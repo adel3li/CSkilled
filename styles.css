@@ -598,9 +598,9 @@ html, body {
     align-items: flex-start; /* Align items to the left on smaller screens */
   }
 
-  /* .container {
-    flex-direction: column; Stack content vertically on smaller screens
-  } */
+  .container {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
 
   .sidebar {
     width: 100%; /* Full width for sidebar on smaller screens */
