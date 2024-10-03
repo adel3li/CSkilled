@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
   font-family: 'Tajawal', 'Cairo', sans-serif; /* Ensure all text elements use the same font */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* Header */
 .header {
   display: flex;
@@ -36,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 6vw;
   margin-bottom: 8px;
 }
 
@@ -56,6 +60,7 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
 /* Navigation */
 .nav a {
   margin-right: 16px;
+  margin-left: 16px;
   text-decoration: none;
   color: black;
 }
@@ -69,7 +74,8 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
   background-color: #4c00ffcf; /* Primary button color */
   color: white; /* White text */
   border: none;
-  /* padding: 10px 20px; Padding for the button */
+  padding: 10px 5vw; /* Padding for the button */
+  font-size: 1.2rem; /* Use relative units for font size */
   border-radius: 20px; /* Rounded corners */
   cursor: pointer;
   transition: background-color 0.3s; /* Smooth hover transition */
@@ -90,7 +96,8 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
 
 /* Sidebar */
 .sidebar {
-  flex: 0 0 200px; /* Sidebar width of 250px */
+  flex: 0 0 25%; /* Sidebar width of 250px */
+  max-width: 300px;
   background-color: white; /* White background */
   padding: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the sidebar */
@@ -102,7 +109,7 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
 /* Responsive Sidebar: Adjust width for smaller screens */
 @media (max-width: 768px) {
   .sidebar {
-    flex: 0 0 200px; /* Narrow the sidebar for smaller screens */
+    flex: 0 0 25%; /* Narrow the sidebar for smaller screens */
   }
 }
 
@@ -173,6 +180,8 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
 .tab-content {
   background-color: white;
   padding: 16px;
+  max-width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
@@ -598,9 +607,9 @@ html, body {
     align-items: flex-start; /* Align items to the left on smaller screens */
   }
 
-  .container {
-    flex-direction: column; /* Stack content vertically on smaller screens */
-  }
+  /* .container { */
+    /* flex-direction: column; Stack content vertically on smaller screens */
+  /* } */
 
   .sidebar {
     width: 100%; /* Full width for sidebar on smaller screens */
@@ -612,6 +621,6 @@ html, body {
   }
 
   .hero-content h1 {
-    font-size: 2rem; /* Smaller font size for hero header */
+    font-size: 1.5rem; /* Smaller font size for hero header */
   }
 }
