@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6, p, li, a, button {
 }
 
 .hero {
-  background-image: url('https://www.dropbox.com/scl/fi/xrpvxev6x2aqhw5xkfl33/Untitled-design.png?rlkey=ap1b4ia0vsq3r3bpgchkp5kik&st=5yjgeqah&raw=1');
+  background-image: url('/Assets/Photos/background\ design.png');
   background-size: cover;
   background-position: center;
   color: white;
