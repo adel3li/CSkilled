@@ -28,7 +28,7 @@ img {
 
 /* Hero Section */
 .hero {
-  background-image: url('/Assets/Photos/background design.png');
+  background-image: url('/Assets/Photos/background_design.webp');
   background-size: 200%; /* Image covers the entire section */
   background-position: center 35%; /* Center the background image */
   color: white; /* White text */
