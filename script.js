@@ -181,8 +181,10 @@ document.addEventListener('DOMContentLoaded', function() {
                   <div class="review-details">
                       <div class="review-header">
                           <div>
+                              <!-- Name comes first -->
                               <span class="student-name">${review.name}</span>
-                              <span class="student-title">${review.title}</span>
+                              <!-- Title comes below the name -->
+                              <div class="student-title">${review.title}</div>
                           </div>
                           <div class="star-rating">
                               <span>${review.rating}</span>
