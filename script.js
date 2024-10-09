@@ -16,7 +16,6 @@ document.querySelectorAll('.tab-button').forEach(button => {
   });
 });
 
-
 // Curriculum
 document.addEventListener('DOMContentLoaded', function() {
   fetch('curriculum.json')
@@ -129,11 +128,9 @@ function getLessonIcon(type) {
 // Function to fetch instructor section data from the JSON data file
 async function fetchInstructorContent() {
   try {
-      // Fetch the JSON file
       const response = await fetch('instructor.json');
       const data = await response.json();
 
-      // Populate the instructor section
       const instructor = data.instructor;
       const instructorSection = document.querySelector('.instructor');
       instructorSection.innerHTML = `
@@ -160,7 +157,6 @@ async function fetchInstructorContent() {
 
 // Call the function to fetch and display content
 fetchInstructorContent();
-
 
 // Reviews
 document.addEventListener('DOMContentLoaded', function() {
@@ -193,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           </div>
                       </div>
                       <div class="review-text ${isEnglish ? 'english' : 'arabic'}">
-                          <p data-full-text="${review.text}">${review.text.replace(/\n/g, '<br>')}</p> <!-- This line is updated -->
+                          <p data-full-text="${review.text}">${review.text.replace(/\n/g, '<br>')}</p> 
                           ${review.expandable && review.text.length > 100 ? '<button class="see-more">See less</button>' : ''}
                       </div>
                   </div>
@@ -211,10 +207,10 @@ document.addEventListener('DOMContentLoaded', function() {
               if (seeMoreButton) {
                   seeMoreButton.addEventListener('click', function() {
                       if (isExpanded) {
-                          textElement.innerHTML = fullText.substring(0, 100).replace(/\n/g, '<br>') + '...'; // Updated line
+                          textElement.innerHTML = fullText.substring(0, 100).replace(/\n/g, '<br>') + '...'; 
                           seeMoreButton.textContent = 'See more';
                       } else {
-                          textElement.innerHTML = fullText.replace(/\n/g, '<br>'); // Updated line
+                          textElement.innerHTML = fullText.replace(/\n/g, '<br>'); 
                           seeMoreButton.textContent = 'See less';
                       }
                       isExpanded = !isExpanded;
@@ -224,7 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => console.error('Error loading reviews:', error));
 });
-
 
 // Fetch FAQ data from the JSON file
 fetch('faq.json')
