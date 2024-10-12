@@ -420,6 +420,14 @@ fetch('sidebar.json')
     console.error('Error fetching sidebar data:', error);
   });
 
+// Add event listener to toggle "+" and "-" across the entire design
+document.querySelectorAll('details').forEach(detail => {
+  detail.addEventListener('toggle', function () {
+    const icon = this.querySelector('summary::before');
+    icon.textContent = this.open ? '-' : '+';
+  });
+});
+
 // lazy landing
 function loadCSS(href, media) {
   var link = document.createElement("link");
