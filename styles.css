@@ -871,3 +871,16 @@ details summary {
   background-color: #edf2f7;
   border-radius: 6px;
 }
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+  details summary::before {
+    font-size: 30px; /* Larger icons for small screens */
+    margin-right: 12px;
+  }
+
+  details summary {
+    font-size: 1.4rem; /* Larger text for better readability */
+    padding: 16px;
+  }
+}
