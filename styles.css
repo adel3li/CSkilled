@@ -502,6 +502,7 @@ details[open] .toggle-icon {
   gap: 20px;
   padding: 20px;
   border-bottom: 1px solid #e2e8f0;
+  flex-direction: row; /* Ensure layout is horizontal */
 }
 
 /* Student Photo */
@@ -537,8 +538,9 @@ details[open] .toggle-icon {
 
 .review-header {
   display: flex;
+  flex-direction: column; /* Stack name and rating */
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Align items to the left */
   margin-bottom: 8px;
   padding-right: 12px;
 }
@@ -558,9 +560,7 @@ details[open] .toggle-icon {
 .star-rating {
   color: #FFD700; /* Gold star color */
   font-size: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  margin-top: 5px; /* Add some margin to separate stars from title */
 }
 
 .review-text {
@@ -601,6 +601,27 @@ details[open] .toggle-icon {
   border-radius: 10px;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .review {
+    flex-direction: column; /* Stack the review vertically */
+    align-items: flex-start; /* Align everything to the left */
+  }
+  
+  .student-photo {
+    margin-bottom: 10px; /* Add space between the photo and the details */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .star-rating {
+    justify-content: flex-start; /* Align stars to the left */
+  }
+}
 /* FAQ Section */
 details {
   position: relative;
