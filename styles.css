@@ -761,18 +761,18 @@ details {
 }
 
 #old-price {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #999; /* Gray color to indicate it's the old price */
   text-decoration: line-through; /* Strikethrough the old price */
   display: block; /* Ensure it's on a separate line */
 }
 
 #new-price {
-  font-size: 1.5rem;
-  color: #050316; /* Red color to highlight the discount */
+  font-size: 1.6rem;
+  color: #443dff; /* Red color to highlight the discount */
   font-weight: bold;
   display: block; /* Ensure it's on a separate line */
-  margin-top: 45px; /* Add spacing between old and new price */
+  margin-top: 30px; /* Add spacing between old and new price */
 }
 
 .subscribtion-time {
