@@ -302,10 +302,31 @@ body {
   }
 }
 
-/* Base Styles for Course Details */
+/* Course Details */
 .course-details summary {
   display: flex;
-  align-items: left;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.course-details summary::before {
+  content: "+"; /* Default plus icon */
+  font-size: 24px;
+  margin-right: 10px;
+  color: #a339ff;
+  padding-left: 6px;
+}
+
+.course-details[open] summary::before {
+  content: "-"; /* Change to minus when opened */
+  color: #a339ff;
+}
+
+/* Course Details */
+.course-details summary {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   list-style: none;
   appearance: none; /* Remove default browser styling */
@@ -341,6 +362,7 @@ body {
   border-radius: 6px;
 }
 
+/* Remove default triangle from summary on mobile */
 .curriculum-section summary {
   cursor: pointer;
   font-size: 1.1rem;
@@ -354,33 +376,6 @@ body {
   -webkit-appearance: none; /* Remove default styling in WebKit browsers */
   -moz-appearance: none; /* Remove default styling in Firefox */
   list-style-type: none; /* Remove any list-style markers */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .curriculum-section summary {
-    font-size: 1.5rem; /* Larger font size for better readability on small screens */
-    padding: 16px; /* Add more padding for touch-friendly design */
-  }
-
-  .course-details summary::before {
-    font-size: 30px; /* Increase icon size for mobile */
-    margin-right: 12px; /* Adjust spacing for larger icons */
-  }
-
-  /* Adjust for mobile */
-  .course-details {
-    padding: 12px; /* Add some padding for small screens */
-  }
-
-  .course-details summary {
-    font-size: 1.4rem; /* Increase font size for better readability on mobile */
-  }
-
-  .course-details[open] summary::before {
-    content: "-"; /* Same minus icon, just larger */
-    font-size: 30px; /* Larger minus icon for mobile */
-  }
 }
 
 /* Module Title */
@@ -407,6 +402,7 @@ details[open] .toggle-icon {
   padding-left: 0; /* Remove default padding */
   list-style: none;
   text-align: left;
+  direction: ltr; /* Force LTR for lesson lists */
 }
 
 .lesson-list li {
@@ -415,12 +411,14 @@ details[open] .toggle-icon {
   direction: ltr; /* Force LTR for list items */
 }
 
+/* Lesson Link */
 .lesson-link {
   text-decoration: none;
   color: inherit;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  direction: ltr; /* Force LTR for links */
 }
 
 .lesson-link:hover {
@@ -433,6 +431,7 @@ details[open] .toggle-icon {
   margin-right: 8px;
 }
 
+/* Lesson Icon */
 .lesson-icon {
   margin-right: 8px;
   font-size: 1.2rem;
@@ -761,18 +760,18 @@ details {
 }
 
 #old-price {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #999; /* Gray color to indicate it's the old price */
   text-decoration: line-through; /* Strikethrough the old price */
   display: block; /* Ensure it's on a separate line */
 }
 
 #new-price {
-  font-size: 1.6rem;
-  color: #443dff; /* Red color to highlight the discount */
+  font-size: 1.5rem;
+  color: #050316; /* Red color to highlight the discount */
   font-weight: bold;
   display: block; /* Ensure it's on a separate line */
-  margin-top: 30px; /* Add spacing between old and new price */
+  margin-top: 45px; /* Add spacing between old and new price */
 }
 
 .subscribtion-time {
