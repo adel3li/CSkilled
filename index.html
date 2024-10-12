@@ -1,116 +1,78 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Machine Learning Diploma</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="logo"><strong>CSkilled</strong></div>
         <nav class="nav">
-            <a href="#">الرئيسية</a>
-            <a href="#">مسار التعلم</a>
-            <a href="#">الدورات</a>
-            <a href="#">الأسئلة الشائعة</a>
-            <a href="#">تواصل معنا</a>
+            <a href="#home">الرئيسية</a>
+            <a href="#learning-path">مسار التعلم</a>
+            <a href="#courses">الدورات</a>
+            <a href="#faq">الأسئلة الشائعة</a>
+            <a href="#contact">تواصل معنا</a>
         </nav>
+        <i class="fas fa-bars hamburger lazy-icon"></i> <!-- Hamburger icon -->
         <button class="login-button">اشترك الان</button>
     </header>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <div id="home" class="hero">
         <div class="hero-content">
             <h1>مسار تعلم <strong>Machine Learning</strong><br>من الصفر وحتى الاحتراف</h1>
-            <h2>دبلومة تعلم الآلة</h2>
+            <h2>دبلومة تعلم الآلة (Machine Learning Diploma)</h2>
             <div class="stats">
-                <span><i class="fas fa-clock"></i> + 130 ساعة</span>
-                <span><i class="fas fa-user-graduate"></i> + 300 طالب</span>
-                <span><i class="fas fa-star"></i> تقييم ممتاز</span>
+                <span><i class="fas fa-star lazy-icon"></i> + 45 تقييم</span>
+                <span><i class="fas fa-user-graduate lazy-icon"></i> + 300 طالب</span>
+                <span>
+                    <i class="fas fa-star lazy-icon"></i>
+                    <i class="fas fa-star lazy-icon"></i>
+                    <i class="fas fa-star lazy-icon"></i>
+                    <i class="fas fa-star lazy-icon"></i>
+                    <i class="fas fa-star lazy-icon"></i> تقييم ممتاز
+                </span>
             </div>
         </div>
     </div>
 
     <!-- Main Content Container -->
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="course-image">
-                <img src="https://cdn.prod.website-files.com/61eeba8765031c95bb83b2ea/61fbec562cf81f62a255f192_61eeb99a54a67e18ce19d47c_0_nyBFE8lLgr8ePAJ_%20(1).jpeg" alt="Course Image" class="resized-image">
-            </div>
-            <ul class="course-info">
-                <li><i class="fas fa-calendar-alt"></i> 84 جلسة</li>
-                <li><i class="fas fa-laptop-code"></i> مشاريع تفاعلية</li>
-                <li><i class="fa fa-comments"></i> نقاشات دسمة</li>
-                <li><i class="fas fa-award"></i> شهادة</li>
-                <li><i class="fas fa-tools"></i> خبرة عملية</li>
-            </ul>
-            <button class="subscribe-button"><h2>اشترك الآن</h2></button>
-        </aside>
-
         <!-- Main Content Area -->
         <main class="content">
             <!-- Tab Navigation -->
             <div class="tabs">
-                <button id="descriptionTab" class="tab-button active"><h3>وصف الدورة</h3></button>
-                <button id="curriculumTab" class="tab-button"><h3>منهج الدورة</h3></button>
-                <button id="instructorTab" class="tab-button"><h3>عن المعلم</h3></button>
-                <button id="reviewsTab" class="tab-button"><h3>التقييمات</h3></button>
-                <button id="faqTab" class="tab-button"><h3>الأسئلة الشائعة</h3></button>
+                <button id="descriptionTab" class="tab-button active">
+                    <h3>وصف الدورة</h3>
+                </button>
+                <button id="curriculumTab" class="tab-button">
+                    <h3>منهج الدورة</h3>
+                </button>
+                <button id="instructorTab" class="tab-button">
+                    <h3>عن المعلم</h3>
+                </button>
+                <button id="reviewsTab" class="tab-button">
+                    <h3>التقييمات</h3>
+                </button>
+                <button id="faqTab" class="tab-button">
+                    <h3>الأسئلة الشائعة</h3>
+                </button>
             </div>
 
             <!-- Tab Content Area -->
             <div id="tabContent">
                 <!-- Course Description -->
                 <section id="descriptionContent" class="tab-content active">
-                    <h2>وصف الدورة</h2>
-                    <p>
-                        دبلومة تأسيسية لمجال تعلم الآلة (Machine Learning)<br>
-                        نتعرض فيه لتغطية واسعة أفقا ورأسا لكثير من المفاهيم والمهارات التي تغيب عن الكثيرين في سوق العمل.
-                        مقدم الدورة حاصل على ماجستير ودكتوراه في واحد من مجالات الذكاء الاصطناعي ويتمتع بخبرة أكثر من 12 سنة في المجال 
-                        بالاضافة الى اشتغاله بالتدريس لأكثر من 10 سنوات ...
-                    </p>
-                    <div class="tab-content-details">
-                        <details class="course-details" open>
-                            <summary><b>أهداف الدبلومة</b></summary>
-                            <p>تسعى الدبلومة للتأسيس في أربع محاور تمهيدا لدبلومة التعلم العميق
-                            والتي من خلالهما تستطيع التقدم لسوق العمل ملفتا الانتباه الى معارفك  ومهاراتك.</p>
-                            <ul class="course-goals-details">
-                                <li>المحور الأول: التعرف العميق على مجموعة من النماذج التي يبنى عليها اليوم الكثير من نجاحات السوق.</li>
-                                <li>المحور الثاني: التمكن من مفاهيم النمذجة اللازمة لتدريب وتحليل وتقييم النماذج لتعمل بكفاءة.</li>
-                                <li>المحور الثالث: التعرف العميق على مفاهيم البيانات اللازمة لتدريب النماذج.</li>
-                                <li>المحور الرابع: التعرف على بعض المفاهيم المهمة في بناء المشاريع من البداية للنهاية.</li>
-                            </ul>
-                        </details>
-                        <details class="course-details" open>
-                            <summary><b>مميزات الدبلومة</b></summary>
-                            <ul class="course-pros-details">
-                                <li>نقاشات مكثفة مع الطلبة للتأكد من فهم المعلومات.</li>
-                                <li>تنهي حالة التشتت والفوضى بين المصادر المختلفة.</li>
-                                <li>تجمع بين الأسس النظرية القوية والتطبيقات العملية.</li>
-                                <li>تختار المواضيع الأكثر انتشاراً في سوق العمل.</li>
-                                <li>تجنب الهشاشة والاستطالة في الرياضيات.</li>
-                                <li>تنتهي بمشروع قوي لتقديمه في السيرة الذاتية.</li>
-                            </ul>
-                        </details>
-                        <details class="course-details">
-                            <summary><b>متطلبات الدورة</b></summary>
-                            <ul class="course-requirements-details">
-                                <li>Python</li>
-                                <li>Linear Equation</li>
-                                <li>Normal Distribution</li>
-                                <li>Basics of Calculus</li>
-                                <li>Basics of Graph</li>
-                                <li>Basics of Dynamic Programming</li>
-                            </ul>
-                            <p>مراجعة ما تحتاجه أثناء فترة الدبلومة.</p>
-                        </details>
-                    </div>
+                    <!-- Content will be loaded dynamically from description.json -->
                 </section>
 
                 <!-- Course Curriculum -->
@@ -144,6 +106,20 @@
                 </section>
             </div>
         </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="course-image">
+                <img id="sidebar-image" src="/Assets/Photos/background.jpg" data-src="path/to/your/image.jpg" alt="Course Image" class="resized-image lazy-image">
+            </div>
+            <ul id="course-info" class="course-info"></ul>
+            <div class="price">
+                <div id="old-price"></div>
+                <div id="new-price"></div>
+            </div>
+            <strong id="subscription-time" class="subscribtion-time"></strong>
+            <button class="subscribe-button" id="subscribe-button"></button>
+        </aside>
     </div>
 
     <!-- Footer -->
@@ -153,10 +129,10 @@
                 <h2 class="footer-logo-text">CSkilled</h2>
             </div>
             <div class="social-icons">
-                <a href="https://m.facebook.com/cskilled/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://sites.google.com/site/mostafasibrahim/" class="social-icon"><i class="fa-solid fa-user"></i></a>
-                <a href="https://ca.linkedin.com/company/cskilled" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/c/ArabicCompetitiveProgramming" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://m.facebook.com/cskilled/" class="social-icon"><i class="fab fa-facebook-f lazy-icon"></i></a>
+                <a href="https://sites.google.com/site/mostafasibrahim/" class="social-icon"><i class="fa-solid fa-user lazy-icon"></i></a>
+                <a href="https://ca.linkedin.com/company/cskilled" class="social-icon"><i class="fab fa-linkedin-in lazy-icon"></i></a>
+                <a href="https://www.youtube.com/c/ArabicCompetitiveProgramming" class="social-icon"><i class="fab fa-youtube lazy-icon"></i></a>
             </div>
             <div class="footer-links">
                 <a href="https://ca.linkedin.com/company/cskilled">عن CSkilled</a>
@@ -173,5 +149,5 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-</body>
+
 </html>
