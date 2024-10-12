@@ -209,7 +209,7 @@ body {
   }
 
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .hero h2 {
@@ -236,7 +236,7 @@ body {
   margin-bottom: 20px;
   background-color: #fbfbfe; /* Light white/blue background */
   border-radius: 10px; /* Rounded tabs */
-  padding: 0px;
+  padding: 10px;
   flex-wrap: wrap; /* Allow wrapping of tabs */
 }
 
@@ -434,7 +434,7 @@ details[open] .toggle-icon {
 
 #instructorContent h2 {
   text-align: center; /* Center the heading text */
-  font-size: 2rem;  /* Adjust font size */
+  font-size: 1.5rem;  /* Adjust font size */
   margin-bottom: 20px;
 }
 
@@ -480,22 +480,13 @@ details[open] .toggle-icon {
     height: 100px;
   }
 
-  .instructor h2 {
-    font-size: 2rem;
-  }
-
   .instructor h3 {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
   }
 
   .instructor p {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
-}
-
-/* Ensure the reviews start from the beginning of the tab */
-#reviewsContent {
-  padding-left: 0; /* Remove indentation */
 }
 
 /* Reviews Section */
@@ -514,7 +505,7 @@ details[open] .toggle-icon {
   gap: 20px;
   padding: 20px;
   border-bottom: 1px solid #e2e8f0;
-  align-items: flex-start; /* Align items at the top */
+  flex-direction: row; /* Ensure layout is horizontal */
 }
 
 /* Student Photo */
@@ -530,6 +521,8 @@ details[open] .toggle-icon {
   font-weight: bold;
   font-size: 1.2rem;
   text-transform: uppercase;
+  margin-right: 16px;
+  margin-top: 10px;
   flex-shrink: 0;
 }
 
@@ -546,34 +539,36 @@ details[open] .toggle-icon {
   flex-direction: column;
 }
 
-/* Align name, title, and rating vertically */
 .review-header {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: column; /* Stack name and rating */
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the left */
+  margin-bottom: 8px;
+  padding-right: 12px;
 }
 
 .student-name {
-  font-size: 1.1rem;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .student-title {
   font-size: 0.9rem;
   color: #343434;
-  margin-top: 2px;
+  margin-top: 1px;
+  margin-bottom: 0;
 }
 
 .star-rating {
   color: #FFD700; /* Gold star color */
-  font-size: 1.2rem;
-  margin-top: 5px; /* Add some margin to separate rating from title */
+  font-size: 1rem;
+  margin-top: 5px; /* Add some margin to separate stars from title */
 }
 
 .review-text {
   font-size: 1rem;
   line-height: 1.5;
-  margin-top: 10px; /* Add space between the review text and the rating */
 }
 
 .english {
@@ -600,7 +595,6 @@ details[open] .toggle-icon {
   text-decoration: underline; /* Underline on hover */
 }
 
-/* Scrollbar Styling */
 .reviews-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -616,14 +610,15 @@ details[open] .toggle-icon {
     flex-direction: column; /* Stack the review vertically */
     align-items: flex-start; /* Align everything to the left */
   }
-
+  
   .student-photo {
-    margin-bottom: 10px; /* Add space between the photo and the details on mobile */
-    margin-right: 0; /* Remove right margin */
+    margin-bottom: 0px; /* Add space between the photo and the details */
+    margin-right: 0px; /* Remove right margin */
   }
 
   .review-header {
-    align-items: flex-start; /* Align everything to the left on mobile */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .star-rating {
