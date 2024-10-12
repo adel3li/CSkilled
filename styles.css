@@ -417,23 +417,35 @@ details[open] .toggle-icon {
 
 
 /* Instructor Content */
-.instructorContent details {
-  align-items: center;
+#instructorContent {
+  padding: 20px; /* Add padding for spacing */
 }
 
 #instructorContent h2 {
   text-align: center; /* Center the heading text */
+  font-size: 1.5rem;  /* Adjust font size */
+  margin-bottom: 20px;
 }
 
 .instructor {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally center the image */
+  align-items: center; /* Center image and text horizontally */
   text-align: right;   /* Align text content under the image */
 }
 
 .instructor h3 {
   text-align: center; /* Center the instructor's name */
+  margin-top: 15px;   /* Add margin above the name */
+  font-size: 1.25rem; /* Adjust font size */
+  color: var(--primary-color); /* Use a custom color (define in your variables) */
+}
+
+.instructor p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: var(--text-color); /* Define this variable in your CSS */
 }
 
 /* Circular Image */
@@ -441,14 +453,29 @@ details[open] .toggle-icon {
   width: 150px;
   height: 150px;
   border-radius: 50%; /* Make it circular */
-  object-fit: cover; /* Ensure image fits container */
+  object-fit: cover;  /* Ensure image fits container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: transform 0.3s ease-in-out;    /* Smooth transition on hover */
 }
 
-/* Resized Image */
-.resized-image {
-  width: 300px;
-  height: 150px;
-  object-fit: cover;
+.instructor-image:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .instructor-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .instructor h3 {
+    font-size: 1.1rem;
+  }
+
+  .instructor p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Reviews Section */
@@ -601,12 +628,12 @@ details {
 /* Sidebar */
 .sidebar {
   width: 25%;
-  border: px #2f27ce; /* Deep blue/purple border */
-  padding: 20px;
+  border: 5px #2f27ce; /* Deep blue/purple border */
+  padding: 10px;
   background-color: #fbfbfe; /* Light white/blue background */
   border-radius: 10px; /* Rounded sidebar */
   position: sticky;
-  top: 20px;
+  /* top: 20px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* All-around shadow */
   display: flex;
   flex-direction: column;

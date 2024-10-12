@@ -263,38 +263,35 @@ function getLessonIcon(type) {
   }
 }
 
+
 // Function to fetch instructor section data from the JSON data file
 async function fetchInstructorContent() {
   try {
-      const response = await fetch('instructor.json');
-      const data = await response.json();
+    // Fetch the JSON data
+    const response = await fetch('instructor.json');
+    const data = await response.json();
 
-      const instructor = data.instructor;
-      const instructorSection = document.querySelector('.instructor');
-      instructorSection.innerHTML = `
-          <img src="${instructor.image}" alt="${instructor.name}" class="instructor-image">
-          <div>
-              <h3>${instructor.name}</h3>
-              ${instructor.description.map(desc => `<p>${desc}</p>`).join('')}
-          </div>
-      `;
+    // Get the instructor object
+    const instructor = data.instructor;
 
-      // Populate the FAQ section
-      const faqSection = document.querySelector('.faq-content');
-      faqSection.innerHTML = data.faq.map(faq => `
-          <details>
-              <summary>${faq.question}</summary>
-              <p>${faq.answer}</p>
-          </details>
-      `).join('');
+    // Select the instructor section container
+    const instructorSection = document.querySelector('.instructor');
 
+    // Insert the instructor's details dynamically
+    instructorSection.innerHTML = `
+        <img src="${instructor.image}" alt="${instructor.name}" class="instructor-image">
+        <div>
+            <h3>${instructor.name}</h3>
+            ${instructor.description.map(desc => `<p>${desc}</p>`).join('')}
+        </div>
+    `;
   } catch (error) {
-      console.error('Error fetching the content:', error);
+    console.error('Error fetching the content:', error);
   }
 }
 
-// Call the function to fetch and display content
-fetchInstructorContent();
+// Call the function when the DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', fetchInstructorContent);
 
 // Reviews
 document.addEventListener('DOMContentLoaded', function() {
