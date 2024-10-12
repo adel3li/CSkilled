@@ -437,7 +437,7 @@ details[open] .toggle-icon {
 }
 
 /* Circular Image */
-.circular-image {
+.instructor-image {
   width: 150px;
   height: 150px;
   border-radius: 50%; /* Make it circular */
@@ -614,11 +614,34 @@ details {
   height: 0%;
 }
 
-.sidebar img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* Rounded image instead of circular */
-  margin-bottom: 20px;
+/* Course Image Container */
+.course-image {
+  margin-bottom: 20px; /* Add space below the image */
+}
+
+/* Sidebar Image Styles */
+.resized-image {
+  width: 100%;           /* Make the image responsive to fill the container */
+  height: auto;          /* Maintain the aspect ratio */
+  border-radius: 10px;   /* Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow around the image */
+  object-fit: cover;     /* Ensure the image covers the container without distorting */
+  transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+/* Lazy Image Placeholder */
+.lazy-image {
+  opacity: 0;            /* Initially hide the lazy-loaded image */
+  transition: opacity 0.5s ease-in-out; /* Fade in the image as it loads */
+}
+
+.lazy-image.lazyloaded {
+  opacity: 1;            /* Show the image once it has been loaded */
+}
+
+/* Optional: Hover Effect for the Image */
+.resized-image:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover for an interactive effect */
 }
 
 .course-info {
