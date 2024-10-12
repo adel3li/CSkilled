@@ -357,14 +357,14 @@ body {
 /* Toggle Icon */
 .toggle-icon {
   font-size: 1.4rem;
-  color: #6b46c1; 
+  color: #6b46c1; /* Purple color */
   transition: transform 0.3s ease;
   padding: 6px;
   padding-left: 12px;
 }
 
 details[open] .toggle-icon {
-  transform: rotate(180deg); 
+  transform: rotate(180deg); /* Rotate on open */
 }
 
 /* Lesson List */
@@ -646,6 +646,10 @@ details {
   /* align-items: right; */
 }
 
+.faq-content details[open] summary {
+  color: #000;
+}
+
 .faq-content summary::before {
   content: "+"; /* Default plus icon */
   font-size: 24px;
@@ -657,11 +661,6 @@ details {
   padding-left: 6px;
   /* padding: 20px; */
   /* padding-top: -10px; */
-}
-
-.faq-content [open] summary::before {
-  content: "-"; /* Change to minus when opened */
-  color: #a339ff;
 }
 
 /* Sidebar */
