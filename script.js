@@ -401,7 +401,7 @@ fetch('sidebar.json')
 // lazy landing
 function loadCSS(href, media) {
   var link = document.createElement("link");
-  link.rel = "styles";
+  link.rel = "stylesheet";
   link.href = href;
   link.media = media || "all";
   document.getElementsByTagName("head")[0].appendChild(link);
