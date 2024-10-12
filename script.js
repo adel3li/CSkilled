@@ -45,6 +45,31 @@ document.querySelectorAll('.tab-button').forEach(button => {
 // Ensure the first tab is visible on page load
 document.getElementById('descriptionContent').style.display = 'block';
 
+// Lazy loading images
+function lazyLoadImages() {
+  const lazyImages = document.querySelectorAll('.lazy-image');
+
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;  // Swap data-src with src
+        img.classList.remove('lazy-image'); // Optionally remove the lazy class once loaded
+        observer.unobserve(img); // Stop observing once the image is loaded
+      }
+    });
+  });
+
+  lazyImages.forEach(image => {
+    imageObserver.observe(image);
+  });
+}
+
+// Call lazyLoadImages when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  lazyLoadImages();
+});
+
 // Description
 document.addEventListener('DOMContentLoaded', function () {
   // Fetch the content from the description.json file
