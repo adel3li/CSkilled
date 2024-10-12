@@ -237,7 +237,6 @@ body {
   background-color: #fbfbfe; /* Light white/blue background */
   border-radius: 10px; /* Rounded tabs */
   padding: 10px;
-  flex-wrap: wrap; /* Allow wrapping of tabs */
 }
 
 .tab-button {
@@ -247,9 +246,9 @@ body {
   cursor: pointer;
   flex: 1;
   text-align: center;
-  margin: 5px;
+  margin: 0 5px;
   line-height: 15px;
-  padding: 10px;
+  padding: 0px 0px 0px 0px;
   border-radius: 100px; /* Rounded tab buttons */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
   font-family: "Cairo";
@@ -264,12 +263,10 @@ body {
   background-color: #443dff; /* Deep blue/purple for active tab */
   color: white;
 }
-
 .tab-button.active:hover {
   background-color: #2f27ce; /* Deep blue/purple for active tab */
   color: white;
 }
-
 .tab-content {
   display: none;
   padding-left: 5%;
@@ -291,7 +288,7 @@ body {
   }
 
   .tab-button {
-    flex: 1 1 30%; /* Each tab takes up 30% of the width, ensuring three tabs fit in the first row */
+    flex: 1 1 30%; /* Each tab takes up 30% width, ensuring three tabs fit in the first row */
     margin: 5px;
   }
 
@@ -505,7 +502,6 @@ details[open] .toggle-icon {
   gap: 20px;
   padding: 20px;
   border-bottom: 1px solid #e2e8f0;
-  flex-direction: row; /* Ensure layout is horizontal */
 }
 
 /* Student Photo */
@@ -541,9 +537,8 @@ details[open] .toggle-icon {
 
 .review-header {
   display: flex;
-  flex-direction: column; /* Stack name and rating */
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the left */
+  align-items: center;
   margin-bottom: 8px;
   padding-right: 12px;
 }
@@ -563,7 +558,9 @@ details[open] .toggle-icon {
 .star-rating {
   color: #FFD700; /* Gold star color */
   font-size: 1rem;
-  margin-top: 5px; /* Add some margin to separate stars from title */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .review-text {
@@ -602,28 +599,6 @@ details[open] .toggle-icon {
 .reviews-container::-webkit-scrollbar-thumb {
   background-color: #6b46c1; /* Purple scrollbar */
   border-radius: 10px;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .review {
-    flex-direction: column; /* Stack the review vertically */
-    align-items: flex-start; /* Align everything to the left */
-  }
-  
-  .student-photo {
-    margin-bottom: 10px; /* Add space between the photo and the details */
-    margin-right: 0; /* Remove right margin */
-  }
-
-  .review-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .star-rating {
-    justify-content: flex-start; /* Align stars to the left */
-  }
 }
 
 /* FAQ Section */
