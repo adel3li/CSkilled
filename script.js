@@ -1,3 +1,24 @@
+// Toggle mobile menu visibility when the hamburger icon is clicked
+document.querySelector('.hamburger').addEventListener('click', function() {
+  document.querySelector('.nav').classList.toggle('active');
+});
+
+// Close the mobile menu when a link is clicked
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', function() {
+    // Close the mobile menu
+    document.querySelector('.nav').classList.remove('active');
+
+    // Scroll the page to the target section
+    const targetId = this.getAttribute('href'); // Get the href value (e.g., #home)
+    const targetElement = document.querySelector(targetId); // Select the target section
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
 // Handle tab switching
 document.querySelectorAll('.tab-button').forEach(button => {
   button.addEventListener('click', () => {
@@ -8,12 +29,104 @@ document.querySelectorAll('.tab-button').forEach(button => {
     button.classList.add('active');
     
     // Hide all tab contents
-    document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.remove('active');
+      content.style.display = 'none'; // Hide all content
+    });
     
     // Show the clicked tab content
     const targetContent = button.id.replace('Tab', 'Content');
-    document.getElementById(targetContent).classList.remove('hidden');
+    const targetElement = document.getElementById(targetContent);
+    targetElement.classList.add('active');
+    targetElement.style.display = 'block'; // Show the selected content
   });
+});
+
+// Ensure the first tab is visible on page load
+document.getElementById('descriptionContent').style.display = 'block';
+
+// Description
+document.addEventListener('DOMContentLoaded', function () {
+  // Fetch the content from the description.json file
+  fetch('description.json')
+      .then(response => response.json())
+      .then(data => {
+          const descriptionContent = data.descriptionContent;
+
+          // Get the descriptionContent section
+          const descriptionSection = document.getElementById('descriptionContent');
+
+          // Create and insert the heading
+          const heading = document.createElement('h2');
+          heading.textContent = descriptionContent.heading;
+          descriptionSection.appendChild(heading);
+
+          // Create and insert the paragraph
+          const paragraph = document.createElement('p');
+          paragraph.innerHTML = descriptionContent.paragraph.replace(/\n/g, '<br>');
+          descriptionSection.appendChild(paragraph);
+
+          // Create and insert the details elements
+          descriptionContent.details.forEach(detail => {
+              const detailsElement = document.createElement('details');
+              detailsElement.classList.add('course-details');
+              detailsElement.open = true;
+
+              const summary = document.createElement('summary');
+              summary.innerHTML = `<b>${detail.summary}</b>`;
+              detailsElement.appendChild(summary);
+
+              if (detail.content) {
+                  const contentParagraph = document.createElement('p');
+                  contentParagraph.textContent = detail.content;
+                  detailsElement.appendChild(contentParagraph);
+              }
+
+              if (detail.goals) {
+                  const ul = document.createElement('ul');
+                  ul.classList.add('course-goals-details');
+                  detail.goals.forEach(goal => {
+                      const li = document.createElement('li');
+                      li.textContent = goal;
+                      ul.appendChild(li);
+                  });
+                  detailsElement.appendChild(ul);
+              }
+
+              if (detail.pros) {
+                  const ul = document.createElement('ul');
+                  ul.classList.add('course-pros-details');
+                  detail.pros.forEach(pro => {
+                      const li = document.createElement('li');
+                      li.textContent = pro;
+                      ul.appendChild(li);
+                  });
+                  detailsElement.appendChild(ul);
+              }
+
+              if (detail.requirements) {
+                  const ul = document.createElement('ul');
+                  ul.classList.add('course-requirements-details');
+                  detail.requirements.forEach(requirement => {
+                      const li = document.createElement('li');
+                      li.textContent = requirement;
+                      ul.appendChild(li);
+                  });
+                  detailsElement.appendChild(ul);
+
+                  if (detail.note) {
+                      const noteParagraph = document.createElement('p');
+                      noteParagraph.textContent = detail.note;
+                      detailsElement.appendChild(noteParagraph);
+                  }
+              }
+
+              descriptionSection.appendChild(detailsElement);
+          });
+      })
+      .catch(error => {
+          console.error('Error fetching the JSON file:', error);
+      });
 });
 
 // Curriculum
@@ -251,3 +364,50 @@ fetch('faq.json')
     });
   })
   .catch(error => console.error('Error loading FAQ:', error));
+
+// Fetch the sidebar data from the JSON file
+fetch('sidebar.json')
+  .then(response => response.json())
+  .then(data => {
+    const sidebarData = data.sidebar;
+
+    // Populate the image
+    const imageElement = document.getElementById('sidebar-image');
+    imageElement.src = sidebarData.image.src;
+    imageElement.alt = sidebarData.image.alt;
+
+    // Populate the course info list
+    const courseInfoList = document.getElementById('course-info');
+    sidebarData.course_info.forEach(info => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `<i class="${info.icon}"></i> ${info.label}`;
+      courseInfoList.appendChild(listItem);
+    });
+
+    // Populate the price
+    document.getElementById('old-price').innerHTML = `<del>${sidebarData.price.old_price}</del>`;
+    document.getElementById('new-price').textContent = sidebarData.price.new_price;
+
+    // Populate the subscription time
+    document.getElementById('subscription-time').textContent = sidebarData.subscription_time;
+
+    // Populate the subscribe button
+    document.getElementById('subscribe-button').textContent = sidebarData.subscribe_button.text;
+  })
+  .catch(error => {
+    console.error('Error fetching sidebar data:', error);
+  });
+
+// lazy landing
+function loadCSS(href, media) {
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = href;
+  link.media = media || "all";
+  document.getElementsByTagName("head")[0].appendChild(link);
+}
+
+// Use this function to load additional CSS files when needed.
+window.onload = function() {
+  loadCSS("path-to-your-lazy-css.css");
+};
