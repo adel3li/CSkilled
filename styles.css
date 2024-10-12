@@ -323,31 +323,6 @@ body {
   color: #a339ff;
 }
 
-/* Course Details */
-.course-details summary {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  list-style: none;
-  appearance: none; /* Remove default browser styling */
-  -webkit-appearance: none; /* Remove default styling in WebKit browsers */
-  -moz-appearance: none; /* Remove default styling in Firefox */
-  list-style-type: none; /* Remove any list-style markers */
-}
-
-.course-details summary::before {
-  content: "+"; /* Default plus icon */
-  font-size: 24px;
-  margin-right: 10px;
-  color: #a339ff;
-  padding-left: 6px;
-}
-
-.course-details[open] summary::before {
-  content: "-"; /* Change to minus when opened */
-  color: #a339ff;
-}
-
 /* Curriculum Section */
 .curriculum-section {
   margin-top: 16px;
@@ -362,7 +337,6 @@ body {
   border-radius: 6px;
 }
 
-/* Remove default triangle from summary on mobile */
 .curriculum-section summary {
   cursor: pointer;
   font-size: 1.1rem;
@@ -372,10 +346,6 @@ body {
   justify-content: flex-start;
   background-color: #edf2f7; /* Light gray background */
   border-radius: 6px;
-  appearance: none; /* Remove default summary styling */
-  -webkit-appearance: none; /* Remove default styling in WebKit browsers */
-  -moz-appearance: none; /* Remove default styling in Firefox */
-  list-style-type: none; /* Remove any list-style markers */
 }
 
 /* Module Title */
@@ -387,14 +357,14 @@ body {
 /* Toggle Icon */
 .toggle-icon {
   font-size: 1.4rem;
-  color: #6b46c1;
+  color: #6b46c1; 
   transition: transform 0.3s ease;
   padding: 6px;
   padding-left: 12px;
 }
 
 details[open] .toggle-icon {
-  transform: rotate(180deg);
+  transform: rotate(180deg); 
 }
 
 /* Lesson List */
