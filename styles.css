@@ -842,11 +842,7 @@ details {
   display: flex;
   align-items: left;
   cursor: pointer;
-  list-style: none;
-  appearance: none; /* Remove browser default styling */
-  -webkit-appearance: none; /* WebKit browsers */
-  -moz-appearance: none; /* Firefox */
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: style;
 }
 
 .details summary::before {
