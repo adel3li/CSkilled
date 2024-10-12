@@ -424,15 +424,15 @@ fetch('sidebar.json')
   });
 
 // lazy landing
-function loadCSS(href, media) {
-  var link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = href;
-  link.media = media || "all";
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+// function loadCSS(href, media) {
+//   var link = document.createElement("link");
+//   link.rel = "stylesheet";
+//   link.href = href;
+//   link.media = media || "all";
+//   document.getElementsByTagName("head")[0].appendChild(link);
+// }
 
-// Use this function to load additional CSS files when needed.
-window.onload = function() {
-  loadCSS("styles.css");
-};
+// // Use this function to load additional CSS files when needed.
+// window.onload = function() {
+//   loadCSS("styles.css");
+// };
