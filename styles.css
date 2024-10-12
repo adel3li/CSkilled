@@ -816,18 +816,6 @@ details {
   }
 }
 
-
-/* Remove default list styling globally */
-ul, ol {
-  list-style: none;
-  padding-left: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-}
-
-li {
-  list-style: none; /* Ensure no list-style for list items */
-}
-
 /* Remove default list styling specifically on mobile */
 @media (max-width: 768px) {
   ul, ol {
