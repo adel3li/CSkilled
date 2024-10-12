@@ -227,7 +227,7 @@ body {
 
 /* Main Content Area */
 .content {
-  width: 70%;
+  width: 100%;
 }
 
 .tabs {
@@ -236,7 +236,8 @@ body {
   margin-bottom: 20px;
   background-color: #fbfbfe; /* Light white/blue background */
   border-radius: 10px; /* Rounded tabs */
-  padding: 10px;
+  padding: 0px;
+  flex-wrap: wrap; /* Allow wrapping of tabs */
 }
 
 .tab-button {
@@ -246,9 +247,9 @@ body {
   cursor: pointer;
   flex: 1;
   text-align: center;
-  margin: 0 5px;
+  margin: 5px;
   line-height: 15px;
-  padding: 0px 0px 0px 0px;
+  padding: 10px;
   border-radius: 100px; /* Rounded tab buttons */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
   font-family: "Cairo";
@@ -263,10 +264,12 @@ body {
   background-color: #443dff; /* Deep blue/purple for active tab */
   color: white;
 }
+
 .tab-button.active:hover {
   background-color: #2f27ce; /* Deep blue/purple for active tab */
   color: white;
 }
+
 .tab-content {
   display: none;
   padding-left: 5%;
@@ -288,7 +291,7 @@ body {
   }
 
   .tab-button {
-    flex: 1 1 30%; /* Each tab takes up 30% width, ensuring three tabs fit in the first row */
+    flex: 1 1 30%; /* Each tab takes up 30% of the width, ensuring three tabs fit in the first row */
     margin: 5px;
   }
 
@@ -431,7 +434,7 @@ details[open] .toggle-icon {
 
 #instructorContent h2 {
   text-align: center; /* Center the heading text */
-  font-size: 1.5rem;  /* Adjust font size */
+  font-size: 2rem;  /* Adjust font size */
   margin-bottom: 20px;
 }
 
@@ -477,13 +480,22 @@ details[open] .toggle-icon {
     height: 100px;
   }
 
+  .instructor h2 {
+    font-size: 2rem;
+  }
+
   .instructor h3 {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
   .instructor p {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
+}
+
+/* Ensure the reviews start from the beginning of the tab */
+#reviewsContent {
+  padding-left: 0; /* Remove indentation */
 }
 
 /* Reviews Section */
@@ -502,7 +514,7 @@ details[open] .toggle-icon {
   gap: 20px;
   padding: 20px;
   border-bottom: 1px solid #e2e8f0;
-  flex-direction: row; /* Ensure layout is horizontal */
+  align-items: flex-start; /* Align items at the top */
 }
 
 /* Student Photo */
@@ -518,8 +530,6 @@ details[open] .toggle-icon {
   font-weight: bold;
   font-size: 1.2rem;
   text-transform: uppercase;
-  margin-right: 16px;
-  margin-top: 10px;
   flex-shrink: 0;
 }
 
@@ -536,36 +546,34 @@ details[open] .toggle-icon {
   flex-direction: column;
 }
 
+/* Align name, title, and rating vertically */
 .review-header {
   display: flex;
-  flex-direction: column; /* Stack name and rating */
-  justify-content: space-between;
-  align-items: flex-start; /* Align items to the left */
-  margin-bottom: 8px;
-  padding-right: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .student-name {
-  font-weight: bold;
   font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .student-title {
   font-size: 0.9rem;
   color: #343434;
-  margin-top: 1px;
-  margin-bottom: 0;
+  margin-top: 2px;
 }
 
 .star-rating {
   color: #FFD700; /* Gold star color */
-  font-size: 1rem;
-  margin-top: 5px; /* Add some margin to separate stars from title */
+  font-size: 1.2rem;
+  margin-top: 5px; /* Add some margin to separate rating from title */
 }
 
 .review-text {
   font-size: 1rem;
   line-height: 1.5;
+  margin-top: 10px; /* Add space between the review text and the rating */
 }
 
 .english {
@@ -592,6 +600,7 @@ details[open] .toggle-icon {
   text-decoration: underline; /* Underline on hover */
 }
 
+/* Scrollbar Styling */
 .reviews-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -607,21 +616,21 @@ details[open] .toggle-icon {
     flex-direction: column; /* Stack the review vertically */
     align-items: flex-start; /* Align everything to the left */
   }
-  
+
   .student-photo {
-    margin-bottom: 10px; /* Add space between the photo and the details */
+    margin-bottom: 10px; /* Add space between the photo and the details on mobile */
     margin-right: 0; /* Remove right margin */
   }
 
   .review-header {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Align everything to the left on mobile */
   }
 
   .star-rating {
     justify-content: flex-start; /* Align stars to the left */
   }
 }
+
 /* FAQ Section */
 details {
   position: relative;
