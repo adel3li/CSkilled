@@ -612,8 +612,8 @@ details[open] .toggle-icon {
   }
   
   .student-photo {
-    margin-bottom: 0px; /* Add space between the photo and the details */
-    margin-right: 0px; /* Remove right margin */
+    margin-bottom: 10px; /* Add space between the photo and the details */
+    margin-right: 0; /* Remove right margin */
   }
 
   .review-header {
