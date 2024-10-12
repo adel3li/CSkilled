@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Machine Learning Diploma</title>
-    <link rel="preload" href="styles.css" as="style" onload="this.rel='stylesheet'">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="preload" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap"></noscript>
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -25,7 +22,7 @@
             <a href="#faq">الأسئلة الشائعة</a>
             <a href="#contact">تواصل معنا</a>
         </nav>
-        <i class="fas fa-bars hamburger lazy-icon"></i>
+        <i class="fas fa-bars hamburger lazy-icon"></i> <!-- Hamburger icon -->
         <button class="login-button">اشترك الان</button>
     </header>
 
@@ -50,6 +47,7 @@
 
     <!-- Main Content Container -->
     <div class="container">
+        <!-- Main Content Area -->
         <main class="content">
             <!-- Tab Navigation -->
             <div class="tabs">
@@ -72,18 +70,39 @@
 
             <!-- Tab Content Area -->
             <div id="tabContent">
-                <section id="descriptionContent" class="tab-content active"></section>
+                <!-- Course Description -->
+                <section id="descriptionContent" class="tab-content active">
+                    <!-- Content will be loaded dynamically from description.json -->
+                </section>
+
+                <!-- Course Curriculum -->
                 <section id="curriculumContent" class="tab-content hidden">
                     <h2>منهج الدورة</h2>
+                    <div class="curriculum-section">
+                        <!-- Curriculum details will go here -->
+                    </div>
                 </section>
+
+                <!-- About Instructor Section -->
                 <section id="instructorContent" class="tab-content hidden">
                     <h2>عن المعلم</h2>
+                    <div class="instructor">
+                        <!-- Instructor details will be inserted here dynamically -->
+                    </div>
                 </section>
+
+                <!-- Reviews -->
                 <section id="reviewsContent" class="tab-content hidden">
                     <h2>التقييمات</h2>
+                    <!-- Reviews will be dynamically inserted here -->
                 </section>
+
+                <!-- FAQ Section -->
                 <section id="faqContent" class="tab-content hidden">
                     <h2>الأسئلة الشائعة</h2>
+                    <div id="faqList" class="faq-content">
+                        <!-- FAQ items will be dynamically inserted here -->
+                    </div>
                 </section>
             </div>
         </main>
@@ -91,10 +110,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="course-image">
-                <img id="sidebar-image" src="/Assets/Photos/background.jpg" 
-                    data-src="/Assets/Photos/background.jpg" 
-                    alt="Course Image" class="resized-image lazy-image" 
-                    loading="lazy">
+                <img id="sidebar-image" data-src="/Assets/Photos/background.jpg" alt="Course Image" class="resized-image lazy-image">
             </div>
             <ul id="course-info" class="course-info"></ul>
             <div class="price">
@@ -132,6 +148,8 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
