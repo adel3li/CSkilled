@@ -401,7 +401,7 @@ fetch('sidebar.json')
 // lazy landing
 function loadCSS(href, media) {
   var link = document.createElement("link");
-  link.rel = "stylesheet";
+  link.rel = "styles";
   link.href = href;
   link.media = media || "all";
   document.getElementsByTagName("head")[0].appendChild(link);
@@ -409,5 +409,5 @@ function loadCSS(href, media) {
 
 // Use this function to load additional CSS files when needed.
 window.onload = function() {
-  loadCSS("path-to-your-lazy-css.css");
+  loadCSS("styles.css");
 };
