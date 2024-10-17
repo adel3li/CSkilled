@@ -663,35 +663,40 @@ details[open] .toggle-icon {
 }
 
 /* FAQ Section */
-details {
+/* details {
   position: relative;
-}
+} */
 
+/* FAQ Section Styling */
 .faq-content summary {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #443dff;
   display: flex;
   line-height: 50px;
-  /* justify-content: space-between; */
-  /* align-items: right; */
+  cursor: pointer; /* Add pointer cursor for summary */
 }
 
 .faq-content details[open] summary {
-  color: #000;
+  color: #000; /* Change color when opened */
 }
 
 .faq-content summary::before {
   content: "+"; /* Default plus icon */
   font-size: 24px;
   margin-right: 10px;
-  /* margin-bottom: 20px; */
-  margin-top: 0px;
   color: #a339ff; /* Icon color */
-  order: -1;
-  padding-left: 6px;
-  /* padding: 20px; */
-  /* padding-top: -10px; */
+  order: -1; /* Make the icon appear before text */
+  margin-left: .5rem;
+}
+
+.faq-content details[open] summary::before {
+  content: "-"; /* Change to minus icon when opened */
+}
+
+.faq-content p {
+  font-size: 1.2rem;
+  margin: 2rem;
 }
 
 /* Style for the "التسجيل والدفع" content section */

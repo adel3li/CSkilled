@@ -426,7 +426,6 @@ function loadPaymentContent() {
           console.error('Error fetching payment details:', error);
       });
 }
-
 // Call the function to load payment content when the page loads
 loadPaymentContent();
 
