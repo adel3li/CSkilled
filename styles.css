@@ -298,7 +298,7 @@ body {
   /* Ensure the last two tabs go to the second row */
   .tab-button:nth-child(4),
   .tab-button:nth-child(5) {
-    flex: 1 1 45%; /* Each takes up 45% to balance the second row */
+    flex: 1 1 30%; /* Each takes up 45% to balance the second row */
   }
 }
 
@@ -308,6 +308,35 @@ body {
   align-items: center;
   cursor: pointer;
   list-style: none;
+  padding: 20px;
+  /* margin: 20px; */
+}
+
+/* Course Content Section */
+.course-content-section {
+  /* margin: 20px 0;  Add space before and after the content */
+  padding: 0px;   /* Add internal padding */
+}
+
+#descriptionContent p {
+  margin-right: 20px ;
+  margin-left: 20px;  /* Add space before and after the content */
+  padding: 0px;
+}
+
+.course-goals-details {
+  margin-right: 20px ;
+  margin-left: 20px;  /* Add space before and after the content */
+}
+
+.course-pros-details {
+  margin-right: 20px ;
+  margin-left: 20px;  /* Add space before and after the content */
+}
+
+.course-requirements-details {
+  margin-right: 20px ;
+  margin-left: 20px;  /* Add space before and after the content */
 }
 
 .course-details summary::before {
@@ -321,6 +350,13 @@ body {
 .course-details[open] summary::before {
   content: "-"; /* Change to minus when opened */
   color: #a339ff;
+}
+
+/* Style for the course note */
+.course-note {
+  margin-right: 20px ;
+  margin-left: 20px;  /* Add space before and after the content */
+  padding: 10px;
 }
 
 /* Curriculum Section */
@@ -656,6 +692,20 @@ details {
   padding-left: 6px;
   /* padding: 20px; */
   /* padding-top: -10px; */
+}
+
+/* Style for the "التسجيل والدفع" content section */
+#paymentContent {
+  padding: 0px;
+}
+
+#paymentContent ul {
+  /* list-style-type: disc; */
+  margin-left: 20px;
+}
+
+#paymentContent p {
+  margin: 20px;
 }
 
 /* Sidebar */

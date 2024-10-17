@@ -101,12 +101,15 @@ document.addEventListener('DOMContentLoaded', function () {
               summary.innerHTML = `<b>${detail.summary}</b>`;
               detailsElement.appendChild(summary);
 
+              // Render the "content" field if it exists
               if (detail.content) {
                   const contentParagraph = document.createElement('p');
+                  contentParagraph.classList.add('course-content-section');  // Add a class for styling
                   contentParagraph.textContent = detail.content;
                   detailsElement.appendChild(contentParagraph);
               }
 
+              // Render goals if they exist
               if (detail.goals) {
                   const ul = document.createElement('ul');
                   ul.classList.add('course-goals-details');
@@ -118,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   detailsElement.appendChild(ul);
               }
 
+              // Render pros if they exist
               if (detail.pros) {
                   const ul = document.createElement('ul');
                   ul.classList.add('course-pros-details');
@@ -129,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   detailsElement.appendChild(ul);
               }
 
+              // Render requirements if they exist
               if (detail.requirements) {
                   const ul = document.createElement('ul');
                   ul.classList.add('course-requirements-details');
@@ -139,11 +144,13 @@ document.addEventListener('DOMContentLoaded', function () {
                   });
                   detailsElement.appendChild(ul);
 
-                  if (detail.note) {
-                      const noteParagraph = document.createElement('p');
-                      noteParagraph.textContent = detail.note;
-                      detailsElement.appendChild(noteParagraph);
-                  }
+              // Add the note if it exists
+              if (detail.note) {
+                const noteParagraph = document.createElement('p');
+                noteParagraph.textContent = detail.note;
+                noteParagraph.classList.add('course-note');  // Add a class for styling
+                detailsElement.appendChild(noteParagraph);
+              }
               }
 
               descriptionSection.appendChild(detailsElement);
@@ -387,6 +394,42 @@ fetch('faq.json')
   })
   .catch(error => console.error('Error loading FAQ:', error));
 
+// Load content for the "Registration & Payment" tab from `payment.json`
+function loadPaymentContent() {
+  fetch('payment.json')
+      .then(response => response.json())
+      .then(data => {
+          const paymentDetails = document.getElementById('paymentDetails');
+          const heading = document.createElement('h3');
+          heading.textContent = data.heading;
+
+          const paragraph = document.createElement('p');
+          paragraph.textContent = data.paragraph;
+
+          const stepsList = document.createElement('ul');
+          data.steps.forEach(step => {
+              const li = document.createElement('li');
+              li.textContent = step;
+              stepsList.appendChild(li);
+          });
+
+          const note = document.createElement('p');
+          note.innerHTML = `<strong>ملاحظة:</strong> ${data.note}`;
+
+          // Append the content to the paymentDetails section
+          paymentDetails.appendChild(heading);
+          paymentDetails.appendChild(paragraph);
+          paymentDetails.appendChild(stepsList);
+          paymentDetails.appendChild(note);
+      })
+      .catch(error => {
+          console.error('Error fetching payment details:', error);
+      });
+}
+
+// Call the function to load payment content when the page loads
+loadPaymentContent();
+
 // Fetch the sidebar data from the JSON file
 fetch('sidebar.json')
   .then(response => response.json())
@@ -420,7 +463,8 @@ fetch('sidebar.json')
     console.error('Error fetching sidebar data:', error);
   });
 
-// Add event listener to toggle "+" and "-" across the entire design
+
+  // Add event listener to toggle "+" and "-" across the entire design
 document.querySelectorAll('details').forEach(detail => {
   detail.addEventListener('toggle', function () {
     const icon = this.querySelector('summary::before');
