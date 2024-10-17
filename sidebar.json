@@ -1,7 +1,7 @@
 {
   "sidebar": {
     "image": {
-      "src": "/Assets/Photos/background.jpg",
+      "image": "/Assets/Photos/background.jpg",
       "alt": "Course Image"
     },
     "course_info": [

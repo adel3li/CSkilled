@@ -321,22 +321,25 @@ body {
 #descriptionContent p {
   margin-right: 20px ;
   margin-left: 20px;  /* Add space before and after the content */
-  padding: 0px;
+  padding-bottom: 1rem;
 }
 
 .course-goals-details {
   margin-right: 20px ;
   margin-left: 20px;  /* Add space before and after the content */
+  margin-bottom: 2rem;
 }
 
 .course-pros-details {
   margin-right: 20px ;
   margin-left: 20px;  /* Add space before and after the content */
+  margin-bottom: 2rem;
 }
 
 .course-requirements-details {
   margin-right: 20px ;
   margin-left: 20px;  /* Add space before and after the content */
+  /* margin-bottom: 2rem; */
 }
 
 .course-details summary::before {
@@ -357,6 +360,7 @@ body {
   margin-right: 20px ;
   margin-left: 20px;  /* Add space before and after the content */
   padding: 10px;
+  margin-bottom: 2rem;
 }
 
 /* Curriculum Section */
@@ -472,6 +476,7 @@ details[open] .toggle-icon {
   text-align: center; /* Center the heading text */
   font-size: 1.5rem;  /* Adjust font size */
   margin-bottom: 20px;
+  color: var(--primary-color); /* Optional: Add color to the heading */
 }
 
 .instructor {
@@ -479,20 +484,24 @@ details[open] .toggle-icon {
   flex-direction: column;
   align-items: center; /* Center image and text horizontally */
   text-align: right;   /* Align text content under the image */
+  max-width: 800px;    /* Limit the width for better readability */
+  margin: 0 auto;      /* Center the instructor content container */
 }
 
 .instructor h3 {
   text-align: center; /* Center the instructor's name */
   margin-top: 15px;   /* Add margin above the name */
   font-size: 1.25rem; /* Adjust font size */
-  color: var(--primary-color); /* Use a custom color (define in your variables) */
+  color: var(--primary-color); /* Use a custom color */
 }
 
 .instructor p {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 10px;
-  color: var(--text-color); /* Define this variable in your CSS */
+  margin-bottom: 0px;  /* Add space between paragraphs */
+  color: var(--text-color); /* Define this variable or replace with a color */
+  text-align: justify;   /* Justify the text for a clean paragraph look */
+  max-width: 100%;       /* Ensure it doesn’t overflow the container */
 }
 
 /* Circular Image */
@@ -511,17 +520,37 @@ details[open] .toggle-icon {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  #instructorContent {
+    padding: 15px; /* Decrease padding on smaller screens */
+  }
+
   .instructor-image {
-    width: 100px;
+    width: 120px;
+    height: 120px; /* Reduce the image size for tablets */
+  }
+
+  .instructor h3 {
+    font-size: 1.1rem; /* Slightly reduce the name size */
+  }
+
+  .instructor p {
+    font-size: 1.2rem;   /* Adjust paragraph font size for smaller screens */
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .instructor-image {
+    width: 100px;   /* Further reduce the image size for mobile */
     height: 100px;
   }
 
   .instructor h3 {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Further reduce the name size for mobile */
   }
 
   .instructor p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Decrease size for readability on small devices */
   }
 }
 
