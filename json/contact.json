@@ -1,0 +1,15 @@
+{
+  "contact": {
+    "title": "تواصل معنا",
+    "details": {
+      "email": "support@cskilled.com",
+      "phone": "+20 123 456 7890",
+      "address": "123 شارع البرمجة، القاهرة، مصر"
+    },
+    "social": {
+      "facebook": "https://m.facebook.com/cskilled/",
+      "linkedin": "https://ca.linkedin.com/company/cskilled",
+      "youtube": "https://www.youtube.com/c/ArabicCompetitiveProgramming"
+    }
+  }
+}

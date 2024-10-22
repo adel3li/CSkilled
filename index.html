@@ -5,135 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Machine Learning Diploma</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CSkilled - Learn and Grow</title>
+    <link rel="stylesheet" href="/CSS/global.css"> <!-- Global CSS -->
+    <link rel="stylesheet" href="/CSS/index.css">  <!-- Page-Specific CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Global Header -->
     <header class="header">
         <div class="logo"><strong>CSkilled</strong></div>
         <nav class="nav">
-            <a href="#home">الرئيسية</a>
-            <a href="#learning-path">مسار التعلم</a>
-            <a href="#courses">الدورات</a>
-            <a href="#faq">الأسئلة الشائعة</a>
-            <a href="#contact">تواصل معنا</a>
+            <a href="index.html">الرئيسية</a>
+            <a href="learning_paths.html">مسارات التعلم</a>
+            <a href="diplomas.html">الدورات</a>
+            <a href="instructor.html">المعلم</a>
+            <a href="about.html">من نحن</a>
+            <a href="contact.html">تواصل معنا</a>
         </nav>
         <i class="fas fa-bars hamburger lazy-icon"></i> <!-- Hamburger icon -->
         <button class="login-button">اشترك الان</button>
     </header>
 
     <!-- Hero Section -->
-    <div id="home" class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
-            <h1>مسار تعلم <strong>Machine Learning</strong><br>من الصفر وحتى الاحتراف</h1>
-            <h2>دبلومة تعلم الآلة <br><strong>(Machine Learning Diploma)</strong></h2>
-            <div class="stats">
-                <span><i class="fas fa-star lazy-icon"></i> + 45 تقييم</span>
-                <span><i class="fas fa-user-graduate lazy-icon"></i> + 300 طالب</span>
-                <span>
-                    <i class="fas fa-star lazy-icon"></i>
-                    <i class="fas fa-star lazy-icon"></i>
-                    <i class="fas fa-star lazy-icon"></i>
-                    <i class="fas fa-star lazy-icon"></i>
-                    <i class="fas fa-star lazy-icon"></i> تقييم ممتاز
-                </span>
+            <h1>تعلم مع <strong>CSkilled</strong></h1>
+            <p>منصة تعليمية متخصصة في <strong>التعلم الآلي</strong> و <strong>علوم البيانات</strong> و <strong>تطوير الويب</strong></p>
+            <a href="#learning-paths" class="cta-button">ابدأ رحلتك الآن</a>
+        </div>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section id="learning-paths" class="learning-paths">
+        <h2>مسارات التعلم</h2>
+        <div class="learning-paths-grid">
+            <div class="learning-path">
+                <h3>تعلم الآلة</h3>
+                <p>ابدأ من الصفر وتعلم مفاهيم وخوارزميات تعلم الآلة</p>
+                <a href="ml-diploma.html" class="path-link">استكشاف المسار</a>
+            </div>
+            <div class="learning-path">
+                <h3>علوم البيانات</h3>
+                <p>تعلم كيفية تحليل البيانات وتطبيق النماذج الإحصائية</p>
+                <a href="data-science.html" class="path-link">استكشاف المسار</a>
+            </div>
+            <div class="learning-path">
+                <h3>تطوير الويب</h3>
+                <p>تعلم تطوير مواقع الويب باستخدام HTML, CSS, JavaScript</p>
+                <a href="web-development.html" class="path-link">استكشاف المسار</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content Container -->
-    <div class="container">
-        <!-- Main Content Area -->
-        <main class="content">
-            <!-- Tab Navigation -->
-            <div class="tabs">
-                <button id="descriptionTab" class="tab-button active">
-                    <h3>وصف الدورة</h3>
-                </button>
-                <button id="curriculumTab" class="tab-button">
-                    <h3>منهج الدورة</h3>
-                </button>
-                <button id="instructorTab" class="tab-button">
-                    <h3>عن المعلم</h3>
-                </button>
-                <button id="reviewsTab" class="tab-button">
-                    <h3>التقييمات</h3>
-                </button>
-                <button id="faqTab" class="tab-button">
-                    <h3>الأسئلة الشائعة</h3>
-                    <button id="paymentTab" class="tab-button">
-                    <h3>التسجيل والدفع</h3>
-                </button>
+    <!-- Featured Courses Section -->
+    <section id="courses" class="courses">
+        <h2>الدورات المميزة</h2>
+        <div class="courses-grid">
+            <div class="course">
+                <img src="assets/img/course-ml-thumbnail.jpg" alt="Machine Learning Course">
+                <h3>دورة تعلم الآلة</h3>
+                <p>تعلم الأساسيات والمفاهيم المتقدمة لتعلم الآلة</p>
+                <a href="ml-course.html" class="course-link">عرض الدورة</a>
             </div>
-
-            <!-- Tab Content Area -->
-            <div id="tabContent">
-                <!-- Course Description -->
-                <section id="descriptionContent" class="tab-content active">
-                    <!-- Content will be loaded dynamically from description.json -->
-                </section>
-
-                <!-- Course Curriculum -->
-                <section id="curriculumContent" class="tab-content hidden">
-                    <h2>منهج الدورة</h2>
-                    <div class="curriculum-section">
-                        <!-- Curriculum details will go here -->
-                    </div>
-                </section>
-
-                <!-- About Instructor Section -->
-                <section id="instructorContent" class="tab-content hidden">
-                    <h2>عن المعلم</h2>
-                    <div class="instructor">
-                        <!-- Instructor details will be inserted here dynamically -->
-                    </div>
-                </section>
-
-                <!-- Reviews -->
-                <section id="reviewsContent" class="tab-content hidden">
-                    <h2>التقييمات</h2>
-                    <!-- Reviews will be dynamically inserted here -->
-                </section>
-
-                <!-- FAQ Section -->
-                <section id="faqContent" class="tab-content hidden">
-                    <h2>الأسئلة الشائعة</h2>
-                    <div id="faqList" class="faq-content">
-                        <!-- FAQ items will be dynamically inserted here -->
-                    </div>
-                </section>
-
-                <!-- Add the new "Registration & Payment" content section -->
-                <section id="paymentContent" class="tab-content hidden">
-                    <h2>التسجيل والدفع</h2>
-                    <!-- Content will be dynamically inserted here from the JSON file -->
-                    <div id="paymentDetails"></div>
-                </section>
-
-
+            <div class="course">
+                <img src="assets/img/course-web-thumbnail.jpg" alt="Web Development Course">
+                <h3>دورة تطوير الويب</h3>
+                <p>تعلم كيفية بناء مواقع ويب تفاعلية</p>
+                <a href="web-course.html" class="course-link">عرض الدورة</a>
             </div>
-        </main>
-
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="course-image">
-                <img id="sidebar-image" data-src="Assets/Photos/background.jpg" alt="Course Image" class="resized-image lazy-image">
+            <div class="course">
+                <img src="assets/img/course-data-thumbnail.jpg" alt="Data Science Course">
+                <h3>دورة علوم البيانات</h3>
+                <p>ابدأ في تحليل البيانات وبناء النماذج التنبؤية</p>
+                <a href="data-course.html" class="course-link">عرض الدورة</a>
             </div>
-            <ul id="course-info" class="course-info"></ul>
-            <div class="price">
-                <div id="old-price"></div>
-                <div id="new-price"></div>
-            </div>
-            <strong id="subscription-time" class="subscribtion-time"></strong>
-            <button class="subscribe-button" id="subscribe-button"></button>
-        </aside>
-    </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>آراء الطلاب</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>تعلمت الكثير من خلال دورة تعلم الآلة على CSkilled. شرح مميز ودعم مستمر!</p>
+                <strong>- أحمد</strong>
+            </div>
+            <div class="testimonial">
+                <p>منصة رائعة لتعلم تطوير الويب. أنصح بها لكل من يريد البدء في هذا المجال.</p>
+                <strong>- سارة</strong>
+            </div>
+            <div class="testimonial">
+                <p>الدورات مميزة جداً وتغطي كافة التفاصيل. شكراً لفريق CSkilled!</p>
+                <strong>- محمد</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>من نحن</h2>
+        <p>
+            CSkilled هي منصة تعليمية تهدف إلى توفير دورات تعليمية احترافية في مجالات التكنولوجيا الحديثة
+            مثل تعلم الآلة وعلوم البيانات وتطوير الويب. نحن نؤمن بأن التعليم هو مفتاح التقدم، ونحاول تقديم
+            المعرفة بطريقة سهلة واحترافية.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>تواصل معنا</h2>
+        <p>لأي استفسارات أو ملاحظات، الرجاء التواصل معنا عبر البريد الإلكتروني: <a href="mailto:info@cskilled.com">info@cskilled.com</a></p>
+    </section>
+
+    <!-- Global Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -158,9 +144,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-
+    <!-- Global JS -->
+    <script src="/js/global.js"></script>
+    <!-- Page-Specific JS -->
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

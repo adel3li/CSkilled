@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSkilled - من نحن</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <!-- Page-Specific CSS -->
+    <link rel="stylesheet" href="/CSS/about.css">
+
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header class="header">
+        <div class="logo"><strong>CSkilled</strong></div>
+        <nav class="nav">
+          <a href="index.html">الرئيسية</a>
+          <a href="learning_paths.html">مسارات التعلم</a>
+          <a href="diplomas.html">الدورات</a>
+          <a href="instructor.html">المعلم</a>
+          <a href="about.html">من نحن</a>
+          <a href="contact.html">تواصل معنا</a>
+        </nav>
+        <i class="fas fa-bars hamburger lazy-icon"></i> <!-- Hamburger icon -->
+        <button class="login-button">اشترك الآن</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>من نحن</h1>
+            <p>تعرف على تاريخنا ورؤيتنا وفريقنا.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>مهمتنا</h2>
+        <p id="missionText"> <!-- Mission will be dynamically loaded here --> </p>
+
+        <h2>تاريخنا</h2>
+        <div id="historyContainer" class="history-content">
+            <!-- History content will be dynamically loaded here -->
+        </div>
+
+        <h2>فريق العمل</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img id="founderImage" class="team-member-image" src="" alt="Founder Image">
+                <h3 id="founderName"></h3>
+                <p id="founderBio"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="footer-logo-text">CSkilled</h2>
+            </div>
+            <div class="social-icons">
+                <a href="https://m.facebook.com/cskilled/" class="social-icon"><i class="fab fa-facebook-f lazy-icon"></i></a>
+                <a href="https://sites.google.com/site/mostafasibrahim/" class="social-icon"><i class="fa-solid fa-user lazy-icon"></i></a>
+                <a href="https://ca.linkedin.com/company/cskilled" class="social-icon"><i class="fab fa-linkedin-in lazy-icon"></i></a>
+                <a href="https://www.youtube.com/c/ArabicCompetitiveProgramming" class="social-icon"><i class="fab fa-youtube lazy-icon"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">عن CSkilled</a>
+                <span>|</span>
+                <a href="support.html">الدعم الفني</a>
+                <span>|</span>
+                <a href="terms.html">الشروط والأحكام</a>
+            </div>
+            <div class="footer-copyright">
+                <p>© جميع الحقوق محفوظة لـ CSkilled - 2024@</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JS -->
+    <script src="/js/global.js"></script>
+    <!-- Page-Specific JS -->
+    <script src="/js/about.js"></script> <!-- Include the about.js file -->
+</body>
+
+</html>

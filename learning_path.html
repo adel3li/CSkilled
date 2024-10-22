@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSkilled - مسار تعلم</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <!-- Page-Specific CSS -->
+    <link rel="stylesheet" href="/CSS/learning_path.css">
+
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Global Header -->
+    <header class="header">
+        <div class="logo"><strong>CSkilled</strong></div>
+        <nav class="nav">
+            <a href="index.html">الرئيسية</a>
+            <a href="learning_paths.html">مسارات التعلم</a>
+            <a href="diplomas.html">الدورات</a>
+            <a href="instructor.html">المعلم</a>
+            <a href="about.html">من نحن</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+        <i class="fas fa-bars hamburger lazy-icon"></i> <!-- Hamburger icon -->
+        <button class="login-button">اشترك الان</button>
+    </header>
+
+    <!-- Hero Section for Learning Path -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>مسار تعلم <strong id="pathTitle">اسم المسار</strong></h1>
+            <p id="pathDescription">وصف قصير لمسار التعلم الحالي الذي يشرح ما ستتعلمه.</p>
+            <a href="#path-modules" class="cta-button">ابدأ الآن</a>
+        </div>
+    </section>
+
+    <!-- Path Modules Section -->
+    <section id="path-modules" class="path-modules">
+        <h2>المقررات الدراسية في هذا المسار</h2>
+        <div id="modulesContainer" class="modules-grid">
+            <!-- Dynamic Modules Content will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Optional) -->
+    <section id="testimonials" class="testimonials">
+        <h2>آراء الطلاب</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p>مسار تعلم الآلة كان شاملاً ومفيداً جداً. أنصح به لكل من يريد البدء في هذا المجال.</p>
+                <strong>- أحمد</strong>
+            </div>
+            <div class="testimonial">
+                <p>الدورات المتوفرة في هذا المسار منظمة بشكل رائع، وساعدتني على تحسين مهاراتي بشكل كبير.</p>
+                <strong>- سارة</strong>
+            </div>
+            <div class="testimonial">
+                <p>مسار علوم البيانات كان مليئاً بالمعلومات المفيدة. شكراً لفريق CSkilled!</p>
+                <strong>- محمد</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="footer-logo-text">CSkilled</h2>
+            </div>
+            <div class="social-icons">
+                <a href="https://m.facebook.com/cskilled/" class="social-icon"><i class="fab fa-facebook-f lazy-icon"></i></a>
+                <a href="https://sites.google.com/site/mostafasibrahim/" class="social-icon"><i class="fa-solid fa-user lazy-icon"></i></a>
+                <a href="https://ca.linkedin.com/company/cskilled" class="social-icon"><i class="fab fa-linkedin-in lazy-icon"></i></a>
+                <a href="https://www.youtube.com/c/ArabicCompetitiveProgramming" class="social-icon"><i class="fab fa-youtube lazy-icon"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="https://ca.linkedin.com/company/cskilled">عن CSkilled</a>
+                <span>|</span>
+                <a href="https://ca.linkedin.com/company/cskilled">الدعم الفني</a>
+                <span>|</span>
+                <a href="#">الشروط والأحكام</a>
+            </div>
+            <div class="footer-copyright">
+                <p>© جميع الحقوق محفوظة لـ CSkilled - 2024@</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JS -->
+    <script src="/js/global.js"></script>
+    <!-- Page-Specific JS -->
+    <script src="/js/learning_path.js"></script>
+</body>
+
+</html>
