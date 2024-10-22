@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadLearningPaths() {
-  fetch('/json/learning_paths.json')
+  fetch('json/learning_paths.json')
     .then(response => response.json())
     .then(data => {
       const container = document.getElementById('learningPathsContainer');
