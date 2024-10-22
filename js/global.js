@@ -1,6 +1,5 @@
 // Global JavaScript
 
-// Toggle mobile menu visibility when the hamburger icon is clicked
 document.addEventListener('DOMContentLoaded', function () {
   // Toggle mobile menu visibility when the hamburger icon is clicked
   const hamburger = document.querySelector('.hamburger');
@@ -37,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
 // Call lazyLoadImages when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   lazyLoadImages();
@@ -57,9 +57,9 @@ window.onload = function() {
 };
 
 // Add event listener to toggle "+" and "-" in details elements
-document.querySelectorAll('details').forEach(detail => {
-  detail.addEventListener('toggle', function() {
-    const icon = this.querySelector('summary::before');
-    icon.textContent = this.open ? '-' : '+';
-  });
-});
+// document.querySelectorAll('details').forEach(detail => {
+//   detail.addEventListener('toggle', function() {
+//     const icon = this.querySelector('summary::before');
+//     icon.textContent = this.open ? '-' : '+';
+//   });
+// });
