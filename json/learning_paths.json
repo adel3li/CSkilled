@@ -1,58 +1,34 @@
 {
   "paths": [
     {
-      "title": "Frontend Developer Path",
-      "description": "Learn how to create interactive websites using HTML, CSS, and JavaScript.",
-      "modules": [
-        {
-          "title": "HTML & CSS Basics",
-          "description": "Learn the basics of HTML and CSS to create well-structured web pages."
-        },
-        {
-          "title": "JavaScript for Beginners",
-          "description": "Understand the fundamentals of JavaScript and how to make websites dynamic."
-        },
-        {
-          "title": "Advanced CSS Techniques",
-          "description": "Learn how to create responsive designs and modern layouts using CSS."
-        }
-      ]
+      "title": "مسار تعلم الالة والذكاء الاصطناعى",
+      "description": "ابدأ بتعلم أساسيات الذكاء الاصطناعي وتعلم الآلة لبناء تطبيقات ذكية.",
+      "icon": "https://i0.wp.com/almdrasa.com/wp-content/uploads/2024/05/Group.png?w=612&ssl=1",
+      "courseInfo": {
+        "courses": 4,
+        "projects": 15
+      },
+      "link": "learning_path.html"  
     },
     {
-      "title": "Backend Developer Path",
-      "description": "Master the skills required to build robust server-side applications.",
-      "modules": [
-        {
-          "title": "Node.js Fundamentals",
-          "description": "Get started with Node.js and learn how to create server-side applications."
-        },
-        {
-          "title": "Database Management",
-          "description": "Learn how to design and manage databases using SQL and NoSQL technologies."
-        },
-        {
-          "title": "RESTful APIs",
-          "description": "Understand how to build and consume RESTful APIs for modern web applications."
-        }
-      ]
+      "title": "مسار تعلم اساسيات البرمجة باستخدام ++C",
+      "description": "تعلم أساسيات البرمجة باستخدام لغة ++C وابدأ ببناء تطبيقات قوية.",
+      "icon": "https://i0.wp.com/almdrasa.com/wp-content/uploads/2024/05/Group.png?w=612&ssl=1",
+      "courseInfo": {
+        "courses": 2,
+        "projects": 14
+      },
+      "link": "instructor.html"  
     },
     {
-      "title": "Full Stack Developer Path",
-      "description": "Become a full-stack developer by mastering both frontend and backend technologies.",
-      "modules": [
-        {
-          "title": "Frontend with React",
-          "description": "Learn how to build modern frontend applications using React."
-        },
-        {
-          "title": "Backend with Express.js",
-          "description": "Build server-side applications and REST APIs using Express.js."
-        },
-        {
-          "title": "Connecting Frontend and Backend",
-          "description": "Learn how to integrate frontend and backend to create full-stack applications."
-        }
-      ]
+      "title": "مسار تعلم اساسيات البرمجة باستخدام بايثون",
+      "description": "ابدأ بتعلم البرمجة باستخدام بايثون، واحدة من أكثر اللغات شيوعاً.",
+      "icon": "https://i0.wp.com/almdrasa.com/wp-content/uploads/2024/05/Group.png?w=612&ssl=1",
+      "courseInfo": {
+        "courses": 2,
+        "projects": 18
+      },
+      "link": "instructor.html"  
     }
   ]
 }

@@ -1,100 +1,307 @@
-/* General Styles
+/* Root Variables for Consistent Colors and Sizing */
+:root {
+  --primary-color: #443dff;
+  --background-color: #f0f0f5;
+  --text-color: #ffffff;
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  --transition-time: 0.3s;
+  --hover-transform: translateY(-5px);
+  --icon-size: 80px; /* Increased icon size for better visibility */
+  --faq-answer-bg: #f9f9f9;
+  --faq-question-bg: #443dff;
+  --faq-question-color: #ffffff;
+  --faq-answer-color: #050316;
+  --faq-border-color: #e0e0e0;
+}
+
+/* General Body Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+/* General Hero Section Styles */
+.hero {
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text for contrast */
+  padding: 60px 20px;
+  position: relative; /* Position for absolute elements (shapes) */
+  overflow: hidden; /* Hide overflow for the shapes */
 }
 
-.nav {
+.hero-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribute space between image and content */
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+  flex-direction: row-reverse; /* Keep the image on the left and text on the right */
 }
 
-.nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+.hero-content {
+  max-width: 600px;
+  text-align: right; /* Right-align text for Arabic */
 }
 
-.nav ul li {
-  margin: 0 10px;
+.hero h1 {
+  font-size: 2.5rem;
+  color: #00d1d8; /* Turquoise color for the heading */
+  line-height: 1.2;
 }
 
-.nav ul li a {
+.hero p {
+  font-size: 1.125rem;
+  margin: 15px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #443dff; /* Button color */
   color: white;
+  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.hamburger {
-  cursor: pointer;
-  display: none;
+.cta-button:hover {
+  background-color: #2f27ce; /* Change color on hover */
+  color: #fff; /* Change text color on hover */
 }
 
+/* Image Styling */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add rounded corners to the image */
+}
+
+/* Decorative Shapes */
+.hero-shape-left,
+.hero-shape-right {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #655eff; /* Purple color for the decorative shapes */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Arrow-like shape */
+}
+
+.hero-shape-left {
+  top: 20%;
+  left: -75px; /* Positioned off-screen */
+  transform: rotate(45deg); /* Rotate the shape */
+}
+
+.hero-shape-right {
+  bottom: 20%;
+  right: -75px; /* Positioned off-screen */
+  transform: rotate(-45deg); /* Rotate the shape */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
+  .hero-container {
+      flex-direction: column; /* Stack the image and text on small screens */
+      text-align: center; /* Center text on small screens */
   }
-  .nav ul {
-    display: none;
-    flex-direction: column;
+  
+  .hero-image, .hero-content {
+      max-width: 100%;
   }
-  .nav.active ul {
-    display: flex;
+  
+  .hero-shape-left, .hero-shape-right {
+      display: none; /* Hide shapes on smaller screens */
   }
 }
 
-main {
-  padding: 20px;
+/* Learning Paths Section */
+
+/* Make the whole card inside the anchor clickable */
+.learning-path-link {
+  display: block;
+  text-decoration: none; /* Remove default underline from links */
+  color: inherit; /* Ensure the text color is inherited */
 }
 
-.learning-paths-section {
-  margin-top: 20px;
+.learning-path-link:hover .learning-path-card {
+  transform: var(--hover-transform); /* Ensure hover effect applies to the card */
 }
 
-.learning-paths-section h1 {
+.learning-paths {
+  padding: 50px 0;
+  background-color: var(--background-color);
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.learning-path {
-  border: 1px solid #ccc;
-  padding: 20px;
+.learning-paths h2 {
+  font-size: 2.5rem;
+  color: #020029;
+  margin-bottom: 30px;
+}
+
+/* Cards Stacked Vertically */
+.learning-paths-grid {
+  display: flex;
+  flex-direction: column; /* Ensure cards stack vertically */
+  gap: 40px;
+  max-width: 60rem; /* Limit the width of the cards */
+  margin: 0 auto; /* Center the cards */
+}
+
+.learning-path-card {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform var(--transition-time);
+  box-shadow: var(--card-shadow);
+  direction: rtl;  /* Maintain right-to-left direction for Arabic text */
+  text-align: right;  /* Ensure the text is aligned to the right */
+}
+
+.learning-path-card:hover {
+  transform: var(--hover-transform); /* Existing transform effect */
+  background-color: #2f27ce; /* New background color on hover */
+  color: #ffffff; /* Ensure text color stays readable */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Icon on the left */
+.learning-path-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex-shrink: 0;
+  display: block;
+  order: 1;  /* Move the icon to the left side in RTL layout */
+  margin-left: 0; /* No margin on the left */
+  margin-right: 20px; /* Add margin-right to separate icon from text */
+}
+
+.learning-path-card-content {
+  flex: 1;
+  text-align: right; /* Ensure content is aligned to the right */
+}
+
+/* Title styling */
+.learning-path-card h3 {
+  font-size: 1.75rem;
   margin-bottom: 10px;
 }
 
-.learning-path h2 {
-  margin: 0 0 10px 0;
+/* Course info styling */
+.learning-path-card .course-info {
+  font-size: 1rem;
+  color: #dedede; /* Lighter color for course info */
+  margin-bottom: 10px;
 }
 
-.learning-path p {
-  margin: 10px 0;
+/* Description styling */
+.learning-path-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
 }
 
-.learning-path .path-details {
-  display: none;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
+/* FAQ Section */
+.faq {
+  padding: 50px;
+  background-color: var(--background-color);
+  text-align: center;
 }
 
-.learning-path .toggle-icon {
+.faq h2 {
+  font-size: 2.5rem;
+  color: #020029;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  background-color: var(--faq-question-bg);
+  color: var(--faq-question-color);
+  border: none;
+  padding: 15px;
+  width: 100%;
+  font-size: 1.5rem;
   cursor: pointer;
-  font-size: 16px;
-  color: #007BFF;
+  text-align: right;
+  border-radius: 5px;
+  transition: background-color var(--transition-time);
 }
 
-.learning-path .toggle-icon.expanded::after {
-  content: "▲";
+.faq-question:hover {
+  background-color: #2f27ce;
 }
 
-.learning-path .toggle-icon.collapsed::after {
-  content: "▼";
-} */
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: var(--faq-answer-bg);
+  border-left: 3px solid var(--faq-border-color);
+  margin-top: 10px;
+  color: var(--faq-answer-color);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  border-radius: 5px;
+  text-align: right;
+}
+
+/* FAQ Answer Display */
+.faq-answer.active {
+  display: block;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #000000;
+  color: var(--text-color);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-logo-text {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color var(--transition-time);
+}
+
+.social-icon:hover {
+  color: #3d20cc;
+}
+
+.footer-links a {
+  color: var(--text-color);
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links span {
+  color: var(--text-color);
+  margin: 0 5px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
