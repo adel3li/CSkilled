@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* direction: rtl; */
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-color: #000; /* Black background */
+  color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between; /* Image on the left, text on the right */
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-direction: row; /* Ensure the image is on the left and text on the right */
+  overflow: hidden; /* Hide overflow for shapes */
+}
+
+/* Purple Decorative Shape in the Top-Left Corner */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background-color: #a394f7; /* Purple color */
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transform: rotate(-10deg); /* Slight rotation for the shape */
+  z-index: 1;
+}
+
+/* Purple Decorative Shape in the Bottom-Right Corner */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: -75px;
+  width: 150px;
+  height: 150px;
+  background-color: #655eff; /* Purple color */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Arrow-like shape */
+  transform: rotate(-45deg); /* Rotate the shape */
+  z-index: 1;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 50%; /* The image container takes 50% of the width */
+  z-index: 2; /* Ensure the image is above the background */
+}
+
+.hero-image img {
+  max-width: 50%; /* Image takes up full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners to the image */
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1 1 50%; /* The text container takes 50% of the width */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  text-align: right; /* Right-align text for Arabic */
+  z-index: 2; /* Ensure the content is above the shapes */
+}
+
+.hero-text {
+  margin-left: 20px; /* Add some space between image and text */
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #00d1d8; /* Turquoise color for the heading */
+  line-height: 2;
+}
+
+.hero-text p {
+  font-size: 1.125rem;
+  margin: 20px 10px;
+  text-align: right;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #443dff; /* Button color */
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #2f27ce; /* Change color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack the image and text on small screens */
+    text-align: center; /* Center text on small screens */
+  }
+
+  .hero-image {
+    max-width: 100%; /* Ensure the image fits the container */
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    text-align: center; /* Center text on small screens */
+  }
+
+  /* Hide shapes on smaller screens */
+  .hero-section::before,
+  .hero-section::after {
+    display: none;
+  }
+}
+
+/* Diplomas Section */
+.diplomas {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.diplomas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.diplomas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.diploma-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  width: 30rem;
+}
+
+.diploma-card img {
+  width: 60%;
+  height: 100;
+  object-fit: cover;
+}
+
+.diploma-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+}
+
+.diploma-card p {
+  font-size: 1rem;
+  color: #6c757d;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.diploma-card .cta-button {
+  display: inline-block;
+  background-color: #5a67d8;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.diploma-card .cta-button:hover {
+  background-color: #434190;
+}
+
+.diploma-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
