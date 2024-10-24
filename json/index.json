@@ -1,46 +1,46 @@
 {
-"hero": {
+    "hero": {
     "title": "تعلم البرمجة بطريقة",
     "description": "ابدأ الآن وطور مهاراتك في البرمجة بطريقة سهلة وفعالة.",
     "ctaButton": "ابدأ التعلم الآن",
-    "image": "assets/img/hero-image.png"
-},
-"testimonials": [
+      "image": "https://cdn-jjfhf.nitrocdn.com/hwGdHsKTGpIHJSBirKPhKvQbhZYuIuNn/assets/images/optimized/rev-448abd0/i0.wp.com/almdrasa.com/wp-content/uploads/2023/08/5138581d6a253be237819505244f1909.Group-607.png"  
+    },
+    "testimonials": [
     {
         "name": "محمد",
         "text": "تعلمت الكثير من خلال الدورة. شكراً لكم!",
-        "image": "assets/img/student1.jpg"
+        "image": "assets/img/student1.jpg"  
     },
     {
         "name": "سارة",
         "text": "أفضل منصة لتعلم البرمجة. أنصح بها الجميع.",
-        "image": "assets/img/student2.jpg"
+        "image": "https://example.com/path/to/student2.jpg"  
     },
     {
         "name": "علي",
         "text": "الدورات مميزة جداً وتغطي كافة التفاصيل.",
-        "image": "assets/img/student3.jpg"
+        "image": "assets/img/student3.jpg" 
     }
-],
-"about": {
+    ],
+    "about": {
     "title": "لماذا مدرستنا؟",
     "description": "نحن نقدم أفضل الدورات التعليمية التي تساعدك على تطوير مهاراتك في البرمجة والتقنية."
-},
-"contact": {
+    },
+    "contact": {
     "title": "تواصل معنا",
     "formFields": [
         {
-            "label": "الاسم",
-            "id": "name",
-            "type": "text",
-            "required": true
+        "label": "الاسم",
+        "id": "name",
+        "type": "text",
+        "required": true
         },
         {
-            "label": "البريد الإلكتروني",
-            "id": "email",
-            "type": "email",
-            "required": true
+        "label": "البريد الإلكتروني",
+        "id": "email",
+        "type": "email",
+        "required": true
         }
     ]
-}
+    }
 }
