@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to load the learning path information from a JSON file
 function loadLearningPath() {
-  fetch('/data/learning_path.json') // Ensure the correct path for your JSON file
+  fetch('json/learning_path.json') // Ensure the correct path for your JSON file
       .then(response => response.json())
       .then(data => {
           // Set the path title and description

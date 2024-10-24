@@ -106,19 +106,26 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('curriculum.json')
     .then(response => response.json())
     .then(data => {
+      console.log('Curriculum data loaded:', data); // Log the curriculum data to verify it is being loaded
+
       const container = document.querySelector('.curriculum-section');
       
       data.forEach(section => {
         const detailsElement = document.createElement('details');
         const summaryElement = document.createElement('summary');
+        
+        // Create the summary title and toggle icon
         summaryElement.innerHTML = `<span class="module-title">${section.title}</span><span class="toggle-icon">+</span>`;
+        
         const lessonList = document.createElement('ul');
         lessonList.classList.add('lesson-list');
         
+        // Loop through each lesson in the section
         section.lessons.forEach(lesson => {
           const listItem = document.createElement('li');
           let lessonContent = `<span class="lesson-icon">${getLessonIcon(lesson.type)}</span><span class="lesson-name">${lesson.name}</span>`;
           
+          // If a link is available, make the lesson name a clickable link
           if (lesson.link) {
             lessonContent = `<a href="#" class="lesson-link" data-link="${lesson.link}">${lessonContent}</a>`;
           }
@@ -126,33 +133,43 @@ document.addEventListener('DOMContentLoaded', function() {
           listItem.innerHTML = lessonContent;
           lessonList.appendChild(listItem);
           
-          const videoContainer = document.createElement('div');
-          videoContainer.classList.add('video-container');
-          videoContainer.style.display = 'none';
-          listItem.appendChild(videoContainer);
+          // Create a video container for each lesson that has a link
+          if (lesson.link) {
+            const videoContainer = document.createElement('div');
+            videoContainer.classList.add('video-container');
+            videoContainer.style.display = 'none'; // Initially hide the video container
+            listItem.appendChild(videoContainer);
+          }
         });
         
+        // Append the summary and lesson list to the details element
         detailsElement.appendChild(summaryElement);
         detailsElement.appendChild(lessonList);
+        
+        // Append the details element to the curriculum container
         container.appendChild(detailsElement);
       });
       
+      // Add event listener to each lesson link to embed the video on click
       document.querySelectorAll('.lesson-link').forEach(link => {
         link.addEventListener('click', function(event) {
-          event.preventDefault();
+          event.preventDefault(); // Prevent the default link behavior
+          
           const videoUrl = this.getAttribute('data-link');
           const videoContainer = this.closest('li').querySelector('.video-container');
           
+          // Toggle the video container visibility and embed the video
           if (videoContainer.style.display === 'none') {
             videoContainer.style.display = 'block';
             videoContainer.innerHTML = `<iframe width="100%" height="400" src="${embedVideoUrl(videoUrl)}" frameborder="0" allowfullscreen></iframe>`;
           } else {
             videoContainer.style.display = 'none';
-            videoContainer.innerHTML = '';
+            videoContainer.innerHTML = ''; // Remove the embedded video
           }
         });
       });
       
+      // Toggle the + and - icons on opening and closing the details elements
       document.querySelectorAll('.curriculum-section details').forEach(detail => {
         detail.addEventListener('toggle', function() {
           const icon = this.querySelector('.toggle-icon');
@@ -160,42 +177,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     })
-    .catch(error => console.error('Error loading curriculum:', error));
+    .catch(error => console.error('Error loading curriculum:', error)); // Catch and log any errors during fetch
 });
+
+// Helper function to get the appropriate icon based on the lesson type
+function getLessonIcon(type) {
+  switch (type) {
+    case 'lecture':
+      return '🎓'; // Example icon for lecture
+    case 'homework':
+      return '📝'; // Example icon for homework
+    case 'project':
+      return '💻'; // Example icon for project
+    case 'challenge':
+      return '🚀'; // Example icon for challenge
+    default:
+      return '📚'; // Default icon
+  }
+}
 
 // Convert video URL to embeddable format for YouTube or Google Drive
 function embedVideoUrl(url) {
+  // Check if the URL is a YouTube link
   if (url.includes('youtube.com')) {
     const videoId = url.split('v=')[1];
     return `https://www.youtube.com/embed/${videoId}`;
+  
+  // Check if the URL is a Google Drive link
   } else if (url.includes('drive.google.com')) {
     const fileId = url.match(/[-\w]{25,}/)[0];
     return `https://drive.google.com/file/d/${fileId}/preview`;
+  
+  // For other types of links, return the URL as is
   } else {
     return url;
   }
 }
 
-// Fetch instructor data from `instructor.json`
-document.addEventListener('DOMContentLoaded', fetchInstructorContent);
-async function fetchInstructorContent() {
-  try {
-    const response = await fetch('instructor.json');
-    const data = await response.json();
-    
-    const instructor = data.instructor;
-    const instructorSection = document.querySelector('.instructor');
-    
-    instructorSection.innerHTML = `
-      <img src="${instructor.image}" alt="${instructor.name}" class="instructor-image">
-      <div>
-        <h3>${instructor.name}</h3>
-        ${instructor.description.map(desc => `<p>${desc}</p>`).join('')}
-      </div>
-    `;
-  } catch (error) {
-    console.error('Error fetching the instructor content:', error);
-  }
+// Load instructor content from `json/instructor.json`
+document.addEventListener('DOMContentLoaded', loadInstructorContent);
+
+function loadInstructorContent() {
+  fetch('json/instructor.json') // Fetch from the correct path
+    .then(response => response.json())
+    .then(data => {
+      const instructorSection = document.querySelector('.instructor');
+
+      // Create and append instructor heading
+      const heading = document.createElement('h3');
+      heading.textContent = data.instructor.name;
+      instructorSection.appendChild(heading);
+
+      // Create and append instructor image
+      const img = document.createElement('img');
+      img.src = data.instructor.image;
+      img.alt = data.instructor.name;
+      img.classList.add('instructor-image');
+      instructorSection.appendChild(img);
+
+      // Create and append instructor description paragraphs
+      data.instructor.description.forEach(desc => {
+        const paragraph = document.createElement('p');
+        paragraph.innerHTML = desc; // Use innerHTML to allow HTML tags like <a>
+        instructorSection.appendChild(paragraph);
+      });
+    })
+    .catch(error => console.error('Error loading instructor content:', error));
 }
 
 // Fetch reviews data from `reviews.json`
@@ -260,6 +307,45 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error loading reviews:', error));
 });
 
+// Load FAQ content from `json/faq.json`
+document.addEventListener('DOMContentLoaded', loadFaqContent);
+
+function loadFaqContent() {
+  fetch('json/faq.json') // Fetch from the correct path
+    .then(response => response.json())
+    .then(data => {
+      const faqList = document.getElementById('faqList'); // Target the correct container
+
+      // Loop through the FAQ array and create question-answer pairs
+      data.faq.forEach(item => {
+        const questionElement = document.createElement('h4');
+        questionElement.classList.add('faq-question');
+        questionElement.textContent = item.question;
+
+        const answerElement = document.createElement('p');
+        answerElement.classList.add('faq-answer');
+        answerElement.textContent = item.answer;
+        answerElement.style.display = 'none'; // Hide the answer initially
+
+        // Append the question and answer to the FAQ list
+        faqList.appendChild(questionElement);
+        faqList.appendChild(answerElement);
+
+        // Add click event to toggle the answer visibility
+        questionElement.addEventListener('click', () => {
+          if (answerElement.style.display === 'block') {
+            answerElement.style.display = 'none';
+            questionElement.classList.remove('active');
+          } else {
+            answerElement.style.display = 'block';
+            questionElement.classList.add('active');
+          }
+        });
+      });
+    })
+    .catch(error => console.error('Error loading FAQ content:', error));
+}
+
 // Load payment content from `payment.json`
 document.addEventListener('DOMContentLoaded', loadPaymentContent);
 function loadPaymentContent() {
@@ -315,4 +401,30 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('subscribe-button').textContent = sidebarData.subscribe_button.text;
     })
     .catch(error => console.error('Error fetching sidebar data:', error));
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const lazyImages = [].slice.call(document.querySelectorAll('img.lazy-image'));
+
+  if ('IntersectionObserver' in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove('lazy-image');
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Fallback for browsers that don't support IntersectionObserver
+    lazyImages.forEach(function(lazyImage) {
+      lazyImage.src = lazyImage.dataset.src;
+    });
+  }
 });

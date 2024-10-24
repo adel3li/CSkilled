@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Function to load about data from the JSON file
 function loadAboutPage() {
-  fetch('/json/about.json') // Updated path to the JSON file
+  fetch('json/about.json') // Updated path to the JSON file
       .then(response => response.json())
       .then(data => {
           const about = data.about;

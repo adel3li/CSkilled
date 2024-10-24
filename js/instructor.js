@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Function to load instructor data from the JSON file
 function loadInstructor() {
-  fetch('/json/instructor.json') // Ensure this path is correct
+  fetch('json/instructor.json') // Ensure this path is correct
       .then(response => response.json())
       .then(data => {
           const instructor = data.instructor;

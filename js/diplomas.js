@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to load diplomas from a JSON file
 function loadDiplomas() {
-  fetch('/data/diplomas.json') // Ensure the correct path for your JSON file
+  fetch('json/diplomas.json') // Ensure the correct path for your JSON file
       .then(response => response.json())
       .then(data => {
           const container = document.getElementById('diplomasContainer');

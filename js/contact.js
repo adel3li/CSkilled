@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Function to load contact data from the JSON file
 function loadContactInfo() {
-  fetch('/json/contact.json') // Correct path to the JSON file
+  fetch('json/contact.json') // Correct path to the JSON file
       .then(response => response.json())
       .then(data => {
           const contact = data.contact;
