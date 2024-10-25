@@ -215,6 +215,7 @@ body {
   padding: 50px;
   background-color: var(--background-color);
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the overall FAQ section */
 }
 
 .faq h2 {
@@ -228,8 +229,8 @@ body {
 }
 
 .faq-question {
-  background-color: var(--faq-question-bg);
-  color: var(--faq-question-color);
+  background-color: #ffffff; /* Set background to white */
+  color: #000000; /* Set text color to black */
   border: none;
   padding: 15px;
   width: 100%;
@@ -237,11 +238,15 @@ body {
   cursor: pointer;
   text-align: right;
   border-radius: 5px;
-  transition: background-color var(--transition-time);
+  background-color: var(--faq-answer-bg);
+  transition: background-color var(--transition-time), color var(--transition-time);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for each question */
+  font-family: var(--text-color);
 }
 
 .faq-question:hover {
   background-color: #2f27ce;
+  color: #ffffff; /* Change text color to white on hover */
 }
 
 .faq-answer {
@@ -255,6 +260,7 @@ body {
   line-height: 1.6;
   border-radius: 5px;
   text-align: right;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for each answer */
 }
 
 /* FAQ Answer Display */
