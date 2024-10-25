@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSkilled - Learn and Grow</title>
-    <link rel="stylesheet" href="CSS/global.css"> <!-- Global CSS -->
-    <link rel="stylesheet" href="CSS/index.css">  <!-- Page-Specific CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/index.css"> <!-- Link to the CSS file -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -29,94 +29,121 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="hero" class="hero-section">
         <div class="hero-content">
-            <h1>تعلم مع <strong>CSkilled</strong></h1>
-            <p>منصة تعليمية متخصصة في <strong>التعلم الآلي</strong> و <strong>علوم البيانات</strong> و <strong>تطوير الويب</strong></p>
-            <a href="#learning-paths" class="cta-button">ابدأ رحلتك الآن</a>
-        </div>
-    </section>
-
-    <!-- Learning Paths Section -->
-    <section id="learning-paths" class="learning-paths">
-        <h2>مسارات التعلم</h2>
-        <div class="learning-paths-grid">
-            <div class="learning-path">
-                <h3>تعلم الآلة</h3>
-                <p>ابدأ من الصفر وتعلم مفاهيم وخوارزميات تعلم الآلة</p>
-                <a href="ml-diploma.html" class="path-link">استكشاف المسار</a>
+            <div class="text-content">
+                <h1>تعلم البرمجة بالطريقة الصحيحة</h1>
+                <p>ابدأ الآن مع أفضل منصات التعلم.</p>
+                <a href="#" class="cta-button">ابدأ الآن</a>
             </div>
-            <div class="learning-path">
-                <h3>علوم البيانات</h3>
-                <p>تعلم كيفية تحليل البيانات وتطبيق النماذج الإحصائية</p>
-                <a href="data-science.html" class="path-link">استكشاف المسار</a>
-            </div>
-            <div class="learning-path">
-                <h3>تطوير الويب</h3>
-                <p>تعلم تطوير مواقع الويب باستخدام HTML, CSS, JavaScript</p>
-                <a href="web-development.html" class="path-link">استكشاف المسار</a>
+            <div class="hero-image">
+                <img src="img/laptop-illustration.png" alt="Learning Illustration">
             </div>
         </div>
     </section>
 
-    <!-- Featured Courses Section -->
-    <section id="courses" class="courses">
-        <h2>الدورات المميزة</h2>
-        <div class="courses-grid">
-            <div class="course">
-                <img src="assets/img/course-ml-thumbnail.jpg" alt="Machine Learning Course">
-                <h3>دورة تعلم الآلة</h3>
-                <p>تعلم الأساسيات والمفاهيم المتقدمة لتعلم الآلة</p>
-                <a href="ml-course.html" class="course-link">عرض الدورة</a>
+    <!-- Feature Section -->
+    <section id="feature" class="feature-section">
+        <div class="feature-content">
+            <div class="feature-text">
+                <h2>استمتع بالتعلم من منزلك</h2>
+                <p>تعلم البرمجة والتقنيات الحديثة من خلال منصتنا المميزة.</p>
+                <a href="#" class="cta-button">تعرف على المزيد</a>
             </div>
-            <div class="course">
-                <img src="assets/img/course-web-thumbnail.jpg" alt="Web Development Course">
-                <h3>دورة تطوير الويب</h3>
-                <p>تعلم كيفية بناء مواقع ويب تفاعلية</p>
-                <a href="web-course.html" class="course-link">عرض الدورة</a>
+            <div class="feature-image">
+                <img src="img/couch-illustration.png" alt="Learning from home">
             </div>
-            <div class="course">
-                <img src="assets/img/course-data-thumbnail.jpg" alt="Data Science Course">
-                <h3>دورة علوم البيانات</h3>
-                <p>ابدأ في تحليل البيانات وبناء النماذج التنبؤية</p>
-                <a href="data-course.html" class="course-link">عرض الدورة</a>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="reviews-content">
+            <div class="review-text">
+                <h2>تقييمات الطلاب</h2>
+                <p>ما يقوله الطلاب عن تجربتهم.</p>
+                <a href="#" class="cta-button">اقرأ المزيد من التقييمات</a>
+            </div>
+            <div class="review-image">
+                <img src="img/review-graphic.png" alt="Reviews">
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <h2>آراء الطلاب</h2>
+    <section id="testimonials" class="testimonials-section">
+        <h2>آراء عملائنا</h2>
         <div class="testimonials-grid">
             <div class="testimonial">
-                <p>تعلمت الكثير من خلال دورة تعلم الآلة على CSkilled. شرح مميز ودعم مستمر!</p>
+                <img src="img/profile1.jpg" alt="Client 1">
+                <p>أفضل تجربة تعليمية على الإطلاق!</p>
                 <strong>- أحمد</strong>
             </div>
             <div class="testimonial">
-                <p>منصة رائعة لتعلم تطوير الويب. أنصح بها لكل من يريد البدء في هذا المجال.</p>
+                <img src="img/profile2.jpg" alt="Client 2">
+                <p>تعلمت الكثير في وقت قصير!</p>
                 <strong>- سارة</strong>
             </div>
             <div class="testimonial">
-                <p>الدورات مميزة جداً وتغطي كافة التفاصيل. شكراً لفريق CSkilled!</p>
+                <img src="img/profile3.jpg" alt="Client 3">
+                <p>منصة ممتازة لتعلم البرمجة.</p>
                 <strong>- محمد</strong>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>من نحن</h2>
-        <p>
-            CSkilled هي منصة تعليمية تهدف إلى توفير دورات تعليمية احترافية في مجالات التكنولوجيا الحديثة
-            مثل تعلم الآلة وعلوم البيانات وتطوير الويب. نحن نؤمن بأن التعليم هو مفتاح التقدم، ونحاول تقديم
-            المعرفة بطريقة سهلة واحترافية.
-        </p>
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="why-choose-us-section">
+        <div class="why-choose-content">
+            <div class="why-choose-text">
+                <h2>لماذا تختارنا؟</h2>
+                <ul>
+                    <li>دورات متخصصة</li>
+                    <li>مدربين محترفين</li>
+                    <li>شهادات معتمدة</li>
+                </ul>
+            </div>
+            <div class="why-choose-image">
+                <img src="img/idea-illustration.png" alt="Innovation">
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>تواصل معنا</h2>
-        <p>لأي استفسارات أو ملاحظات، الرجاء التواصل معنا عبر البريد الإلكتروني: <a href="mailto:info@cskilled.com">info@cskilled.com</a></p>
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section">
+        <h2>اشترك في النشرة الإخبارية</h2>
+        <form action="">
+            <input type="email" placeholder="أدخل بريدك الإلكتروني">
+            <button type="submit" class="cta-button">اشترك الآن</button>
+        </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <h2>الأسئلة الشائعة</h2>
+        <div class="faq-container">
+            
+            <details>
+                <summary>ما هي البرمجة؟</summary>
+                <p>البرمجة هي عملية كتابة تعليمات مفصلة بلغة يفهمها الحاسوب لتأدية مهام معينة.</p>
+            </details>
+
+            <details>
+                <summary>كيف يمكنني البدء في تعلم البرمجة؟</summary>
+                <p>يمكنك البدء بتعلم الأساسيات من خلال منصات مثل CSkilled أو من خلال الدورات التفاعلية.</p>
+            </details>
+
+            <details>
+                <summary>ما هي أفضل لغات البرمجة للمبتدئين؟</summary>
+                <p>من اللغات الشهيرة للمبتدئين: Python، JavaScript، وScratch.</p>
+            </details>
+
+            <details>
+                <summary>هل يمكنني الحصول على شهادة من CSkilled؟</summary>
+                <p>نعم، عند إكمال الدورات بنجاح، يمكنك الحصول على شهادة معتمدة من CSkilled.</p>
+            </details>
+
+        </div>
     </section>
 
     <!-- Global Footer -->
@@ -132,9 +159,9 @@
                 <a href="https://www.youtube.com/c/ArabicCompetitiveProgramming" class="social-icon"><i class="fab fa-youtube lazy-icon"></i></a>
             </div>
             <div class="footer-links">
-                <a href="https://ca.linkedin.com/company/cskilled">عن CSkilled</a>
+                <a href="#">عن CSkilled</a>
                 <span>|</span>
-                <a href="https://ca.linkedin.com/company/cskilled">الدعم الفني</a>
+                <a href="#">الدعم الفني</a>
                 <span>|</span>
                 <a href="#">الشروط والأحكام</a>
             </div>
@@ -144,10 +171,6 @@
         </div>
     </footer>
 
-    <!-- Global JS -->
     <script src="js/global.js"></script>
-    <!-- Page-Specific JS -->
-    <script src="js/index.js"></script>
 </body>
-
 </html>
