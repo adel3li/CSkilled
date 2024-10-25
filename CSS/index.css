@@ -39,24 +39,73 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background-color: #000;
+  background-color: #000; /* Solid black background */
   display: flex;
   justify-content: space-between;
-  padding: 50px 100px;
+  padding: 50px 250px 100px 50px;
+  color: white;
+  position: relative; /* To position the decorative shapes */
+  overflow: hidden; /* Ensure the shapes don't overflow the section */
+}
+
+/* Decorative shapes */
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  background-color: #6f42ff; /* Purple color */
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.hero-section::before {
+  width: 150px;
+  height: 150px;
+  top: -50px;
+  left: -50px;
+  transform: rotate(45deg);
+}
+
+.hero-section::after {
+  width: 200px;
+  height: 200px;
+  bottom: -80px;
+  right: -80px;
+  background-color: #b18aff; /* Violet color */
+  transform: rotate(-30deg);
+}
+
+/* Flex container for hero content */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2; /* Ensure content is above the shapes */
+}
+
+/* Text content styling */
+.text-content {
+  max-width: 50%; /* Ensure the text takes up half the space */
   color: white;
 }
 
-.hero-section .text-content h1 {
+.text-content h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  color: white;
 }
 
-.hero-section .text-content p {
+.text-content h1 span {
+  color: #00d1b2; /* Greenish color for emphasis */
+}
+
+.text-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #aaa;
+  color: #aaa; /* Lighter color for the description */
 }
 
+/* Call-to-action button */
 .cta-button {
   background-color: #6f42ff;
   padding: 10px 30px;
@@ -64,116 +113,707 @@ body {
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #563d7c;
+  background-color: #563d7c; /* Darker purple on hover */
+}
+
+/* Hero image styling */
+.hero-image {
+  max-width: 45%; /* Image takes up the remaining space */
 }
 
 .hero-image img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
+  z-index: 2;
 }
 
 /* Feature Section */
 .feature-section {
-  background-color: #fff;
+  background-color: #fff; /* Pure white background */
   display: flex;
   justify-content: space-between;
-  padding: 50px 100px;
+  align-items: center;
+  padding: 0px 170px 50px 50px;
+  position: relative;
+  overflow: hidden; /* Ensure background elements don't overflow */
 }
 
+/* Background decorative shapes using pseudo-elements */
+.feature-section::before,
+.feature-section::after {
+  content: '';
+  position: absolute;
+  z-index: 1; /* Ensure it's behind the content */
+  opacity: 0.2; /* Make the shapes subtle */
+  background-color: #6f42ff; /* Purple color */
+  border-radius: 50%;
+}
+
+.feature-section::before {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -100px;
+  background-color: #6f42ff; /* Purple */
+}
+
+.feature-section::after {
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  right: -150px;
+  background-color: #00d1b2; /* Cyan / Greenish */
+}
+
+/* Flex container for feature content */
 .feature-content {
   display: flex;
-  gap: 30px;
+  justify-content: space-between; /* Ensure text and image are side by side */
+  align-items: center;
+  gap: 50px; /* Add space between text and image columns */
+  z-index: 2; /* Ensure content is above the background shapes */
+}
+
+.feature-text {
+  max-width: 50%; /* Ensure the text takes up half the space */
 }
 
 .feature-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem; /* Bold and attention-grabbing heading */
+  margin-bottom: 20px;
+  color: #333; /* Dark text for contrast on the white background */
+  font-weight: bold;
 }
 
 .feature-text p {
+  font-size: 1.2rem;
   margin-bottom: 20px;
+  line-height: 1.8; /* Increased line-height for better readability */
+  color: #555; /* Slightly lighter text for the description */
+}
+
+/* Call-to-action button styling */
+.cta-button {
+  background-color: #6f42ff; /* Purple background */
+  padding: 12px 30px;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #563d7c; /* Darker purple on hover */
+}
+
+/* Feature image styling */
+.feature-image {
+  max-width: 40%; /* Image takes up 40% of the section */
 }
 
 .feature-image img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
+  z-index: 2; /* Ensure image is above the background shapes */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: #6f42ff;
+  padding: 60px 100px;
+  text-align: center;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: #6f42ff;
+  margin-bottom: 40px;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Fixed height for the square design */
+  width: 300px;  /* Fixed width for the square design */
+  margin: 0 auto 20px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  position: absolute;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: none;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.testimonial-card strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #6f42ff;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+/* Slider Dots */
+.slider-dots {
+  text-align: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 40px 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #6f42ff;
+}
+
+.dot:hover {
+  background-color: #6f42ff;
+}
+
+/* Ensure the section is responsive */
+@media (max-width: 768px) {
+  .testimonial-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
 }
 
 /* Reviews Section */
 .reviews-section {
-  background-color: #f5f5f5;
-  padding: 50px 100px;
+  background-color: #f5f7ff; /* Very light violet/pale blue background */
+  padding: 60px 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items vertically centered */
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%; /* Ensure the content takes the full width */
+  padding-right: 300px;
+}
+
+.review-text {
+  max-width: 50%; /* Take half of the available width */
 }
 
 .review-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
 }
 
 .review-text p {
   margin-bottom: 20px;
 }
 
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6f42ff; /* Purple button */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.review-image {
+  max-width: 50%; /* Take half of the available width */
+  display: flex;
+  /* justify-content: flex-end; */
+}
+
 .review-image img {
-  max-width: 100%;
+  max-width: 60%; /* Ensure the image is responsive */
   height: auto;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-  background-color: #6f42ff;
+/* Background Decorative Elements */
+.reviews-section::before,
+.reviews-section::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.reviews-section::before {
+  width: 150px;
+  height: 150px;
+  top: -30px;
+  left: -50px;
+  background-color: #6f42ff; /* Purple shape */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.reviews-section::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -80px;
+  background-color: #00d1b2; /* Cyan shape */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Instructor Section */
+.instructor-section {
+  background-color: #6f42ff; /* Purple background */
+  padding: 60px 100px;
+  position: relative;
   color: white;
-  padding: 50px 100px;
   text-align: center;
+  overflow: hidden;
 }
 
-.testimonials-grid {
+/* Instructor Content - Text and Instructor Card */
+.instructor-content {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 0px;
 }
 
-.testimonial {
-  width: 30%;
+/* Instructor Text */
+.instructor-text {
+  width: 50%;
+  text-align: right; /* Align text to the right for Arabic */
+  padding-right: 100px;
+}
+
+.instructor-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.instructor-text p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Instructor Cards Section (Now in Place of the Illustration) */
+.instructor-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 40%; /* Adjust width to fit beside the text */
+}
+
+.instructor-card {
+  background-color: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
   text-align: center;
+  width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial img {
+.instructor-card img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  margin-bottom: 15px;
+}
+
+.instructor-card strong {
+  font-size: 1.5rem;
+  color: #6f42ff;
+  display: block;
   margin-bottom: 10px;
+}
+
+.instructor-card p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background-color: #00d1b2; /* Cyan button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.cta-button:hover {
+  background-color: #00a890;
+  transition: background-color 0.3s ease;
+}
+
+/* Background Decorative Shapes */
+.instructor-section::before, .instructor-section::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.instructor-section::before {
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  background-color: #00d1b2; /* Cyan shape */
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.instructor-section::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -30px;
+  background-color: #ffffff; /* White circle */
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .instructor-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .instructor-text, .instructor-cards {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .instructor-cards {
+    justify-content: center;
+  }
+
+  .instructor-card {
+    width: 100%;
+  }
 }
 
 /* Why Choose Us Section */
 .why-choose-us-section {
-  background-color: #000;
+  background-color: #000; /* Black background */
   color: white;
-  padding: 50px 100px;
-  display: flex;
-  justify-content: space-between;
+  padding: 20px 0px;
+  text-align: center;
+  position: relative;
 }
 
-.why-choose-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+.why-choose-us-section h2 {
+  font-size: 2.5rem;
+  color: #6f42ff; /* Purple accent for the heading */
+  margin-bottom: 40px;
+}
+
+/* Flexbox layout for content */
+.why-choose-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Left and Right Text Sections */
+.why-choose-text {
+  width: 100%;
+  text-align: right; /* Align text for Arabic */
+  padding: 0px 200px 0px 200px;
 }
 
 .why-choose-text ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
+  padding: 0px;
 }
 
 .why-choose-text li {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.why-choose-text li img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px; /* Space between icon and text */
+}
+
+.why-choose-text li span {
+  color: #00d1b2; /* Cyan for the bullet point title */
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.why-choose-text li p {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+/* Illustration in the Middle */
+.why-choose-image {
+  width: 100%;
+  text-align: center;
 }
 
 .why-choose-image img {
   max-width: 100%;
+  height: auto;
+}
+
+/* Background Decorative Elements */
+.why-choose-us-section::before, .why-choose-us-section::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.why-choose-us-section::before {
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  background-color: #00d1b2; /* Cyan shape */
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.why-choose-us-section::after {
+  width: 150px;
+  height: 150px;
+  bottom: -50px;
+  right: -30px;
+  background-color: #ffffff; /* White circle */
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose-content {
+    flex-direction: column;
+  }
+
+  .why-choose-text {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .why-choose-image {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .why-choose-text ul {
+    margin-top: 20px;
+  }
+
+  .why-choose-text li {
+    justify-content: center;
+  }
+}
+
+/* Service Details Section */
+.service-details-section {
+  background-color: #fff; /* White background */
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Service Details Content Layout */
+.service-details-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Left Side: Image of Person Working */
+.service-details-image {
+  text-align: center;
+  width: 40%;
+}
+
+.service-details-image img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Buttons Below the Person Image */
+.service-details-image .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cta-button {
+  background-color: #6f42ff; /* Purple background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5a35cc; /* Darker purple for hover */
+}
+
+.cta-button.purple {
+  background-color: #6f42ff; /* Purple button */
+}
+
+.cta-button.white {
+  background-color: white;
+  color: #6f42ff;
+  border: 2px solid #6f42ff;
+}
+
+.cta-button.white:hover {
+  background-color: #f5f5f5; /* Light hover effect */
+}
+
+/* Right Side: Service Details Text */
+.service-details-text {
+  width: 50%;
+  text-align: right; /* Align text to the right for Arabic */
+}
+
+.service-details-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-details-text li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  /* margin-right: 20px; */
+}
+
+.service-details-text li img {
+  width: 30px;
+  margin-left: 15px; /* Space between icon and text */
+}
+
+.service-details-text li span {
+  color: #6f42ff; /* Purple for the title */
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.service-details-text li p {
+  color: #333;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+  margin-right: 20px;
+}
+
+/* Background Decorative Elements */
+.service-details-section::before, .service-details-section::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.service-details-section::before {
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  background-color: #00d1b2; /* Cyan shape */
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.service-details-section::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -30px;
+  background-color: #ffffff; /* White circle */
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-details-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-details-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-details-text {
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Newsletter Section */
