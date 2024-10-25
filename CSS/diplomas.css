@@ -130,71 +130,122 @@ body {
 
 /* Diplomas Section */
 .diplomas {
-  padding: 50px 0;
+  padding: 0px;
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: #f9f9f9;
 }
 
 .diplomas h2 {
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-weight: 700;
+  color: #333;
 }
 
 .diplomas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 diplomas per row on large screens */
+  gap: 0px 50px;
   justify-items: center;
-  padding: 0 20px;
+  /* padding: 15%; */
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
 }
 
 .diploma-card {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-  width: 30rem;
+  text-align: center; /* Align text to the right for Arabic */
+  width: 100%; /* Ensure cards are responsive */
+  /* max-width: 500px; */
+  margin: 5%;
+  /* height: 88%; */
 }
 
 .diploma-card img {
-  width: 60%;
-  height: 100;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
 }
 
 .diploma-card h3 {
   font-size: 1.5rem;
-  margin: 15px 0 10px;
+  margin-bottom: 0px;
+  color: #333;
+  text-align: right; /* Ensure titles are aligned to the right */
 }
 
-.diploma-card p {
-  font-size: 1rem;
-  color: #6c757d;
-  padding: 0 15px;
-  margin-bottom: 20px;
+.course-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.diploma-card .cta-button {
+.course-info .chapters {
+  font-weight: bold;
+  color: #5a67d8;
+}
+
+.course-info .duration {
+  color: #999;
+}
+
+.course-rating {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0px;
+  text-align: right; /* Align ratings to the right */
+}
+
+.rating-stars {
+  color: #f5c518;
+  margin-left: 0px;
+}
+
+.rating-count {
+  color: #666;
+}
+
+.cta-button {
   display: inline-block;
+  padding: 10px 20px;
   background-color: #5a67d8;
   color: #fff;
-  padding: 10px 20px;
+  font-weight: bold;
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin-bottom: 20px;
 }
 
-.diploma-card .cta-button:hover {
+.cta-button:hover {
   background-color: #434190;
 }
 
 .diploma-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .diplomas-grid {
+    grid-template-columns: 1fr; /* 1 diploma per row on smaller screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .diplomas-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 diplomas per row for tablets */
+  }
 }
