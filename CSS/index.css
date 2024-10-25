@@ -81,6 +81,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 2; /* Ensure content is above the shapes */
+  padding-right: 20%;
 }
 
 /* Text content styling */
@@ -126,9 +127,87 @@ body {
 }
 
 .hero-image img {
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
   z-index: 2;
+}
+
+/* ===== Responsive Design for Hero Section ===== */
+@media (max-width: 1200px) {
+  .hero-section {
+    padding: 50px 100px 100px 50px; /* Reduce padding for medium screens */
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem; /* Decrease font size for medium screens */
+  }
+
+  .text-content p {
+    font-size: 1.1rem; /* Decrease font size for medium screens */
+  }
+
+  .hero-image {
+    max-width: 40%; /* Adjust image width for medium screens */
+  }
+
+  .hero-content {
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    display: block; /* Stack content vertically */
+    padding: 30px 30px 50px 30px; /* Reduce padding for mobile */
+  }
+
+  .hero-content {
+    display: block;
+    padding-right: 0;
+    text-align: center; /* Center-align the text */
+  }
+
+  .text-content {
+    max-width: 100%; /* Full width for text on mobile */
+    margin-bottom: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 2rem; /* Further decrease font size for mobile */
+  }
+
+  .text-content p {
+    font-size: 1rem; /* Further decrease font size for mobile */
+  }
+
+  .hero-image {
+    max-width: 70%;
+    margin: 0 auto; /* Center the image */
+  }
+
+  .cta-button {
+    width: auto; /* Remove full width and allow the button to auto-size */
+    display: inline-block; /* Ensure the button keeps its natural size */
+    margin: 0 auto; /* Center the button on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px; /* Further reduce padding for very small screens */
+  }
+
+  .text-content h1 {
+    font-size: 1.8rem; /* Maintain readability on small screens */
+  }
+
+  .text-content p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  .hero-image {
+    max-width: 80%; /* Slightly smaller image on very small screens */
+  }
 }
 
 /* Feature Section */
@@ -178,6 +257,7 @@ body {
   z-index: 2; /* Ensure content is above the background shapes */
 }
 
+/* Feature text styling */
 .feature-text {
   max-width: 50%; /* Ensure the text takes up half the space */
 }
@@ -223,6 +303,77 @@ body {
   z-index: 2; /* Ensure image is above the background shapes */
 }
 
+/* ===== Responsive Design for Feature Section ===== */
+@media (max-width: 1200px) {
+  .feature-section {
+    padding: 0px 100px 50px 30px; /* Reduce padding on medium screens */
+  }
+
+  .feature-text h2 {
+    font-size: 2rem; /* Reduce heading size for medium screens */
+  }
+
+  .feature-text p {
+    font-size: 1.1rem; /* Slightly reduce paragraph size */
+  }
+
+  .feature-image {
+    max-width: 45%; /* Increase the image size to balance text and image */
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-section {
+    padding: 0px 30px 50px 30px; /* Further reduce padding for mobile */
+  }
+
+  .feature-content {
+    flex-direction: column; /* Stack content vertically on mobile */
+    text-align: center; /* Center-align text on mobile */
+  }
+
+  .feature-text {
+    max-width: 100%; /* Text takes full width on mobile */
+    margin-bottom: 20px; /* Add spacing between text and image */
+  }
+
+  .feature-text h2 {
+    font-size: 1.8rem; /* Reduce heading size for mobile */
+  }
+
+  .feature-text p {
+    font-size: 1rem; /* Further reduce paragraph size for readability */
+  }
+
+  .feature-image {
+    max-width: 70%; /* Image takes up more space on mobile */
+    margin: 0 auto; /* Center the image on mobile */
+  }
+
+  .cta-button {
+    width: auto; /* Keep the button size natural */
+    margin: 0 auto; /* Center the button on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-section {
+    padding: 20px; /* Further reduce padding for very small screens */
+  }
+
+  .feature-text h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .feature-text p {
+    font-size: 0.9rem; /* Reduce paragraph size */
+  }
+
+  .feature-image {
+    max-width: 80%; /* Slightly smaller image on very small screens */
+  }
+}
+
 /* Testimonials Section */
 .testimonials-section {
   background-color: #6f42ff;
@@ -233,7 +384,7 @@ body {
 /* Section Title */
 .section-title {
   font-size: 2.5rem;
-  color: #6f42ff;
+  color: #fff; /* Changed to white for better contrast on purple background */
   margin-bottom: 40px;
 }
 
@@ -243,8 +394,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Fixed height for the square design */
-  width: 300px;  /* Fixed width for the square design */
+  height: 300px; /* Fixed height for larger screens */
+  width: 300px;  /* Fixed width for larger screens */
   margin: 0 auto 20px;
 }
 
@@ -304,46 +455,135 @@ body {
 }
 
 .dot.active {
-  background-color: #6f42ff;
+  background-color: #fff; /* Changed to white for better contrast */
 }
 
 .dot:hover {
-  background-color: #6f42ff;
+  background-color: #fff;
 }
 
-/* Ensure the section is responsive */
-@media (max-width: 768px) {
+/* Responsive Design for Testimonials Section */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .testimonials-section {
+    padding: 50px 50px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
   .testimonial-container {
-    height: 100%;
+    height: 250px;
+    width: 250px;
+  }
+
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card strong {
+    margin-bottom: 8px;
+  }
+
+  .stars {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-container {
+    height: auto;
     width: 100%;
+    max-width: 90%;
   }
 
   .testimonial-card {
     padding: 20px;
+  }
+
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card strong {
+    font-size: 1rem;
+  }
+
+  .stars {
+    font-size: 1rem;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 30px 3px;
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-card strong {
+    font-size: 0.9rem;
+  }
+
+  .stars {
+    font-size: 0.9rem;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 20px 2px;
   }
 }
 
 /* Reviews Section */
 .reviews-section {
   background-color: #f5f7ff; /* Very light violet/pale blue background */
-  padding: 60px 100px;
+  padding: 2% 20% 2% 0%;
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   justify-content: space-between;
-  align-items: center; /* Align items vertically centered */
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
 
 .reviews-content {
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
-  align-items: center;
-  width: 60%; /* Ensure the content takes the full width */
-  padding-right: 300px;
+  align-items: flex-start;
+  width: 50%; /* Adjust based on screen size */
+  padding-right: 20px;
+  z-index: 2;
 }
 
 .review-text {
-  max-width: 50%; /* Take half of the available width */
+  max-width: 100%;
 }
 
 .review-text h2 {
@@ -367,9 +607,10 @@ body {
 }
 
 .review-image {
-  max-width: 50%; /* Take half of the available width */
+  width: 50%; /* Ensure the image container takes half of the available width */
   display: flex;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
+  z-index: 2;
 }
 
 .review-image img {
@@ -377,7 +618,7 @@ body {
   height: auto;
 }
 
-/* Background Decorative Elements */
+/* Decorative Elements */
 .reviews-section::before,
 .reviews-section::after {
   content: '';
@@ -404,6 +645,77 @@ body {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
+/* Responsive Design for Reviews Section */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .reviews-section {
+    padding: 50px 50px;
+  }
+
+  .reviews-content {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .review-image {
+    width: 40%;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .reviews-content {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .review-text h2 {
+    font-size: 2rem;
+  }
+
+  .review-image {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 1%;
+  }
+
+  .review-image img {
+    max-width: 100%;
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 30px 10px;
+  }
+
+  .review-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .reviews-content {
+    width: 60%;
+  }
+
+  .review-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .review-image img {
+    max-width: 100%;
+  }
+}
+
 /* Instructor Section */
 .instructor-section {
   background-color: #6f42ff; /* Purple background */
@@ -417,8 +729,9 @@ body {
 /* Instructor Content - Text and Instructor Card */
 .instructor-content {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
+  gap: 20px; /* Add gap between text and cards */
   margin-bottom: 0px;
 }
 
@@ -445,7 +758,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 40%; /* Adjust width to fit beside the text */
+  width: 40%;
 }
 
 .instructor-card {
@@ -520,24 +833,101 @@ body {
   border-radius: 50%;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .instructor-content {
-    flex-direction: column;
-    text-align: center;
+/* ====== Responsive Design ====== */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .instructor-section {
+    padding: 50px 50px;
   }
 
-  .instructor-text, .instructor-cards {
+  .instructor-text {
+    padding-right: 50px; /* Reduce padding for medium screens */
+  }
+
+  .instructor-text h2 {
+    font-size: 2rem; /* Adjust font size for medium screens */
+  }
+
+  .instructor-text p {
+    font-size: 1rem;
+  }
+
+  .instructor-card img {
+    width: 120px; /* Reduce image size */
+    height: 120px;
+  }
+
+  .instructor-card strong {
+    font-size: 1.3rem; /* Smaller text for medium screens */
+  }
+
+  .instructor-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .instructor-section {
+    padding: 40px 20px;
+  }
+
+  .instructor-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .instructor-text {
     width: 100%;
-    margin-bottom: 20px;
+    text-align: center; /* Center-align text for smaller screens */
+    padding-right: 0;
   }
 
   .instructor-cards {
+    width: 100%;
     justify-content: center;
   }
 
   .instructor-card {
-    width: 100%;
+    width: 90%; /* Cards take up more space on small screens */
+  }
+
+  .cta-button {
+    margin-top: 30px; /* Add extra space for the button */
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .instructor-section {
+    padding: 30px 10px;
+  }
+
+  .instructor-text h2 {
+    font-size: 1.8rem; /* Reduce font size for very small screens */
+  }
+
+  .instructor-text p {
+    font-size: 0.9rem;
+  }
+
+  .instructor-card {
+    width: 100%; /* Full width for cards on very small screens */
+  }
+
+  .instructor-card img {
+    width: 100px; /* Smaller image size */
+    height: 100px;
+  }
+
+  .instructor-card strong {
+    font-size: 1.2rem;
+  }
+
+  .instructor-card p {
+    font-size: 0.9rem;
   }
 }
 
@@ -545,11 +935,12 @@ body {
 .why-choose-us-section {
   background-color: #000; /* Black background */
   color: white;
-  padding: 20px 0px;
+  padding: 40px 0px; /* Increased padding for better spacing */
   text-align: center;
   position: relative;
 }
 
+/* Section Heading */
 .why-choose-us-section h2 {
   font-size: 2.5rem;
   color: #6f42ff; /* Purple accent for the heading */
@@ -562,24 +953,26 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  gap: 30px; /* Add gap between content blocks */
 }
 
 /* Left and Right Text Sections */
 .why-choose-text {
-  width: 100%;
+  width: 40%; /* Shrink width to allow space for the image */
   text-align: right; /* Align text for Arabic */
-  padding: 0px 200px 0px 200px;
+  padding: 0px 50px; /* Reduced padding for better fit on smaller screens */
 }
 
 .why-choose-text ul {
   list-style: none;
   padding: 0px;
+  margin: 0;
 }
 
 .why-choose-text li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 100px;
+  margin-bottom: 40px; /* Reduced margin for better spacing */
 }
 
 .why-choose-text li img {
@@ -604,7 +997,7 @@ body {
 
 /* Illustration in the Middle */
 .why-choose-image {
-  width: 100%;
+  width: 30%; /* Reduced width for better layout */
   text-align: center;
 }
 
@@ -614,7 +1007,8 @@ body {
 }
 
 /* Background Decorative Elements */
-.why-choose-us-section::before, .why-choose-us-section::after {
+.why-choose-us-section::before, 
+.why-choose-us-section::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -639,21 +1033,49 @@ body {
   border-radius: 50%;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .why-choose-content {
-    flex-direction: column;
-  }
+/* ====== Responsive Design ====== */
 
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
   .why-choose-text {
-    width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
+    padding: 0px 20px; /* Reduce padding for medium screens */
+    width: 45%; /* Adjust width for better balance */
   }
 
   .why-choose-image {
-    width: 50%;
+    width: 40%; /* Increase image width on medium screens */
+  }
+
+  .why-choose-text li {
+    margin-bottom: 30px;
+  }
+
+  .why-choose-text li span {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .why-choose-text li p {
+    font-size: 0.95rem; /* Adjust text size */
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .why-choose-content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px;
+  }
+
+  .why-choose-text {
+    width: 100%; /* Full width for text section */
+    padding: 0px 20px; /* Reduce padding for small screens */
     margin-bottom: 20px;
+    text-align: center; /* Center-align text */
+  }
+
+  .why-choose-image {
+    width: 80%; /* Increase image width */
+    margin: 0 auto 20px; /* Center image */
   }
 
   .why-choose-text ul {
@@ -662,6 +1084,43 @@ body {
 
   .why-choose-text li {
     justify-content: center;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    margin-bottom: 20px; /* Reduced margin for smaller screens */
+  }
+
+  .why-choose-text li img {
+    margin-left: 0; /* Remove left margin */
+    margin-bottom: 10px; /* Add margin below the icon */
+  }
+
+  .why-choose-text li p {
+    margin-right: 0;
+    text-align: center; /* Center-align text */
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .why-choose-us-section h2 {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    margin-bottom: 30px;
+  }
+
+  .why-choose-text li span {
+    font-size: 1.1rem; /* Adjust text size */
+  }
+
+  .why-choose-text li p {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .why-choose-image {
+    width: 100%; /* Full width for image */
+  }
+
+  .why-choose-text li {
+    margin-bottom: 15px;
   }
 }
 
@@ -681,12 +1140,13 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  gap: 30px; /* Add gap between image and text */
 }
 
 /* Left Side: Image of Person Working */
 .service-details-image {
   text-align: center;
-  width: 40%;
+  width: 40%; /* 40% width for image container */
 }
 
 .service-details-image img {
@@ -733,7 +1193,7 @@ body {
 
 /* Right Side: Service Details Text */
 .service-details-text {
-  width: 50%;
+  width: 50%; /* 50% width for text container */
   text-align: right; /* Align text to the right for Arabic */
 }
 
@@ -746,7 +1206,6 @@ body {
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
-  /* margin-right: 20px; */
 }
 
 .service-details-text li img {
@@ -769,7 +1228,8 @@ body {
 }
 
 /* Background Decorative Elements */
-.service-details-section::before, .service-details-section::after {
+.service-details-section::before, 
+.service-details-section::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -794,25 +1254,83 @@ body {
   border-radius: 50%;
 }
 
-/* Responsive Design */
+/* ====== Responsive Design ====== */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .service-details-section {
+    padding: 50px 50px; /* Reduce padding for medium screens */
+  }
+
+  .service-details-image img {
+    width: 180px; /* Slightly smaller image */
+  }
+
+  .service-details-text li span {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+
+  .service-details-text li p {
+    font-size: 0.95rem; /* Adjust text size */
+  }
+}
+
+/* Small Screens (768px and below) */
 @media (max-width: 768px) {
+  .service-details-section {
+    padding: 40px 20px; /* Reduce padding for small screens */
+  }
+
   .service-details-content {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
   }
 
   .service-details-image {
-    width: 100%;
+    width: 100%; /* Full width for image container */
     margin-bottom: 20px;
   }
 
+  .service-details-image img {
+    width: 150px; /* Smaller image */
+  }
+
   .service-details-text {
-    width: 100%;
+    width: 100%; /* Full width for text container */
+    text-align: center; /* Center-align text */
+  }
+
+  .service-details-text li {
+    justify-content: center; /* Center-align list items */
+  }
+
+  .service-details-text li img {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-bottom: 10px; /* Add margin below the icon */
   }
 
   .cta-button {
-    width: 100%;
+    width: 100%; /* Full width for buttons */
     text-align: center;
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .service-details-section {
+    padding: 30px 10px; /* Further reduce padding */
+  }
+
+  .service-details-image img {
+    width: 120px; /* Smaller image for extra small screens */
+  }
+
+  .service-details-text li span {
+    font-size: 1rem; /* Adjust title font size */
+  }
+
+  .service-details-text li p {
+    font-size: 0.9rem; /* Adjust text size */
   }
 }
 
@@ -826,6 +1344,10 @@ body {
 
 .newsletter-section form {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 .newsletter-section input {
@@ -833,10 +1355,23 @@ body {
   width: 300px;
   border-radius: 20px;
   border: none;
+  margin-bottom: 10px; /* Add margin below input for small screens */
 }
 
 .newsletter-section button {
   margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  color: #6f42ff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-section button:hover {
+  background-color: #f5f5f5;
 }
 
 /* FAQ Section */
@@ -852,6 +1387,7 @@ body {
   color: #333;
 }
 
+/* FAQ Container */
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
@@ -874,10 +1410,10 @@ summary {
   color: #6f42ff;
   outline: none;
   cursor: pointer;
-  /* display: flex; Use flexbox */
-  justify-content: space-between; /* Spread the symbol and text apart */
-  align-items: center; /* Vertically align the text and symbol */
-  padding: 0.5rem; /* Add padding to the summary */
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
   list-style: none; /* Removes the marker in Firefox */
 }
 
@@ -915,6 +1451,102 @@ details p {
 
 details:hover {
   background-color: #f0f0f0;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .newsletter-section {
+    padding: 40px 50px; /* Reduce padding for medium screens */
+  }
+
+  .newsletter-section input {
+    width: 250px; /* Slightly reduce input width */
+  }
+
+  .faq-section {
+    padding: 40px 50px; /* Reduce padding for medium screens */
+  }
+
+  .faq-section h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding: 30px 20px; /* Reduce padding for small screens */
+  }
+
+  .newsletter-section form {
+    flex-direction: column; /* Stack input and button vertically */
+  }
+
+  .newsletter-section input {
+    width: 100%; /* Full width input */
+    margin-bottom: 10px; /* Add space below input */
+  }
+
+  .newsletter-section button {
+    width: 100%; /* Full width button */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .faq-section {
+    padding: 30px 20px; /* Reduce padding for small screens */
+  }
+
+  .faq-container {
+    max-width: 100%; /* Full width for FAQ container */
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  details summary {
+    font-size: 1.1rem; /* Slightly reduce summary text size */
+  }
+
+  details p {
+    padding-right: 10px; /* Reduce padding for text */
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding: 20px 10px; /* Further reduce padding */
+  }
+
+  .newsletter-section input {
+    width: 100%; /* Full width input */
+    padding: 8px; /* Slightly reduce padding */
+  }
+
+  .newsletter-section button {
+    width: 100%; /* Full width button */
+    padding: 8px 15px; /* Adjust button padding */
+  }
+
+  .faq-section {
+    padding: 20px 10px; /* Further reduce padding */
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  details summary {
+    font-size: 1rem; /* Reduce summary text size */
+  }
+
+  details p {
+    font-size: 0.9rem;
+    padding-right: 5px; /* Reduce padding for text */
+  }
 }
 
 /* Footer */
