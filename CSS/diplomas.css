@@ -14,11 +14,10 @@ body {
   color: #fff;
   padding: 60px 20px;
   display: flex;
-  justify-content: space-between; /* Image on the left, text on the right */
-  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   max-width: 100%;
   margin: 0 auto;
-  flex-direction: row; /* Ensure the image is on the left and text on the right */
   overflow: hidden; /* Hide overflow for shapes */
 }
 
@@ -28,11 +27,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 100px;
   height: 150px;
   background-color: #a394f7; /* Purple color */
   clip-path: polygon(0 0, 100% 50%, 0 100%);
-  transform: rotate(-10deg); /* Slight rotation for the shape */
+  transform: rotate(-0deg); /* Slight rotation for the shape */
   z-index: 1;
 }
 
@@ -40,40 +39,48 @@ body {
 .hero-section::after {
   content: '';
   position: absolute;
-  bottom: 20px;
+  bottom: 2px;
   right: -75px;
-  width: 150px;
+  width: 180px;
   height: 150px;
+  top: 300px;
   background-color: #655eff; /* Purple color */
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Arrow-like shape */
-  transform: rotate(-45deg); /* Rotate the shape */
+  clip-path: polygon(0% 0%, 0% 100%, 100% 0%); /* Arrow-like shape */
+  transform: rotate(-0deg); /* Rotate the shape */
   z-index: 1;
-}
-
-/* Hero Image */
-.hero-image {
-  flex: 1 1 50%; /* The image container takes 50% of the width */
-  z-index: 2; /* Ensure the image is above the background */
-}
-
-.hero-image img {
-  max-width: 50%; /* Image takes up full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: Add rounded corners to the image */
 }
 
 /* Hero Content */
 .hero-content {
-  flex: 1 1 50%; /* The text container takes 50% of the width */
   display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  text-align: right; /* Right-align text for Arabic */
+  justify-content: space-between; /* Keep image on the left and text on the right */
+  align-items: center; /* Vertically center the content */
   z-index: 2; /* Ensure the content is above the shapes */
+  max-width: 1400px; /* Optional: constrain the width of the content */
+  width: 100%; /* Ensure it takes the full width of the container */
+  margin-right: 18%;
 }
 
+/* Hero Image */
+.hero-image {
+  flex: 1 1 30%; /* The image container takes 50% of the width */
+  /* display: flex; */
+  justify-content: center; /* Center the image horizontally in its container */
+  padding: 0%;
+  margin: 0%;
+}
+
+.hero-image img {
+  max-width: 50%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners to the image */
+}
+
+/* Hero Text */
 .hero-text {
-  margin-left: 20px; /* Add some space between image and text */
+  flex: 1 1 50%; /* The text container takes 50% of the width */
+  text-align: right; /* Right-align text for Arabic */
+  padding-left: 20px; /* Add space between text and image */
 }
 
 .hero-text h1 {
@@ -82,27 +89,26 @@ body {
   line-height: 2;
 }
 
+.hero-text h2 {
+  font-size: 2rem;
+  color: #fff; /* White color for the second heading */
+}
+
 .hero-text p {
   font-size: 1.125rem;
-  margin: 20px 10px;
+  margin: 20px 0;
   text-align: right;
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #443dff; /* Button color */
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+.hero-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: right;
 }
 
-.cta-button:hover {
-  background-color: #2f27ce; /* Change color on hover */
-  color: #fff; /* Change text color on hover */
+.hero-text ul li {
+  margin-bottom: 10px;
 }
 
 /* Responsive Design */
@@ -110,14 +116,19 @@ body {
   .hero-section {
     flex-direction: column; /* Stack the image and text on small screens */
     text-align: center; /* Center text on small screens */
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stack content vertically */
   }
 
   .hero-image {
-    max-width: 100%; /* Ensure the image fits the container */
     margin-bottom: 20px;
   }
 
   .hero-text {
+    padding-left: 0;
     text-align: center; /* Center text on small screens */
   }
 
@@ -127,10 +138,9 @@ body {
     display: none;
   }
 }
-
 /* Diplomas Section */
 .diplomas {
-  padding: 0px;
+  padding: 40px;
   text-align: center;
   background-color: #f9f9f9;
 }
@@ -142,28 +152,29 @@ body {
   color: #333;
 }
 
+/* Diplomas Grid */
 .diplomas-grid {
-  display:grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 diplomas per row on large screens */
-  gap: 0px 50px;
-  justify-items: center;
-  /* padding: 15%; */
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 5%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 cards per row */
+  justify-content: center; /* Center the grid items horizontally */
+  gap: 50px; /* Space between cards */
+  width: 100%; /* Ensure grid takes full width */
+  max-width: 800px; /* Set a maximum width for the grid */
+  margin: 0 auto; /* Center the grid itself */
 }
 
+/* Diploma Card */
 .diploma-card {
   background-color: #fff;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center; /* Align text to the right for Arabic */
-  width: 100%; /* Ensure cards are responsive */
-  /* max-width: 500px; */
-  margin: 5%;
-  /* height: 88%; */
+  text-align: center; /* Align text to the center */
+  width: 100%; /* Ensure card takes full width of its container */
+  max-width: 450px; /* Set a maximum width for each card */
+  margin: 0 auto; /* Center the card within the grid */
+  padding: 0px; /* Add some padding inside the card */
 }
 
 .diploma-card img {
@@ -178,15 +189,14 @@ body {
 
 .diploma-card h3 {
   font-size: 1.5rem;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   color: #333;
-  text-align: right; /* Ensure titles are aligned to the right */
 }
 
 .course-info {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -203,13 +213,11 @@ body {
 .course-rating {
   font-size: 1.2rem;
   color: #666;
-  margin-bottom: 0px;
-  text-align: right; /* Align ratings to the right */
+  margin-bottom: 10px;
 }
 
 .rating-stars {
   color: #f5c518;
-  margin-left: 0px;
 }
 
 .rating-count {
@@ -218,19 +226,20 @@ body {
 
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
-  /* background-color: #5a67d8; */
-  color: #fff;
+  padding: 12px 24px;
+  background-color: #443dff; /* Button color */
+  color: white;
   font-weight: bold;
   border-radius: 25px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
-/* 
+
 .cta-button:hover {
-  background-color: #434190;
-} */
+  background-color: #2f27ce; /* Change color on hover */
+  color: #fff; /* Change text color on hover */
+}
 
 .diploma-card:hover {
   transform: translateY(-5px);
@@ -240,12 +249,23 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .diplomas-grid {
-    grid-template-columns: 1fr; /* 1 diploma per row on smaller screens */
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 cards per row, smaller width */
+    max-width: 100%; /* Allow the grid to take full width on small screens */
+  }
+
+  .diploma-card {
+    max-width: 100%; /* Allow the card to take full width on small screens */
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .diplomas-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 diplomas per row for tablets */
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* 2 diplomas per row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .diplomas-grid {
+    grid-template-columns: 1fr; /* Switch to 1 card per row on very small screens */
   }
 }
