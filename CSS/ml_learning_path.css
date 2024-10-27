@@ -1,0 +1,914 @@
+
+/* General Styles */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #000;
+  color: white;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative shape on the top left */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(108, 99, 255, 1); /* Adjust color as needed */
+  border-radius: 50%;
+  z-index: -1; /* Behind the content */
+  /* overflow: hidden; */
+}
+
+/* Decorative shape on the bottom right */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 255, 255, 1); /* Aqua with 50% transparency */
+  border-radius: 50%;
+  z-index: -1; /* Behind the content */
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  max-width: 600px;
+  padding-left: 30px;
+}
+
+.hero .hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: aquamarine;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.hero-rating {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.hero .hero-text .hero-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: aquamarine;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #5548d9;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #6c63ff;
+  border: 2px solid #6c63ff;
+}
+
+.secondary-button:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Key Features Section */
+.key-features {
+  background-color: white;  /* Purple background */
+  color: black;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.key-features h2 {
+  text-align: right; /* Right-aligned heading */
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.key-features-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;  /* Wrap on smaller screens */
+}
+
+.key-feature-item {
+  max-width: 250px;  /* Adjust as needed */
+  text-align: center;
+}
+
+.key-feature-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.key-feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.key-feature-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .key-features-grid {
+    gap: 20px;
+  }
+  
+  .key-feature-item {
+    max-width: 100%;  /* Full width on smaller screen */
+  }
+
+  .key-features h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .key-features h2 {
+    font-size: 1.6rem;
+  }
+
+  .key-feature-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .key-feature-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Features Section */
+.features-section {
+  background-color: #4100ff; /* Purple background */
+  color: white;
+  padding: 50px 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Prevents overflow of decorative elements */
+}
+
+/* Features Container */
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feature-item {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.feature-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Top-left decorative circle */
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light white */
+  border-radius: 50%;
+  z-index: -1; /* Behind the content */
+}
+
+/* Decorative Rotated Rectangle */
+.decorative-rectangle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 200px;
+  height: 500px;
+  background-color: white;
+  transform: rotate(45deg) translate(100px, -50%);
+  z-index: -1; /* Behind the content */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: 30px 10px;
+  }
+
+  .feature-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-item p {
+    font-size: 1rem;
+  }
+
+  .decorative-rectangle {
+    width: 150px;
+    height: 400px;
+  }
+}
+
+/* Learn Section */
+.learn-section {
+  background-color: #ffffff; /* White background */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.learn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.learn-content {
+  width: 60%;
+  text-align: right;
+}
+
+.learn-content h2 {
+  font-size: 2rem;
+  color: #4b00ff; /* Purple color for the title */
+  margin-bottom: 20px;
+}
+
+.learn-content p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #4b00ff;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #3a00cc;
+}
+
+/* Learn Image */
+.learn-image {
+  width: 35%;
+  text-align: center;
+}
+
+.learn-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .learn-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .learn-content {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .learn-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .learn-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .learn-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+/* Course Highlights Section */
+.course-highlights {
+  background-color: #f7f8fc;  /* Light background */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.course-highlights h2 {
+  color: #4b00ff;  /* Purple color */
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* List of Highlights */
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;  /* Center the list */
+  max-width: 800px;  /* Limit the width for centering */
+}
+
+.highlight-item {
+  display: flex;
+  justify-content: center;  /* Center the content */
+  align-items: center;  /* Align items to the center */
+  gap: 20px;
+  margin-bottom: 40px;
+  text-align: right; /* RTL support */
+}
+
+.highlight-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 600px;
+  justify-content: center;  /* Center text block */
+}
+
+.highlight-text img.check-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 8px;
+}
+
+.highlight-text h3 {
+  font-size: 1.3rem;
+  color: #333;  /* Dark text */
+  margin-bottom: 5px;
+}
+
+.highlight-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.highlight-img {
+  max-width: 180px;
+  height: auto;
+}
+
+.no-img .highlight-img {
+  display: none;  /* No image for the last two entries */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;  /* Center text */
+  }
+
+  .highlight-text {
+    text-align: center;  /* Center text content */
+    justify-content: center;  /* Center flex items */
+  }
+
+  .highlight-img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-highlights h2 {
+    font-size: 1.6rem;
+  }
+
+  .highlight-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .highlight-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Learning Paths Section */
+
+/* Make the whole card inside the anchor clickable */
+.learning-path-link {
+  display: block;
+  text-decoration: none; /* Remove default underline from links */
+  color: inherit; /* Ensure the text color is inherited */
+}
+
+.learning-path-link:hover .learning-path-card {
+  transform: translateY(-5px); /* Ensure hover effect applies to the card */
+}
+
+.learning-paths {
+  padding: 50px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.learning-paths h2 {
+  font-size: 2.5rem;
+  color: #020029;
+  margin-bottom: 30px;
+}
+
+/* Cards Stacked Vertically */
+.learning-paths-grid {
+  display: flex;
+  flex-direction: column; /* Ensure cards stack vertically */
+  gap: 40px;
+  max-width: 60rem; /* Limit the width of the cards */
+  margin: 0 auto; /* Center the cards */
+}
+
+.learning-path-card {
+  background-color: #443dff;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  direction: rtl;  /* Maintain right-to-left direction for Arabic text */
+  text-align: right;  /* Ensure the text is aligned to the right */
+}
+
+.learning-path-card:hover {
+  transform: translateY(-5px); /* Existing transform effect */
+  background-color: #2f27ce; /* New background color on hover */
+  color: #ffffff; /* Ensure text color stays readable */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Icon on the left */
+.learning-path-icon {
+  width: 10%;
+  height: 10%;
+  flex-shrink: 0;
+  display: block;
+  order: 1;  /* Move the icon to the left side in RTL layout */
+  margin-left: 0; /* No margin on the left */
+  margin-right: 20px; /* Add margin-right to separate icon from text */
+}
+
+.learning-path-card-content {
+  flex: 1;
+  text-align: right; /* Ensure content is aligned to the right */
+}
+
+/* Title styling */
+.learning-path-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+/* Course info styling */
+.learning-path-card .course-info {
+  font-size: 1rem;
+  color: #dedede; /* Lighter color for course info */
+  margin-bottom: 10px;
+}
+
+/* Description styling */
+.learning-path-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9ff;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #4b00ff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Testimonials Grid Layout */
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; /* Fixed width for each testimonial card */
+}
+
+.testimonial img.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial .stars {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Decorative Background Elements */
+.testimonials::before,
+.testimonials::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.testimonials::before {
+  width: 100px;
+  height: 100px;
+  background-color: #00d1ff;
+  top: 10%;
+  left: -50px;
+  transform: rotate(45deg);
+}
+
+.testimonials::after {
+  width: 120px;
+  height: 120px;
+  background-color: #a49bff;
+  bottom: 10%;
+  right: -60px;
+  transform: rotate(45deg);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    gap: 15px;
+  }
+
+  .testimonial {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f5f5f5;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* FAQ Container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6f42ff;
+  outline: none;
+  cursor: pointer;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  list-style: none; /* Removes the marker in Firefox */
+}
+
+/* Change color when the FAQ is open */
+details[open] summary {
+  color: #563d7c;
+}
+
+/* Remove the default arrow in WebKit browsers */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add the custom + and - symbols */
+summary::before {
+  content: "+";
+  font-size: 1.5rem;
+  color: #6f42ff;
+  transition: transform 0.3s ease;
+  margin-left: 10px; /* Add space between the symbol and the text */
+}
+
+/* Change the + to - when details is open */
+details[open] summary::before {
+  content: "-";
+  color: #563d7c;
+}
+
+details p {
+  margin-top: 10px;
+  padding-right: 20px;
+  color: #333;
+  text-align: right;
+}
+
+details:hover {
+  background-color: #f0f0f0;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .newsletter-section {
+    padding: 40px 50px; /* Reduce padding for medium screens */
+  }
+
+  .newsletter-section input {
+    width: 250px; /* Slightly reduce input width */
+  }
+
+  .faq-section {
+    padding: 40px 50px; /* Reduce padding for medium screens */
+  }
+
+  .faq-section h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 30px 20px; /* Reduce padding for small screens */
+  }
+
+  .faq-container {
+    max-width: 100%; /* Full width for FAQ container */
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  details summary {
+    font-size: 1.1rem; /* Slightly reduce summary text size */
+  }
+
+  details p {
+    padding-right: 10px; /* Reduce padding for text */
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 20px 10px; /* Further reduce padding */
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  details summary {
+    font-size: 1rem; /* Reduce summary text size */
+  }
+
+  details p {
+    font-size: 0.9rem;
+    padding-right: 5px; /* Reduce padding for text */
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #4b007d;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.footer .social-icons {
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.footer .footer-links a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer .footer-links span {
+  color: white;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 1rem;
+}
