@@ -2,25 +2,75 @@
 
 /* Hero Section */
 .hero {
+  position: relative;
   background-color: #f0f4f8;
-  padding: 50px;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  min-height: 8vh;
+  overflow: hidden; /* To hide floating elements that go out of bounds */
+}
+
+.hero-content {
+  z-index: 10; /* Ensure the content is above the background elements */
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
+  color: #00d1b2;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  color: #555;
+  font-size: 1.5rem;
+  color: #00d1b2;
   margin-bottom: 30px;
+}
+
+/* Floating Background Elements */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  background-color: gainsboro;
+  border-radius: 50%;
+  animation: float 1s infinite ease-in-out;
+}
+
+.hero::before {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 10%;
+  animation-duration: 12s;
+}
+
+.hero::after {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 15%;
+  animation-duration: 18s;
+}
+
+/* Keyframes for Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* About Section */
 .about {
-  padding: 40px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
 }
 
@@ -34,6 +84,7 @@
   color: #666;
   margin-bottom: 20px;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* History Section */
@@ -47,6 +98,7 @@
 .team-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   margin-top: 30px;
 }
 
@@ -58,6 +110,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Add margin to avoid team members touching each other */
 }
 
 .team-member-image {
@@ -75,4 +128,33 @@
 .team-member p {
   font-size: 1rem;
   color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .team-member {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .team-member {
+    max-width: 100%;
+  }
 }

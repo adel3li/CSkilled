@@ -2,25 +2,71 @@
 
 /* Hero Section */
 .hero {
+  position: relative; /* Relative positioning to contain the background elements */
   background-color: #f0f4f8;
-  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 60px 20px;
+  min-height: 6vh; /* Ensure hero takes up 60% of the viewport height */
+  flex-direction: column; /* Stack content vertically */
+  overflow: hidden; /* Ensure floating background elements stay within the hero */
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  color: #555;
+  font-size: 1.5rem;
+  color: #00d1b2;
   margin-bottom: 30px;
+}
+
+/* Floating Background Elements */
+.hero::before, 
+.hero::after {
+  content: '';
+  position: absolute;
+  background-color: gainsboro;
+  border-radius: 50%;
+  animation: float 0s infinite ease-in-out;
+}
+
+.hero::before {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 10%;
+  animation-duration: 12s;
+}
+
+.hero::after {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 15%;
+  animation-duration: 18s;
+}
+
+/* Keyframes for Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Contact Details Section */
 .contact {
-  padding: 40px;
+  padding: 40px 20px;
   background-color: #f9f9f9;
 }
 
@@ -36,17 +82,20 @@
   text-align: center;
 }
 
+/* Social Links Section */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 40px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-.social-icon {
+.social-icons {
   font-size: 2rem;
   color: #555;
   transition: color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .social-icon:hover {
@@ -98,4 +147,58 @@
 
 .contact-form button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .contact-form {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .social-links {
+    gap: 10px; /* Reduce gap between social icons */
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 8px; /* Further reduce gap between social icons */
+  }
+
+  .social-icon {
+    font-size: 1.75rem; /* Adjust icon size */
+  }
+
+  .contact-form {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px; /* Adjust input/textarea padding */
+  }
+
+  .contact-form button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 10px; /* Adjust button padding */
+  }
 }
