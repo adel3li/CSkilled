@@ -101,21 +101,117 @@ body {
   bottom: 20%;
   right: -75px; /* Positioned off-screen */
   transform: rotate(-45deg); /* Rotate the shape */
+  opacity: .5;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Slightly smaller heading for tablet */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph font size */
+  }
+
+  .hero-content {
+    max-width: 600px; /* Reduce max-width for content */
+  }
+
+  .hero-container {
+    flex-direction: row-reverse; /* Keep image on the left and text on the right */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Reduce button padding */
+  }
+}
+
 @media (max-width: 768px) {
   .hero-container {
-      flex-direction: column; /* Stack the image and text on small screens */
-      text-align: center; /* Center text on small screens */
+    flex-direction: column; /* Stack the image and text on small screens */
+    text-align: center; /* Center text on small screens */
   }
-  
-  .hero-image, .hero-content {
-      max-width: 100%;
+
+  .hero h1 {
+    font-size: 1.75rem; /* Smaller heading */
   }
-  
-  .hero-shape-left, .hero-shape-right {
-      display: none; /* Hide shapes on smaller screens */
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    margin: 15px 0; /* Reduce margin */
+  }
+
+  .hero-image,
+  .hero-content {
+    max-width: 100%; /* Take full width */
+  }
+
+  /* Make the shapes smaller and reposition them for mobile */
+  .hero-shape-left {
+    top: 10%;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-shape-right {
+    bottom: 10%;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .cta-button {
+    padding: 10px 18px; /* Reduce button padding further */
+    font-size: 0.9rem; /* Smaller button text */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 10px; /* Reduce padding for smaller mobile */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem; /* Smaller heading for small mobile */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+
+  .hero-container {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center text */
+  }
+
+  .hero-image img {
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .hero-shape-left {
+    top: 5%;
+    left: -15px;
+    width: 80px;
+    height: 80px; /* Further reduce shape size */
+  }
+
+  .hero-shape-right {
+    bottom: 5%;
+    right: -15px;
+    width: 80px;
+    height: 80px; /* Further reduce shape size */
+  }
+
+  .cta-button {
+    padding: 8px 16px; /* Further reduce button padding */
+    font-size: 0.85rem; /* Smaller button text */
   }
 }
 
@@ -208,6 +304,221 @@ body {
   font-size: 1rem;
   line-height: 1.8;
   margin: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Reduce padding and adjust font size for tablet devices */
+  .learning-paths {
+    padding: 40px 20px;
+  }
+
+  .learning-paths h2 {
+    font-size: 2rem; /* Slightly smaller heading */
+  }
+
+  .learning-path-card {
+    padding: 30px;
+    gap: 15px;
+  }
+
+  .learning-path-icon {
+    width: 60px; /* Adjust icon size */
+    height: 60px;
+  }
+
+  .learning-path-card h3 {
+    font-size: 1.5rem; 
+  }
+  
+  .learning-path-card .course-info {
+    font-size: 0.9rem;
+  }
+
+  .learning-path-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout for mobile devices */
+  .learning-paths {
+    padding: 30px 15px;
+  }
+
+  .learning-paths h2 {
+    font-size: 1.75rem; /* Smaller heading */
+  }
+
+  .learning-paths-grid {
+    gap: 30px; /* Smaller gap between cards */
+  }
+
+  .learning-path-card {
+    flex-direction: column; /* Stack icon and text vertically */
+    text-align: center; /* Center align text */
+    padding: 25px;
+  }
+
+  .learning-path-icon {
+    width: 50px; /* Smaller icon */
+    height: 50px;
+    margin: 0 auto 15px auto; /* Center icon above text */
+  }
+
+  .learning-path-card-content {
+    text-align: center; /* Center content */
+  }
+
+  .learning-path-card h3 {
+    font-size: 1.4rem; /* Reduce font size */
+  }
+
+  .learning-path-card .course-info {
+    font-size: 0.85rem; /* Smaller course info */
+  }
+
+  .learning-path-card p {
+    font-size: 0.85rem; /* Smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust layout for smaller mobile devices */
+  .learning-paths {
+    padding: 20px 10px;
+  }
+
+  .learning-paths h2 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .learning-path-card {
+    padding: 20px;
+  }
+
+  .learning-path-icon {
+    width: 40px;
+    height: 40px; /* Further reduce icon size */
+  }
+
+  .learning-path-card h3 {
+    font-size: 1.25rem; /* Smaller title */
+  }
+
+  .learning-path-card .course-info {
+    font-size: 0.75rem; /* Smaller course info */
+  }
+
+  .learning-path-card p {
+    font-size: 0.75rem; /* Smaller description */
+  }
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9ff;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #4b00ff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Testimonials Grid Layout */
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; /* Fixed width for each testimonial card */
+}
+
+.testimonial img.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial .stars {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Decorative Background Elements */
+.testimonials::before,
+.testimonials::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.testimonials::before {
+  width: 100px;
+  height: 100px;
+  background-color: #00d1ff;
+  top: 10%;
+  left: -50px;
+  transform: rotate(45deg);
+}
+
+.testimonials::after {
+  width: 120px;
+  height: 120px;
+  background-color: #a49bff;
+  bottom: 10%;
+  right: -60px;
+  transform: rotate(45deg);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    gap: 15px;
+  }
+
+  .testimonial {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
 }
 
 /* FAQ Section */

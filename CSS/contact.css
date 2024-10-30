@@ -31,6 +31,7 @@
   content: '';
   position: absolute;
   background-color: cyan;
+  opacity: 25%;
   border-radius: 50%;
   animation: float 0s infinite ease-in-out;
 }
@@ -40,7 +41,7 @@
   height: 200px;
   bottom: 20%;
   left: 10%;
-  animation-duration: 12s;
+  animation-duration: 10s;
 }
 
 .hero::after {
@@ -48,7 +49,7 @@
   height: 150px;
   top: 30%;
   right: 15%;
-  animation-duration: 18s;
+  animation-duration: 5s;
 }
 
 /* Keyframes for Floating Animation */

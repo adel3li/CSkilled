@@ -25,29 +25,102 @@ body {
 .hero-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 150px;
-  background-color: #a394f7; /* Purple color */
+  top: -50px; /* Move shape a bit out of the view */
+  left: -50px; /* Move shape a bit out of the view */
+  width: 200px; /* Increased width */
+  height: 300px; /* Increased height */
+  background-color: rgba(163, 148, 247, 0.5); /* Purple color with 50% opacity */
   clip-path: polygon(0 0, 100% 50%, 0 100%);
-  transform: rotate(-0deg); /* Slight rotation for the shape */
+  transform: rotate(0deg); /* Slight rotation for the shape */
   z-index: 1;
+  animation: floatTopLeft 10s infinite ease-in-out; /* Apply animation */
 }
 
 /* Purple Decorative Shape in the Bottom-Right Corner */
 .hero-section::after {
   content: '';
   position: absolute;
-  bottom: 2px;
-  right: -75px;
-  width: 180px;
-  height: 150px;
-  top: 300px;
-  background-color: #655eff; /* Purple color */
+  bottom: -50px; /* Move shape a bit out of the view */
+  right: -100px; /* Move shape a bit out of the view */
+  width: 300px; /* Increased width */
+  height: 250px; /* Increased height */
+  background-color: rgba(101, 94, 255, 0.5); /* Purple color with 50% opacity */
   clip-path: polygon(0% 0%, 0% 100%, 100% 0%); /* Arrow-like shape */
-  transform: rotate(-0deg); /* Rotate the shape */
+  transform: rotate(0deg); /* Rotate the shape */
   z-index: 1;
+  animation: floatBottomRight 12s infinite ease-in-out; /* Apply animation */
+}
+
+/* Keyframes for the top-left shape animation */
+@keyframes floatTopLeft {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px) rotate(10deg); /* Move slightly and rotate */
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg); /* Reset to original position */
+  }
+}
+
+/* Keyframes for the bottom-right shape animation */
+@keyframes floatBottomRight {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) translateX(-10px) rotate(-10deg); /* Move slightly and rotate */
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg); /* Reset to original position */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust padding and layout for mobile */
+  .hero-section {
+    padding: 40px 10px;
+    flex-direction: column;
+  }
+
+  /* Adjust the size and position of the top-left shape */
+  .hero-section::before {
+    width: 150px;
+    height: 225px;
+    top: -30px;
+    left: -30px;
+  }
+
+  /* Adjust the size and position of the bottom-right shape */
+  .hero-section::after {
+    width: 200px;
+    height: 170px;
+    bottom: -30px;
+    right: -50px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .hero-section {
+    padding: 30px 5px;
+  }
+
+  .hero-section::before {
+    width: 120px;
+    height: 180px;
+    top: -20px;
+    left: -20px;
+  }
+
+  .hero-section::after {
+    width: 150px;
+    height: 130px;
+    bottom: -20px;
+    right: -30px;
+  }
 }
 
 /* Hero Content */
@@ -63,11 +136,10 @@ body {
 
 /* Hero Image */
 .hero-image {
-  flex: 1 1 30%; /* The image container takes 50% of the width */
-  /* display: flex; */
+  flex: 1 1 30%; /* The image container takes 30% of the width */
+  display: flex;
   justify-content: center; /* Center the image horizontally in its container */
-  padding: 0%;
-  margin: 0%;
+  margin: 0;
 }
 
 .hero-image img {
@@ -112,19 +184,54 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  /* Adjust the hero layout for mid-sized screens */
   .hero-section {
-    flex-direction: column; /* Stack the image and text on small screens */
-    text-align: center; /* Center text on small screens */
+    padding: 50px 15px;
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stack content vertically */
+    margin-right: 0; /* Remove right margin for content */
+  }
+
+  .hero-image {
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    max-width: 80%; /* Slightly smaller image on mid-sized screens */
+  }
+
+  .hero-text {
+    text-align: center; /* Center text for better layout */
+    padding-left: 0; /* Remove left padding */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+
+  .hero-text h2 {
+    font-size: 1.75rem; /* Reduce font size */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust the hero layout for smaller screens */
+  .hero-section {
+    flex-direction: column; /* Stack the image and text vertically */
+    text-align: center; /* Center text on smaller screens */
     padding: 40px 20px;
   }
 
   .hero-content {
     flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center both text and image */
   }
 
-  .hero-image {
-    margin-bottom: 20px;
+  .hero-image img {
+    max-width: 70%; /* Make the image smaller */
   }
 
   .hero-text {
@@ -132,10 +239,40 @@ body {
     text-align: center; /* Center text on small screens */
   }
 
+  .hero-text h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem; /* Reduce font size */
+  }
+
   /* Hide shapes on smaller screens */
   .hero-section::before,
   .hero-section::after {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 30px 10px;
+  }
+
+  .hero-image img {
+    max-width: 60%; /* Further reduce image size for mobile */
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem; /* Reduce subheading size */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
 }
 /* Diplomas Section */
