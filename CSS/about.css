@@ -34,7 +34,7 @@
 .hero::after {
   content: '';
   position: absolute;
-  background-color: gainsboro;
+  background-color: cyan;
   border-radius: 50%;
   animation: float 1s infinite ease-in-out;
 }

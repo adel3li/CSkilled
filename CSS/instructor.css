@@ -3,68 +3,187 @@
 /* Hero Section */
 .hero {
   background-color: #f0f4f8;
-  padding: 50px;
+  padding: 100px 20px;
+  position: relative;
   text-align: center;
+  overflow: hidden;
+  display: flex;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: #00d1b2;
 }
 
 .hero p {
   font-size: 1.25rem;
-  color: #555;
   margin-bottom: 30px;
+  color: #00d1b2;
 }
 
-/* Instructors Section */
-.instructors {
-  padding: 40px;
-  background-color: #f9f9f9;
-}
-
-.instructors h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.instructors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.instructor {
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.instructor h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.instructor p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.instructor-link {
-  display: inline-block;
-  padding: 10px 20px;
+.hero-content .cta-button {
   background-color: #007bff;
   color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
   text-decoration: none;
-  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0px;
   transition: background-color 0.3s ease;
 }
 
-.instructor-link:hover {
+.cta-button:hover {
   background-color: #0056b3;
+}
+
+/* Background elements for hero */
+.hero-background .circle {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-color: cyan;
+  border-radius: 50%;
+}
+
+.hero-background .triangle {
+  position: absolute;
+  bottom: -0px;
+  right: -150px;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 200px solid cornflowerblue;
+}
+
+/* Centering all sections */
+.instructors, .testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.instructors h2, .testimonials h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.instructor p {
+  line-height: 1.6; /* Adjust line spacing */
+  margin-bottom: 15px; /* Add margin between paragraphs */
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9ff;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #4b00ff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Testimonials Grid Layout */
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; /* Fixed width for each testimonial card */
+}
+
+.testimonial img.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial .stars {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Decorative Background Elements */
+.testimonials::before,
+.testimonials::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.testimonials::before {
+  width: 100px;
+  height: 100px;
+  background-color: #00d1ff;
+  top: 10%;
+  left: -50px;
+  transform: rotate(45deg);
+}
+
+.testimonials::after {
+  width: 120px;
+  height: 120px;
+  background-color: #a49bff;
+  bottom: 10%;
+  right: -60px;
+  transform: rotate(45deg);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    gap: 15px;
+  }
+
+  .testimonial {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
 }

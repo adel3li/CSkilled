@@ -34,6 +34,10 @@
 
     <!-- Hero section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="circle"></div>
+            <div class="triangle"></div>
+        </div>
         <div class="hero-content">
             <h1>تعرف على المدربين في <strong>CSkilled</strong></h1>
             <p>تعرف على أفضل المدربين المحترفين الذين يقدمون دورات في <strong>التطوير</strong>، <strong>البيانات</strong>، و<strong>الذكاء الاصطناعي</strong>.</p>
@@ -44,27 +48,46 @@
     <!-- Instructors Section -->
     <section id="instructors" class="instructors">
         <h2>قائمة المدربين</h2>
-        <div id="instructorsContainer" class="instructors-grid">
-            <!-- Dynamic content from instructor.json will be loaded here -->
+        <div class="instructors-grid">
+            <!-- Hardcoded instructor information -->
+            <div class="instructor">
+                <img src="Assets/Photos/Dr.Mostafa.jpg" alt="د. مصطفى سعد" class="instructor-image"><br>
+                <h3>د. مصطفى سعد</h3><br>
+                <p>مقدم الدورة حاصل على بكالوريوس في علوم الحاسب (2008) وماجستير في رؤية الحاسوب (مجال تطبيقي للذكاء الاصطناعي) من حاسبات ومعلومات القاهرة.</p><br>
+                <p>حاصل على دكتوراه في رؤية الحاسوب من جامعة سيمون فريزر الكندية تحت إشراف <a href='https://scholar.google.com/citations?user=Bl9FSL0AAAAJ&hl=en'>بروفيسور جريج موري</a>. خلال الدكتوراه نشر 3 أبحاث في كبرى المؤتمرات وذكر عمله <a href='https://scholar.google.com/citations?user=Bl9FSL0AAAAJ&hl=en'>880</a> مرة.</p><br>
+                <p>عمل بمجال هندسة البرمجيات 5 سنوات و عمل 7 سنوات في الذكاء الاصطناعي بين الهندسة والبحث العلمي.</p><br>
+                <p>عمل بكبرى الشركات مثل هواوي ونفيديا وتدرب في شركات مثل جوجل وميكروسوفت وآي بي إم.</p><br>
+                <p>شارك لسنوات طويلة في مسابقات البرمجة وصعد للمستوى العربي والعالمي. لعب أيضا دور المدرب والحكم. كان رئيس الحكام للمسابقة المصرية والأردنية.</p><br>
+                <p>صاحب أشهر قناة يوتيوب مخصصة لكل ما يخص مسابقات البرمجة وله العديد من المبادرات الأخرى.</p><br>
+                <p>له الكثير من اللقاءات مع طلاب من كافة الجامعات العربية.</p><br>
+                <p>مهتم بمجال التعليم والتدريب منذ 2006.</p><br>
+                <p>فلسفته التعليمية تتميز عن الآخرين بالتوسع الأفقي والرأسي في المادة العلمية مع كم غفير من التدريبات لتأسيس الطالب.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Testimonials Section (Optional) -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <h2>آراء الطلاب</h2>
+        <h2>اسمع من طلاب المدرسة</h2>
         <div class="testimonials-grid">
-            <div class="testimonial">
-                <p>المدربون هنا يتمتعون بخبرة كبيرة ويقدمون توجيهات مميزة.</p>
-                <strong>- أحمد</strong>
-            </div>
-            <div class="testimonial">
-                <p>تعلمت الكثير من المدربين في CSkilled. الدورات كانت ممتازة!</p>
-                <strong>- فاطمة</strong>
-            </div>
-            <div class="testimonial">
-                <p>المدربون يهتمون جداً بالتفاصيل ويحرصون على إيصال المعلومات بوضوح.</p>
-                <strong>- خالد</strong>
-            </div>
+        <div class="testimonial">
+            <img src="Assets/Photos/Dr.Mostafa.jpg" alt="Profile of الطالب 1" class="profile-pic" />
+            <p>الكورس كان جيداً في تغطية أساسيات لغة CSS وكان مليء جدًا بالمعلومات وكان هناك وقت ومجهود كبير جدًا.</p>
+            <div class="stars">★★★★★</div>
+            <strong>محمود محمد</strong>
+        </div>
+        <div class="testimonial">
+            <img src="Assets/Photos/Dr.Mostafa.jpg" alt="Profile of الطالب 2" class="profile-pic" />
+            <p>الدكتور شرح جيد جداً في المحاضرات، حسيت ان المادة كانت شيقة وتفهمها بسهولة الحمد لله.</p>
+            <div class="stars">★★★★★</div>
+            <strong>شادي محمدي</strong>
+        </div>
+        <div class="testimonial">
+            <img src="Assets/Photos/Dr.Mostafa.jpg" alt="Profile of الطالب 3" class="profile-pic" />
+            <p>الكورسات المتاحة ساعدتني على تحسين مهاراتي في البرمجة بشكل كبير. أنصح الجميع بها.</p>
+            <div class="stars">★★★★★</div>
+            <strong>علي حسن</strong>
+        </div>
         </div>
     </section>
 
@@ -95,7 +118,5 @@
 
     <!-- Global JS -->
     <script src="js/global.js"></script>
-    <!-- Page-Specific JS -->
-    <script src="js/instructor.js"></script> <!-- Include the instructor JS file -->
 </body>
 </html>
