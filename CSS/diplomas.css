@@ -270,3 +270,252 @@ body {
     grid-template-columns: 1fr; /* Switch to 1 card per row on very small screens */
   }
 }
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9ff;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #4b00ff;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Testimonials Grid Layout */
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; /* Fixed width for each testimonial card */
+}
+
+.testimonial img.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial .stars {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Decorative Background Elements */
+.testimonials::before,
+.testimonials::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+.testimonials::before {
+  width: 100px;
+  height: 100px;
+  background-color: #00d1ff;
+  top: 10%;
+  left: -50px;
+  transform: rotate(45deg);
+}
+
+.testimonials::after {
+  width: 120px;
+  height: 120px;
+  background-color: #a49bff;
+  bottom: 10%;
+  right: -60px;
+  transform: rotate(45deg);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    gap: 15px;
+  }
+
+  .testimonial {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f5f5f5;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* FAQ Container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6f42ff;
+  outline: none;
+  cursor: pointer;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  list-style: none; /* Removes the marker in Firefox */
+}
+
+/* Change color when the FAQ is open */
+details[open] summary {
+  color: #563d7c;
+}
+
+/* Remove the default arrow in WebKit browsers */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add the custom + and - symbols */
+summary::before {
+  content: "+";
+  font-size: 1.5rem;
+  color: #6f42ff;
+  transition: transform 0.3s ease;
+  margin-left: 10px; /* Add space between the symbol and the text */
+}
+
+/* Change the + to - when details is open */
+details[open] summary::before {
+  content: "-";
+  color: #563d7c;
+}
+
+details p {
+  margin-top: 10px;
+  padding-right: 20px;
+  color: #333;
+  text-align: right;
+}
+
+details:hover {
+  background-color: #f0f0f0;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .newsletter-section {
+    padding: 40px 50px; /* Reduce padding for medium screens */
+  }
+
+  .newsletter-section input {
+    width: 250px; /* Slightly reduce input width */
+  }
+
+  .faq-section {
+    padding: 40px 50px; /* Reduce padding for medium screens */
+  }
+
+  .faq-section h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 30px 20px; /* Reduce padding for small screens */
+  }
+
+  .faq-container {
+    max-width: 100%; /* Full width for FAQ container */
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  details summary {
+    font-size: 1.1rem; /* Slightly reduce summary text size */
+  }
+
+  details p {
+    padding-right: 10px; /* Reduce padding for text */
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 20px 10px; /* Further reduce padding */
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  details summary {
+    font-size: 1rem; /* Reduce summary text size */
+  }
+
+  details p {
+    font-size: 0.9rem;
+    padding-right: 5px; /* Reduce padding for text */
+  }
+}

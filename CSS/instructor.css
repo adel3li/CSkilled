@@ -8,6 +8,9 @@
   text-align: center;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
@@ -56,7 +59,7 @@
 
 .hero-background .triangle {
   position: absolute;
-  bottom: -0px;
+  bottom: 0px;
   right: -150px;
   width: 0;
   height: 0;
@@ -78,6 +81,7 @@
   text-align: center;
   margin-bottom: 30px;
 }
+
 .instructor p {
   line-height: 1.6; /* Adjust line spacing */
   margin-bottom: 15px; /* Add margin between paragraphs */
@@ -166,7 +170,30 @@
 }
 
 /* Responsive Styling */
+
+/* For tablets and smaller screens */
 @media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero-background .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-background .triangle {
+    display: none; /* Hide triangle on smaller screens */
+  }
+
   .testimonials-grid {
     gap: 15px;
   }
@@ -175,15 +202,49 @@
     width: 100%; /* Full width on smaller screens */
     max-width: 500px;
   }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
 }
 
+/* For mobile screens */
 @media (max-width: 480px) {
-  .testimonial p {
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
     font-size: 1rem;
+  }
+
+  .hero-content .cta-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 
   .testimonials h2 {
     font-size: 1.8rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    padding: 15px;
+  }
+
+  .testimonials::before {
+    display: none; /* Hide decorative elements on mobile */
+  }
+
+  .testimonials::after {
+    display: none; /* Hide decorative elements on mobile */
   }
 }
