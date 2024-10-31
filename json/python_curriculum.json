@@ -1,0 +1,109 @@
+[
+  {
+    "title": "Python Basics",
+    "lessons": [
+      { "name": "Introduction to Python", "type": "lecture", "link": "https://www.youtube.com/watch?v=pkaAmBKh0ko" },
+      { "name": "Setting up Python Environment", "type": "lecture" },
+      { "name": "Data Types in Python", "type": "lecture" },
+      { "name": "Control Flow in Python", "type": "lecture" },
+      { "name": "Functions in Python", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Advanced Python",
+    "lessons": [
+      { "name": "Object-Oriented Programming in Python", "type": "lecture" },
+      { "name": "Python Modules and Packages", "type": "lecture" },
+      { "name": "Error Handling & Exceptions", "type": "lecture" },
+      { "name": "File Input/Output", "type": "lecture" },
+      { "name": "Decorators in Python", "type": "lecture" },
+      { "name": "Generators in Python", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Data Science Libraries",
+    "lessons": [
+      { "name": "Introduction to Numpy", "type": "lecture" },
+      { "name": "Introduction to Pandas", "type": "lecture" },
+      { "name": "Data Visualization with Matplotlib", "type": "lecture" },
+      { "name": "Data Visualization with Seaborn", "type": "lecture" },
+      { "name": "Working with DataFrames in Pandas", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Python for Web Development",
+    "lessons": [
+      { "name": "Introduction to Flask", "type": "lecture" },
+      { "name": "Creating Web Applications with Flask", "type": "lecture" },
+      { "name": "Introduction to Django", "type": "lecture" },
+      { "name": "Building REST APIs with Django REST Framework", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Python for Automation",
+    "lessons": [
+      { "name": "Automating Tasks with Python", "type": "lecture" },
+      { "name": "Working with Files and Directories", "type": "lecture" },
+      { "name": "Web Scraping with BeautifulSoup", "type": "lecture" },
+      { "name": "Automating Web Tasks with Selenium", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Data Analysis with Python",
+    "lessons": [
+      { "name": "Exploratory Data Analysis with Pandas", "type": "lecture" },
+      { "name": "Advanced Data Manipulation with Pandas", "type": "lecture" },
+      { "name": "Data Cleaning and Preprocessing", "type": "lecture" },
+      { "name": "Handling Missing Data", "type": "lecture" },
+      { "name": "Time Series Analysis", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Machine Learning with Python",
+    "lessons": [
+      { "name": "Introduction to Machine Learning", "type": "lecture" },
+      { "name": "Supervised vs Unsupervised Learning", "type": "lecture" },
+      { "name": "Linear Regression with Scikit-learn", "type": "lecture" },
+      { "name": "Classification with Scikit-learn", "type": "lecture" },
+      { "name": "Clustering with Scikit-learn", "type": "lecture" },
+      { "name": "Model Evaluation Metrics", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Project 1",
+    "lessons": [
+      { "name": "Project: Data Analysis with Python", "type": "project" }
+    ]
+  },
+  {
+    "title": "Deep Learning with Python",
+    "lessons": [
+      { "name": "Introduction to Neural Networks", "type": "lecture" },
+      { "name": "Building Neural Networks with TensorFlow", "type": "lecture" },
+      { "name": "Training Neural Networks with Keras", "type": "lecture" },
+      { "name": "Convolutional Neural Networks (CNN)", "type": "lecture" },
+      { "name": "Recurrent Neural Networks (RNN)", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Project 2",
+    "lessons": [
+      { "name": "Project: Building a Machine Learning Model", "type": "project" }
+    ]
+  },
+  {
+    "title": "Python for DevOps",
+    "lessons": [
+      { "name": "Introduction to DevOps", "type": "lecture" },
+      { "name": "Working with Docker", "type": "lecture" },
+      { "name": "CI/CD with Jenkins", "type": "lecture" },
+      { "name": "Using Python for Automation in DevOps", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Final Project",
+    "lessons": [
+      { "name": "Final Project: End-to-End Data Science Solution", "type": "project" }
+    ]
+  }
+]
