@@ -1,0 +1,220 @@
+[
+  {
+    "title": "Background Lectures",
+    "lessons": [
+      { "name": "Background: Normal Distribution", "type": "lecture", "link": "https://drive.google.com/file/d/14mxJjsDndXwBcuN3Fg_pISeTnzB2Z97N" },
+      { "name": "Background: Linear Equation", "type": "lecture", "link": "https://www.youtube.com/watch?v=pkaAmBKh0ko" },
+      { "name": "Background: Calculus", "type": "lecture" },
+      { "name": "Background: Graph Theory", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Introduction",
+    "lessons": [
+      { "name": "Machine Learning Applications", "type": "lecture" },
+      { "name": "Fields around the Data", "type": "lecture" },
+      { "name": "What is Data Science", "type": "lecture" },
+      { "name": "What is Machine Learning", "type": "lecture" },
+      { "name": "Machine Learning Algorithms", "type": "lecture" },
+      { "name": "Machine Learning Model", "type": "lecture" },
+      { "name": "What are the Features in ML", "type": "lecture" },
+      { "name": "Popular people in AI", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Libraries",
+    "lessons": [
+      { "name": "Scikit Learn", "type": "lecture" },
+      { "name": "Jupyter Notebook", "type": "lecture" },
+      { "name": "Numpy", "type": "lecture" },
+      { "name": "Matplotlib", "type": "lecture" },
+      { "name": "Pandas", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Linear Regression",
+    "lessons": [
+      { "name": "Linear Regression Intuition", "type": "lecture" },
+      { "name": "Gradient Descent", "type": "lecture" },
+      { "name": "Linear Regression using Gradient Descent", "type": "lecture" },
+      { "name": "Linear Regression Assumptions", "type": "lecture" },
+      { "name": "Homework 1: Gradient Descent", "type": "homework" },
+      { "name": "Homework 2: Linear Regression- Cost Function", "type": "homework" },
+      { "name": "Homework 3: Linear Regression: 9 subtasks", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Modeling Concepts",
+    "lessons": [
+      { "name": "Polynomial Regression", "type": "lecture" },
+      { "name": "Model Selection", "type": "lecture" },
+      { "name": "Cross Validation", "type": "lecture" },
+      { "name": "Overfitting and Underfitting", "type": "lecture" },
+      { "name": "Regularization - Ridge", "type": "lecture" },
+      { "name": "Regularization - Lasso", "type": "lecture" },
+      { "name": "Homework - Regressors Project - 10 tasks", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Data Concepts",
+    "lessons": [
+      { "name": "Features Engineering", "type": "lecture" },
+      { "name": "Data in Practice", "type": "lecture" },
+      { "name": "Fine Grained Data Collection: Deep market experience", "type": "lecture" },
+      { "name": "Data Leakage", "type": "lecture" },
+      { "name": "Synthetic Data", "type": "lecture" },
+      { "name": "Background: Logarithm", "type": "lecture" },
+      { "name": "Common ML Jargons", "type": "lecture" },
+      { "name": "ML Big Picture", "type": "lecture" },
+      { "name": "Challenge: Database Schema", "type": "challenge" },
+      { "name": "Challenge: Large Scale Data Annotation", "type": "challenge" },
+      { "name": "Challenge: Data for Verification", "type": "challenge" },
+      { "name": "Challenge: Modeling with Data Limitation", "type": "challenge" },
+      { "name": "Challenge: Unlimited Data Variance", "type": "challenge" }
+    ]
+  },
+  {
+    "title": "Project 1",
+    "lessons": [
+      { "name": "Project #1", "type": "project" }
+    ]
+  },
+  {
+    "title": "Neural Network for Regression",
+    "lessons": [
+      { "name": "Background: Graph Theory", "type": "lecture" },
+      { "name": "Background: Multivariate Chain Rule", "type": "lecture" },
+      { "name": "ANN in depth", "type": "lecture" },
+      { "name": "Training Neural Networks: The Big Picture", "type": "lecture" },
+      { "name": "Backpropagation", "type": "lecture" },
+      { "name": "Homework: Backpropagation", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Binary Classification",
+    "lessons": [
+      { "name": "Regression for Binary Classification", "type": "lecture" },
+      { "name": "Linear Separability", "type": "lecture" },
+      { "name": "Background: Sigmoid Function", "type": "lecture" },
+      { "name": "Logistic Regression", "type": "lecture" },
+      { "name": "Cost Function", "type": "lecture" },
+      { "name": "Homework: Logistic", "type": "homework" },
+      { "name": "Binary Evaluation Metrics - log acc", "type": "lecture" },
+      { "name": "Binary Evaluation Metrics - CM", "type": "lecture" },
+      { "name": "Binary Evaluation Metrics - Precision Recall", "type": "lecture" },
+      { "name": "Binary Evaluation Metrics - F Score", "type": "lecture" },
+      { "name": "Binary Evaluation Metrics - FPR FNR", "type": "lecture" },
+      { "name": "Binary Evaluation Metrics - Curves", "type": "lecture" },
+      { "name": "Binary Evaluation Metrics - AP", "type": "lecture" },
+      { "name": "Imbalanced Datasets", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Project 2",
+    "lessons": [
+      { "name": "Project #2", "type": "project" }
+    ]
+  },
+  {
+    "title": "End to End ML",
+    "lessons": [
+      { "name": "Model Deployment", "type": "lecture" },
+      { "name": "Data Distribution Shift", "type": "lecture" },
+      { "name": "Scoping and Feasibility", "type": "lecture" },
+      { "name": "Business Metrics", "type": "lecture" },
+      { "name": "Data Storage", "type": "lecture" },
+      { "name": "Model Development and Training", "type": "lecture" },
+      { "name": "Experiments Tracking", "type": "lecture" },
+      { "name": "Boosting Model Inference Speed", "type": "lecture" },
+      { "name": "SWE Diagrams", "type": "lecture" },
+      { "name": "Toward ML Seniority", "type": "lecture" },
+      { "name": "Challenge: Customer Requirements", "type": "challenge" },
+      { "name": "Challenge: Problem Formulation", "type": "challenge" }
+    ]
+  },
+  {
+    "title": "Multiclass Classification",
+    "lessons": [
+      { "name": "Intro", "type": "lecture" },
+      { "name": "Softmax Function", "type": "lecture" },
+      { "name": "Cross Entropy", "type": "lecture" },
+      { "name": "Model Calibration", "type": "lecture" },
+      { "name": "Homework# 1: Multiclass Classifier", "type": "homework" },
+      { "name": "Homework#2: Theatrical Qs", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Unsupervised Learning",
+    "lessons": [
+      { "name": "Unsupervised and Self Supervised Learning", "type": "lecture" },
+      { "name": "AutoEncoder", "type": "lecture" },
+      { "name": "K-means", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Misc Topics",
+    "lessons": [
+      { "name": "KNN", "type": "lecture" },
+      { "name": "Intro to Probabilistic Modeling", "type": "lecture" },
+      { "name": "Introduction to Sampling Techniques", "type": "lecture" },
+      { "name": "Coding Interviewing Questions", "type": "lecture" },
+      { "name": "Homework: Intro to Probabilistic Modeling", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Project 3",
+    "lessons": [
+      { "name": "Project #3", "type": "project" }
+    ]
+  },
+  {
+    "title": "Deep Learning Frameworks",
+    "lessons": [
+      { "name": "PyTorch Installations", "type": "lecture" },
+      { "name": "PyTorch Basics", "type": "lecture" },
+      { "name": "PyTorch Simple Network", "type": "lecture" },
+      { "name": "PyTorch Dataset", "type": "lecture" },
+      { "name": "Challenge: Network Design", "type": "challenge" }
+    ]
+  },
+  {
+    "title": "Project 4",
+    "lessons": [
+      { "name": "Project #4", "type": "project" }
+    ]
+  },
+  {
+    "title": "Convolutional Neural Network",
+    "lessons": [
+      { "name": "Intro to Computer Vision Problems", "type": "lecture" },
+      { "name": "Debugging DNNs", "type": "lecture" },
+      { "name": "CV before DL", "type": "lecture" },
+      { "name": "Convolution Operator", "type": "lecture" },
+      { "name": "Padding and Stride", "type": "lecture" },
+      { "name": "Convolutional Layer", "type": "lecture" },
+      { "name": "Feature Pooling", "type": "lecture" },
+      { "name": "Convolutional Neural Networks", "type": "lecture" },
+      { "name": "Finetune", "type": "lecture" },
+      { "name": "Misc", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "RNN and LSTM",
+    "lessons": [
+      { "name": "Sequence Models", "type": "lecture" },
+      { "name": "RNN", "type": "lecture" },
+      { "name": "RNN for Char Generation", "type": "lecture" },
+      { "name": "RNN for Word Generation", "type": "lecture" },
+      { "name": "More on RNN", "type": "lecture" },
+      { "name": "LSTM", "type": "lecture" },
+      { "name": "LSTM in PyTorch", "type": "lecture" },
+      { "name": "Notes on Time Series", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Final Project",
+    "lessons": [
+      { "name": "A resume-level Project in Computer Vision (employing CNN, RNN and potentially transformers)", "type": "project" }
+    ]
+  }
+]

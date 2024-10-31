@@ -1,0 +1,42 @@
+{
+  "sidebar": {
+    "image": {
+      "image": "Asset/Photos/background.jpg",
+      "alt": "Course Image"
+    },
+    "course_info": [
+      {
+        "icon": "fas fa-clock",
+        "label": "+ 130 ساعة"
+      },
+      {
+        "icon": "fas fa-calendar-alt",
+        "label": "84 جلسة"
+      },
+      {
+        "icon": "fas fa-laptop-code",
+        "label": "مشاريع تفاعلية"
+      },
+      {
+        "icon": "fa fa-comments",
+        "label": "نقاشات دسمة"
+      },
+      {
+        "icon": "fas fa-award",
+        "label": "شهادة"
+      },
+      {
+        "icon": "fas fa-tools",
+        "label": "خبرة عملية"
+      }
+    ],
+    "price": {
+      "old_price": "500$",
+      "new_price": "300$"
+    },
+    "subscription_time": "اشتراك مدى الحياة",
+    "subscribe_button": {
+      "text": "اشترك الآن"
+    }
+  }
+}

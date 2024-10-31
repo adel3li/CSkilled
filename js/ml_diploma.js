@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Load curriculum data from `curriculum.json`
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('curriculum.json')
+  fetch('json/curriculum.json')
     .then(response => response.json())
     .then(data => {
       console.log('Curriculum data loaded:', data); // Log the curriculum data to verify it is being loaded
@@ -139,7 +139,7 @@ function embedVideoUrl(url) {
 
 // Fetch reviews data from `reviews.json`
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('reviews.json')
+  fetch('json/reviews.json')
     .then(response => response.json())
     .then(data => {
       const container = document.getElementById('reviewsContent');
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Load sidebar content from `sidebar.json`
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('sidebar.json')
+  fetch('json/sidebar.json')
     .then(response => response.json())
     .then(data => {
       const sidebarData = data.sidebar;
