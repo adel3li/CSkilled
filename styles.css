@@ -467,90 +467,64 @@ details[open] .toggle-icon {
 }
 
 
-/* Instructor Content */
-#instructorContent {
-  padding: 20px; /* Add padding for spacing */
-}
-
+/* Instructor Container */
 #instructorContent h2 {
-  text-align: center; /* Center the heading text */
-  font-size: 1.5rem;  /* Adjust font size */
-  margin-bottom: 20px;
-  color: var(--primary-color); /* Optional: Add color to the heading */
+  text-align: center;  /* Center the h2 text */
+  margin-bottom: 30px; /* Add some space below the h2 */
+  color: #050316;      /* Optional: Set a specific color */
+  font-size: 2rem;     /* Optional: Set a specific font size */
 }
 
 .instructor {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center image and text horizontally */
-  text-align: right;   /* Align text content under the image */
-  max-width: 800px;    /* Limit the width for better readability */
-  margin: 0 auto;      /* Center the instructor content container */
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto; /* Center the section */
 }
 
-.instructor h3 {
-  text-align: center; /* Center the instructor's name */
-  margin-top: 15px;   /* Add margin above the name */
-  font-size: 1.25rem; /* Adjust font size */
-  color: var(--primary-color); /* Use a custom color */
-}
-
-.instructor p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 0px;  /* Add space between paragraphs */
-  color: var(--text-color); /* Define this variable or replace with a color */
-  text-align: justify;   /* Justify the text for a clean paragraph look */
-  max-width: 100%;       /* Ensure it doesn’t overflow the container */
-}
-
-/* Circular Image */
-.instructor-image {
+/* Instructor Image */
+.instructor img {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* Make it circular */
-  object-fit: cover;  /* Ensure image fits container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  transition: transform 0.3s ease-in-out;    /* Smooth transition on hover */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
 }
 
-.instructor-image:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+/* Instructor Name */
+.instructor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-/* Responsive Adjustments */
+/* Instructor Description */
+.instructor-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Links inside description */
+.instructor-description a {
+  color: #443dff;
+  text-decoration: none;
+}
+
+.instructor-description a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  #instructorContent {
-    padding: 15px; /* Decrease padding on smaller screens */
-  }
-
-  .instructor-image {
-    width: 120px;
-    height: 120px; /* Reduce the image size for tablets */
-  }
-
-  .instructor h3 {
-    font-size: 1.1rem; /* Slightly reduce the name size */
-  }
-
-  .instructor p {
-    font-size: 1.2rem;   /* Adjust paragraph font size for smaller screens */
-  }
-}
-
-/* Mobile Adjustments */
-@media (max-width: 480px) {
-  .instructor-image {
-    width: 100px;   /* Further reduce the image size for mobile */
-    height: 100px;
-  }
-
-  .instructor h3 {
-    font-size: 1rem; /* Further reduce the name size for mobile */
-  }
-
-  .instructor p {
-    font-size: 0.9rem; /* Decrease size for readability on small devices */
+  .instructor {
+      padding: 15px;
   }
 }
 

@@ -23,83 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('descriptionContent').style.display = 'block';
 });
 
-// Fetch the description content from `description.json`
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('description.json')
-    .then(response => response.json())
-    .then(data => {
-      const descriptionContent = data.descriptionContent;
-      const descriptionSection = document.getElementById('descriptionContent');
-      
-      const heading = document.createElement('h2');
-      heading.textContent = descriptionContent.heading;
-      descriptionSection.appendChild(heading);
-      
-      const paragraph = document.createElement('p');
-      paragraph.innerHTML = descriptionContent.paragraph.replace(/\n/g, '<br>');
-      descriptionSection.appendChild(paragraph);
-      
-      descriptionContent.details.forEach(detail => {
-        const detailsElement = document.createElement('details');
-        detailsElement.classList.add('course-details');
-        detailsElement.open = true;
-        
-        const summary = document.createElement('summary');
-        summary.innerHTML = `<b>${detail.summary}</b>`;
-        detailsElement.appendChild(summary);
-        
-        if (detail.content) {
-          const contentParagraph = document.createElement('p');
-          contentParagraph.classList.add('course-content-section');
-          contentParagraph.textContent = detail.content;
-          detailsElement.appendChild(contentParagraph);
-        }
-
-        if (detail.goals) {
-          const ul = document.createElement('ul');
-          ul.classList.add('course-goals-details');
-          detail.goals.forEach(goal => {
-            const li = document.createElement('li');
-            li.textContent = goal;
-            ul.appendChild(li);
-          });
-          detailsElement.appendChild(ul);
-        }
-
-        if (detail.pros) {
-          const ul = document.createElement('ul');
-          ul.classList.add('course-pros-details');
-          detail.pros.forEach(pro => {
-            const li = document.createElement('li');
-            li.textContent = pro;
-            ul.appendChild(li);
-          });
-          detailsElement.appendChild(ul);
-        }
-
-        if (detail.requirements) {
-          const ul = document.createElement('ul');
-          ul.classList.add('course-requirements-details');
-          detail.requirements.forEach(requirement => {
-            const li = document.createElement('li');
-            li.textContent = requirement;
-            ul.appendChild(li);
-          });
-          detailsElement.appendChild(ul);
-        }
-
-        if (detail.note) {
-          const noteParagraph = document.createElement('p');
-          noteParagraph.textContent = detail.note;
-          noteParagraph.classList.add('course-note');
-          detailsElement.appendChild(noteParagraph);
-        }
-
-        descriptionSection.appendChild(detailsElement);
-      });
-    })
-    .catch(error => console.error('Error fetching the description:', error));
-});
 
 // Load curriculum data from `curriculum.json`
 document.addEventListener('DOMContentLoaded', function() {
@@ -214,37 +137,6 @@ function embedVideoUrl(url) {
   }
 }
 
-// Load instructor content from `json/instructor.json`
-document.addEventListener('DOMContentLoaded', loadInstructorContent);
-
-function loadInstructorContent() {
-  fetch('json/instructor.json') // Fetch from the correct path
-    .then(response => response.json())
-    .then(data => {
-      const instructorSection = document.querySelector('.instructor');
-
-      // Create and append instructor heading
-      const heading = document.createElement('h3');
-      heading.textContent = data.instructor.name;
-      instructorSection.appendChild(heading);
-
-      // Create and append instructor image
-      const img = document.createElement('img');
-      img.src = data.instructor.image;
-      img.alt = data.instructor.name;
-      img.classList.add('instructor-image');
-      instructorSection.appendChild(img);
-
-      // Create and append instructor description paragraphs
-      data.instructor.description.forEach(desc => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = desc; // Use innerHTML to allow HTML tags like <a>
-        instructorSection.appendChild(paragraph);
-      });
-    })
-    .catch(error => console.error('Error loading instructor content:', error));
-}
-
 // Fetch reviews data from `reviews.json`
 document.addEventListener('DOMContentLoaded', function() {
   fetch('reviews.json')
@@ -306,76 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error loading reviews:', error));
 });
-
-// Load FAQ content from `json/faq.json`
-document.addEventListener('DOMContentLoaded', loadFaqContent);
-
-function loadFaqContent() {
-  fetch('json/faq.json') // Fetch from the correct path
-    .then(response => response.json())
-    .then(data => {
-      const faqList = document.getElementById('faqList'); // Target the correct container
-
-      // Loop through the FAQ array and create question-answer pairs
-      data.faq.forEach(item => {
-        const questionElement = document.createElement('h4');
-        questionElement.classList.add('faq-question');
-        questionElement.textContent = item.question;
-
-        const answerElement = document.createElement('p');
-        answerElement.classList.add('faq-answer');
-        answerElement.textContent = item.answer;
-        answerElement.style.display = 'none'; // Hide the answer initially
-
-        // Append the question and answer to the FAQ list
-        faqList.appendChild(questionElement);
-        faqList.appendChild(answerElement);
-
-        // Add click event to toggle the answer visibility
-        questionElement.addEventListener('click', () => {
-          if (answerElement.style.display === 'block') {
-            answerElement.style.display = 'none';
-            questionElement.classList.remove('active');
-          } else {
-            answerElement.style.display = 'block';
-            questionElement.classList.add('active');
-          }
-        });
-      });
-    })
-    .catch(error => console.error('Error loading FAQ content:', error));
-}
-
-// Load payment content from `payment.json`
-document.addEventListener('DOMContentLoaded', loadPaymentContent);
-function loadPaymentContent() {
-  fetch('payment.json')
-    .then(response => response.json())
-    .then(data => {
-      const paymentDetails = document.getElementById('paymentDetails');
-      const heading = document.createElement('h3');
-      heading.textContent = data.heading;
-      
-      const paragraph = document.createElement('p');
-      paragraph.textContent = data.paragraph;
-      
-      const stepsList = document.createElement('ul');
-      data.steps.forEach(step => {
-        const li = document.createElement('li');
-        li.textContent = step;
-        stepsList.appendChild(li);
-      });
-      
-      const note = document.createElement('p');
-      note.innerHTML = `<strong>ملاحظة:</strong> ${data.note}`;
-      
-      paymentDetails.appendChild(heading);
-      paymentDetails.appendChild(paragraph);
-      paymentDetails.appendChild(stepsList);
-      paymentDetails.appendChild(note);
-    })
-    .catch(error => console.error('Error loading payment details:', error));
-}
 
 // Load sidebar content from `sidebar.json`
 document.addEventListener('DOMContentLoaded', function() {
