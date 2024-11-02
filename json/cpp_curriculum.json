@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Intro",
+    "lessons": [
+      { "name": "Intro for C++", "type": "lecture" },
+      { "name": "Printing", "type": "lecture" },
+      { "name": "Data Types and Variables", "type": "lecture" },
+      { "name": "Operators", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Control Flow",
+    "lessons": [
+      { "name": "Selection", "type": "lecture" },
+      { "name": "Loops", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Arrays",
+    "lessons": [
+      { "name": "1D Arrays", "type": "lecture" },
+      { "name": "Char Arrays", "type": "lecture" },
+      { "name": "Multidimensional Arrays", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Functions and Structures",
+    "lessons": [
+      { "name": "Functions", "type": "lecture" },
+      { "name": "Recursive Functions", "type": "lecture" },
+      { "name": "Structures", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Advanced Concepts",
+    "lessons": [
+      { "name": "Templates", "type": "lecture" },
+      { "name": "STL", "type": "lecture" },
+      { "name": "Files and Streams", "type": "lecture" },
+      { "name": "Pointers", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Headers and Exception Handling",
+    "lessons": [
+      { "name": "Headers and Includes", "type": "lecture" },
+      { "name": "Exception Handling", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Object-Oriented Programming",
+    "lessons": [
+      { "name": "OOP Concepts", "type": "lecture" },
+      { "name": "Classes", "type": "lecture" },
+      { "name": "UML Inheritance Polymorphism", "type": "lecture" },
+      { "name": "Operator overloading", "type": "lecture" }
+    ]
+  }
+]

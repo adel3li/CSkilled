@@ -1,104 +1,141 @@
 [
   {
-    "title": "Introduction to Data Structures and Algorithms",
+    "title": "Welcome",
     "lessons": [
-      { "name": "What are Data Structures and Algorithms?", "type": "lecture" },
-      { "name": "Importance of DSA in Programming", "type": "lecture" },
-      { "name": "Complexity Analysis - Big O Notation", "type": "lecture", "link": "https://www.youtube.com/watch?v=__vX2sjlpXU" },
-      { "name": "Basic Mathematical Concepts for DSA", "type": "lecture" }
+      { "name": "Introduction to Data Structures and Algorithms", "type": "lecture" }
     ]
   },
   {
-    "title": "Arrays and Linked Lists",
+    "title": "Vector",
     "lessons": [
-      { "name": "Introduction to Arrays", "type": "lecture" },
-      { "name": "Operations on Arrays", "type": "lecture" },
-      { "name": "Introduction to Linked Lists", "type": "lecture" },
-      { "name": "Singly Linked Lists", "type": "lecture", "link": "https://drive.google.com/file/d/14mxJjsDndXwBcuN3Fg_pISeTnzB2Z97N" },
-      { "name": "Doubly Linked Lists", "type": "lecture" },
-      { "name": "Circular Linked Lists", "type": "lecture" },
-      { "name": "Project: Linked List Implementation", "type": "project" }
+      { "name": "Understanding Vectors", "type": "lecture" },
+      { "name": "Vector Operations", "type": "lecture" }
     ]
   },
   {
-    "title": "Stacks and Queues",
+    "title": "Complexity",
     "lessons": [
-      { "name": "Introduction to Stacks", "type": "lecture" },
-      { "name": "Stack Operations", "type": "lecture" },
-      { "name": "Introduction to Queues", "type": "lecture" },
-      { "name": "Queue Operations", "type": "lecture" },
-      { "name": "Applications of Stacks and Queues", "type": "lecture" },
-      { "name": "Homework: Stack and Queue Implementation", "type": "homework" }
+      { "name": "Time Complexity", "type": "lecture" },
+      { "name": "Space Complexity", "type": "lecture" }
     ]
   },
   {
-    "title": "Trees",
+    "title": "Singly Linked List",
     "lessons": [
-      { "name": "Introduction to Trees", "type": "lecture" },
-      { "name": "Binary Trees", "type": "lecture" },
-      { "name": "Binary Search Trees (BST)", "type": "lecture" },
-      { "name": "Tree Traversal Techniques", "type": "lecture" },
-      { "name": "Balanced Trees - AVL Trees", "type": "lecture" },
-      { "name": "Homework: Implementing a BST", "type": "homework" },
-      { "name": "Project: Tree Traversal Visualizer", "type": "project" }
+      { "name": "Introduction to Singly Linked Lists", "type": "lecture" },
+      { "name": "Operations on Singly Linked Lists", "type": "lecture" }
     ]
   },
   {
-    "title": "Hashing",
+    "title": "Doubly Linked List",
     "lessons": [
-      { "name": "Introduction to Hashing", "type": "lecture" },
-      { "name": "Hash Functions", "type": "lecture" },
-      { "name": "Collision Handling Techniques", "type": "lecture" },
-      { "name": "Applications of Hashing", "type": "lecture" },
-      { "name": "Homework: Hash Map Implementation", "type": "homework" }
+      { "name": "Introduction to Doubly Linked Lists", "type": "lecture" },
+      { "name": "Operations on Doubly Linked Lists", "type": "lecture" }
     ]
   },
   {
-    "title": "Graphs",
+    "title": "Stack",
+    "lessons": [
+      { "name": "Stack Data Structure", "type": "lecture" },
+      { "name": "Applications of Stacks", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Queue",
+    "lessons": [
+      { "name": "Queue Data Structure", "type": "lecture" },
+      { "name": "Types of Queues", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Binary Tree",
+    "lessons": [
+      { "name": "Introduction to Binary Trees", "type": "lecture" },
+      { "name": "Tree Traversal Techniques", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Binary Search Tree",
+    "lessons": [
+      { "name": "Introduction to BST", "type": "lecture" },
+      { "name": "BST Operations", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Heap",
+    "lessons": [
+      { "name": "Introduction to Heaps", "type": "lecture" },
+      { "name": "Heap Operations", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Trie",
+    "lessons": [
+      { "name": "Introduction to Tries", "type": "lecture" },
+      { "name": "Applications of Tries", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "AVL Tree",
+    "lessons": [
+      { "name": "Introduction to AVL Trees", "type": "lecture" },
+      { "name": "Balancing AVL Trees", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "HashTables",
+    "lessons": [
+      { "name": "Introduction to HashTables", "type": "lecture" },
+      { "name": "Hash Functions and Collisions", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Sorting",
+    "lessons": [
+      { "name": "Introduction to Sorting Algorithms", "type": "lecture" },
+      { "name": "Merge Sort and Quick Sort", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Binary Search",
+    "lessons": [
+      { "name": "Introduction to Binary Search", "type": "lecture" },
+      { "name": "Applications of Binary Search", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Graph (Part 1)",
     "lessons": [
       { "name": "Introduction to Graphs", "type": "lecture" },
-      { "name": "Graph Representation - Adjacency Matrix & List", "type": "lecture" },
-      { "name": "Graph Traversal - BFS & DFS", "type": "lecture", "link": "https://www.youtube.com/watch?v=pkaAmBKh0ko" },
-      { "name": "Shortest Path Algorithms - Dijkstra's & Floyd-Warshall", "type": "lecture" },
-      { "name": "Minimum Spanning Tree - Kruskal & Prim", "type": "lecture" },
-      { "name": "Project: Graph Traversal Simulator", "type": "project" }
+      { "name": "Graph Representation", "type": "lecture" }
     ]
   },
   {
-    "title": "Sorting Algorithms",
+    "title": "Dynamic Programming",
     "lessons": [
-      { "name": "Introduction to Sorting", "type": "lecture" },
-      { "name": "Bubble Sort, Selection Sort, and Insertion Sort", "type": "lecture" },
-      { "name": "Merge Sort and Quick Sort", "type": "lecture" },
-      { "name": "Heap Sort", "type": "lecture" },
-      { "name": "Homework: Sorting Algorithm Comparison", "type": "homework" }
+      { "name": "Introduction to Dynamic Programming", "type": "lecture" },
+      { "name": "Memoization and Tabulation", "type": "lecture" }
     ]
   },
   {
-    "title": "Advanced Data Structures",
+    "title": "Backtrack",
     "lessons": [
-      { "name": "Heaps and Priority Queues", "type": "lecture" },
-      { "name": "Trie Data Structure", "type": "lecture" },
-      { "name": "Disjoint Set Union (DSU)", "type": "lecture" },
-      { "name": "Segment Trees", "type": "lecture" },
-      { "name": "Fenwick Tree (Binary Indexed Tree)", "type": "lecture" },
-      { "name": "Project: Implementing a Priority Queue", "type": "project" }
+      { "name": "Introduction to Backtracking", "type": "lecture" },
+      { "name": "Backtracking Techniques", "type": "lecture" }
     ]
   },
   {
-    "title": "Algorithmic Techniques",
+    "title": "Divide and Conquer",
     "lessons": [
-      { "name": "Divide and Conquer", "type": "lecture" },
-      { "name": "Dynamic Programming", "type": "lecture" },
-      { "name": "Greedy Algorithms", "type": "lecture" },
-      { "name": "Backtracking", "type": "lecture" },
-      { "name": "Homework: Dynamic Programming Challenges", "type": "homework" }
+      { "name": "Introduction to Divide and Conquer", "type": "lecture" },
+      { "name": "Applications of Divide and Conquer", "type": "lecture" }
     ]
   },
   {
-    "title": "Final Project",
+    "title": "Graph (Part 2)",
     "lessons": [
-      { "name": "Build a Resume-Level Data Structure and Algorithm Project", "type": "project" }
+      { "name": "Graph Traversal Techniques", "type": "lecture" },
+      { "name": "Shortest Path Algorithms", "type": "lecture" }
     ]
   }
 ]

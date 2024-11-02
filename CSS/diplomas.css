@@ -130,20 +130,20 @@ body {
   align-items: center; /* Vertically center the content */
   z-index: 2; /* Ensure the content is above the shapes */
   max-width: 1400px; /* Optional: constrain the width of the content */
-  width: 100%; /* Ensure it takes the full width of the container */
-  margin-right: 18%;
+  width: 70%; /* Ensure it takes the full width of the container */
+  margin-right: 20%;
 }
 
 /* Hero Image */
 .hero-image {
-  flex: 1 1 30%; /* The image container takes 30% of the width */
+  flex: 1 1 20%; /* The image container takes 30% of the width */
   display: flex;
   justify-content: center; /* Center the image horizontally in its container */
   margin: 0;
 }
 
 .hero-image img {
-  max-width: 50%; /* Ensure image is responsive */
+  max-width: 60%; /* Ensure image is responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Optional: Add rounded corners to the image */
 }
@@ -187,33 +187,44 @@ body {
 @media (max-width: 1024px) {
   /* Adjust the hero layout for mid-sized screens */
   .hero-section {
-    padding: 50px 15px;
+    padding: 0px 0px;
   }
 
   .hero-content {
-    flex-direction: column; /* Stack content vertically */
-    margin-right: 0; /* Remove right margin for content */
+    display: flex;
+    justify-content: space-between; /* Keep image on the left and text on the right */
+    align-items: center; /* Vertically center the content */
+    z-index: 2; /* Ensure the content is above the shapes */
+    max-width: 1400px; /* Optional: constrain the width of the content */
+    width: 70%; /* Ensure it takes the full width of the container */
+    margin-right: 0%;
+    flex-direction: column;
   }
 
   .hero-image {
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+    margin-right: 0;
   }
 
   .hero-image img {
-    max-width: 80%; /* Slightly smaller image on mid-sized screens */
+    max-width: 60%; /* Slightly smaller image on mid-sized screens */
+    margin-right: 0;
   }
 
   .hero-text {
-    text-align: center; /* Center text for better layout */
+    text-align: right; /* Center text for better layout */
     padding-left: 0; /* Remove left padding */
+    margin-right: 0;
   }
 
   .hero-text h1 {
     font-size: 2rem; /* Reduce font size */
+    margin-right: 0;
   }
 
   .hero-text h2 {
-    font-size: 1.75rem; /* Reduce font size */
+    font-size: 2rem; /* Reduce font size */
+    margin-right: 0;
   }
 }
 
@@ -221,38 +232,45 @@ body {
   /* Adjust the hero layout for smaller screens */
   .hero-section {
     flex-direction: column; /* Stack the image and text vertically */
-    text-align: center; /* Center text on smaller screens */
+    text-align: right; /* Center text on smaller screens */
     padding: 40px 20px;
+    margin-right: 0;
   }
 
   .hero-content {
     flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center both text and image */
+    align-items: right; /* Center both text and image */
+    margin-right: 0;
   }
 
   .hero-image img {
-    max-width: 70%; /* Make the image smaller */
+    max-width: 40%; /* Make the image smaller */
+    margin-right: 0;
   }
 
   .hero-text {
     padding-left: 0;
-    text-align: center; /* Center text on small screens */
+    text-align: right; /* Center text on small screens */
+    margin-right: 0;
+    font-size: 1rem;
   }
 
   .hero-text h1 {
     font-size: 2rem; /* Reduce font size */
+    margin-right: 0;
   }
 
   .hero-text h2 {
-    font-size: 1.5rem; /* Reduce font size */
+    font-size: 2rem; /* Reduce font size */
+    margin-right: 0;
   }
 
   /* Hide shapes on smaller screens */
-  .hero-section::before,
+  /* .hero-section::before,
   .hero-section::after {
     display: none;
-  }
-}
+  }*/
+} 
 
 @media (max-width: 480px) {
   .hero-section {

@@ -1,4 +1,4 @@
-// Specific JavaScript for Data Structures and Algorithms using C++ Diploma
+// Specific JavaScript for Deep Learning Diploma
 
 // Handle tab switching
 document.querySelectorAll('.tab-button').forEach(button => {
@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('descriptionContent').style.display = 'block';
 });
 
-// Load curriculum data from `dsa_cpp_curriculum.json`
+// Load curriculum data from `deep_learning_curriculum.json`
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('json/dsa_cpp_curriculum.json')
+  fetch('json/dl_curriculum.json')
     .then(response => response.json())
     .then(data => {
-      console.log('DSA C++ curriculum data loaded:', data); // Log the curriculum data to verify it is being loaded
+      console.log('Deep Learning curriculum data loaded:', data); // Log the curriculum data to verify it is being loaded
 
       const container = document.querySelector('.curriculum-section');
       
@@ -136,9 +136,9 @@ function embedVideoUrl(url) {
   }
 }
 
-// Fetch reviews data from `dsa_cpp_reviews.json`
+// Fetch reviews data from `deep_learning_reviews.json`
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('json/dsa_cpp_reviews.json')
+  fetch('json/dl_reviews.json')
     .then(response => response.json())
     .then(data => {
       const container = document.getElementById('reviewsContent');
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.error('Error loading reviews:', error));
 });
 
-// Load sidebar content from `dsa_cpp_sidebar.json`
+// Load sidebar content from `deep_learning_sidebar.json`
 document.addEventListener('DOMContentLoaded', function() {
   fetch('json/sidebar.json')
     .then(response => response.json())

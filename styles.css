@@ -730,6 +730,7 @@ details[open] .toggle-icon {
   flex-direction: column;
   align-items: center; /* Center content horizontally */
   height: 0%;
+  margin-bottom: 10%;
 }
 
 /* Course Image Container */
