@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="review-text ${isEnglish ? 'english' : 'arabic'}">
               <p data-full-text="${review.text}">${review.text.replace(/\n/g, '<br>')}</p>
-              ${review.expandable && review.text.length > 100 ? '<button class="see-more">See more</button>' : ''}
+              ${review.expandable && review.text.length > 100 ? '<button class="see-more">See less</button>' : ''}
             </div>
           </div>
         `;
