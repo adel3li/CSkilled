@@ -1,0 +1,115 @@
+[
+  {
+    "title": "Introduction to C++ Programming",
+    "lessons": [
+      { "name": "What is C++?", "type": "lecture" },
+      { "name": "History and Features of C++", "type": "lecture" },
+      { "name": "Setting up C++ Development Environment", "type": "lecture", "link": "https://www.youtube.com/watch?v=__vX2sjlpXU" },
+      { "name": "Basic Syntax and Structure", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Variables, Data Types, and Operators",
+    "lessons": [
+      { "name": "Variables and Constants", "type": "lecture" },
+      { "name": "Data Types in C++", "type": "lecture" },
+      { "name": "Basic Input/Output in C++", "type": "lecture" },
+      { "name": "Operators in C++", "type": "lecture" },
+      { "name": "Project: Calculator Program", "type": "project" }
+    ]
+  },
+  {
+    "title": "Control Flow",
+    "lessons": [
+      { "name": "Conditional Statements (if, else, switch)", "type": "lecture" },
+      { "name": "Loops (for, while, do-while)", "type": "lecture" },
+      { "name": "Break and Continue Statements", "type": "lecture" },
+      { "name": "Homework: Implementing Control Flow Exercises", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Functions and Recursion",
+    "lessons": [
+      { "name": "Introduction to Functions", "type": "lecture" },
+      { "name": "Function Parameters and Return Values", "type": "lecture" },
+      { "name": "Function Overloading", "type": "lecture" },
+      { "name": "Recursive Functions", "type": "lecture" },
+      { "name": "Project: Factorial and Fibonacci Calculator", "type": "project" }
+    ]
+  },
+  {
+    "title": "Object-Oriented Programming in C++",
+    "lessons": [
+      { "name": "Introduction to Object-Oriented Programming (OOP)", "type": "lecture" },
+      { "name": "Classes and Objects", "type": "lecture" },
+      { "name": "Access Modifiers (public, private, protected)", "type": "lecture" },
+      { "name": "Constructors and Destructors", "type": "lecture" },
+      { "name": "Homework: Creating Your Own Class", "type": "homework" },
+      { "name": "Project: Bank Account Management System", "type": "project" }
+    ]
+  },
+  {
+    "title": "Advanced OOP Concepts",
+    "lessons": [
+      { "name": "Inheritance", "type": "lecture" },
+      { "name": "Polymorphism (Function Overriding and Virtual Functions)", "type": "lecture" },
+      { "name": "Abstraction and Encapsulation", "type": "lecture" },
+      { "name": "Homework: Implementing Inheritance", "type": "homework" },
+      { "name": "Project: Vehicle Inheritance System", "type": "project" }
+    ]
+  },
+  {
+    "title": "Pointers and Memory Management",
+    "lessons": [
+      { "name": "Introduction to Pointers", "type": "lecture" },
+      { "name": "Pointer Arithmetic", "type": "lecture" },
+      { "name": "Dynamic Memory Allocation", "type": "lecture" },
+      { "name": "Smart Pointers", "type": "lecture" },
+      { "name": "Homework: Pointer Exercises", "type": "homework" },
+      { "name": "Project: Dynamic Array Implementation", "type": "project" }
+    ]
+  },
+  {
+    "title": "File Handling in C++",
+    "lessons": [
+      { "name": "File Streams (ifstream, ofstream)", "type": "lecture" },
+      { "name": "Reading and Writing to Files", "type": "lecture" },
+      { "name": "Binary Files", "type": "lecture" },
+      { "name": "Project: Student Record Management System", "type": "project" }
+    ]
+  },
+  {
+    "title": "Standard Template Library (STL)",
+    "lessons": [
+      { "name": "Introduction to STL", "type": "lecture" },
+      { "name": "STL Containers (vector, list, set, map)", "type": "lecture" },
+      { "name": "Iterators", "type": "lecture" },
+      { "name": "Algorithms in STL", "type": "lecture" },
+      { "name": "Homework: Using STL Containers", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Error Handling and Debugging",
+    "lessons": [
+      { "name": "Types of Errors (Syntax, Runtime, Logic)", "type": "lecture" },
+      { "name": "Exception Handling (try, catch, throw)", "type": "lecture" },
+      { "name": "Debugging Techniques", "type": "lecture" },
+      { "name": "Project: Error-Free Code Implementation", "type": "project" }
+    ]
+  },
+  {
+    "title": "Multithreading in C++",
+    "lessons": [
+      { "name": "Introduction to Multithreading", "type": "lecture" },
+      { "name": "Creating Threads in C++", "type": "lecture" },
+      { "name": "Thread Synchronization", "type": "lecture" },
+      { "name": "Project: Multithreaded File Processor", "type": "project" }
+    ]
+  },
+  {
+    "title": "Final Project",
+    "lessons": [
+      { "name": "Develop a Complete Application Using C++", "type": "project" }
+    ]
+  }
+]

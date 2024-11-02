@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Introduction to Deep Learning",
+    "lessons": [
+      { "name": "What is Deep Learning?", "type": "lecture" },
+      { "name": "History of Neural Networks", "type": "lecture" },
+      { "name": "Applications of Deep Learning", "type": "lecture", "link": "https://www.youtube.com/watch?v=example" },
+      { "name": "Mathematical Foundations for Deep Learning", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Neural Networks Basics",
+    "lessons": [
+      { "name": "Introduction to Artificial Neural Networks", "type": "lecture" },
+      { "name": "Perceptron and Activation Functions", "type": "lecture" },
+      { "name": "Training Neural Networks - Forward and Backpropagation", "type": "lecture" },
+      { "name": "Homework: Implement a Simple Neural Network", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Deep Learning Frameworks",
+    "lessons": [
+      { "name": "Introduction to TensorFlow", "type": "lecture" },
+      { "name": "Introduction to PyTorch", "type": "lecture" },
+      { "name": "Building Your First Model in TensorFlow", "type": "lecture" },
+      { "name": "Building Your First Model in PyTorch", "type": "lecture" },
+      { "name": "Homework: Compare TensorFlow and PyTorch", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Convolutional Neural Networks (CNNs)",
+    "lessons": [
+      { "name": "Introduction to Convolutional Neural Networks", "type": "lecture" },
+      { "name": "Convolutional Layers and Pooling", "type": "lecture" },
+      { "name": "Building a CNN for Image Classification", "type": "lecture" },
+      { "name": "Homework: Implement a CNN Model", "type": "homework" },
+      { "name": "Project: Image Classifier", "type": "project" }
+    ]
+  },
+  {
+    "title": "Recurrent Neural Networks (RNNs)",
+    "lessons": [
+      { "name": "Introduction to Recurrent Neural Networks", "type": "lecture" },
+      { "name": "LSTM and GRU Networks", "type": "lecture" },
+      { "name": "Sequence Modeling Applications", "type": "lecture" },
+      { "name": "Project: Text Generation Using RNN", "type": "project" }
+    ]
+  },
+  {
+    "title": "Deep Learning for NLP",
+    "lessons": [
+      { "name": "Natural Language Processing Overview", "type": "lecture" },
+      { "name": "Word Embeddings and Word2Vec", "type": "lecture" },
+      { "name": "Attention Mechanism and Transformers", "type": "lecture" },
+      { "name": "Homework: Sentiment Analysis", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Generative Adversarial Networks (GANs)",
+    "lessons": [
+      { "name": "Introduction to GANs", "type": "lecture" },
+      { "name": "Training a GAN", "type": "lecture" },
+      { "name": "Applications of GANs", "type": "lecture" },
+      { "name": "Project: Create Your Own GAN", "type": "project" }
+    ]
+  },
+  {
+    "title": "Reinforcement Learning Basics",
+    "lessons": [
+      { "name": "Introduction to Reinforcement Learning", "type": "lecture" },
+      { "name": "Deep Q-Learning", "type": "lecture" },
+      { "name": "Homework: Building a Q-Learning Agent", "type": "homework" },
+      { "name": "Project: Reinforcement Learning for Game Play", "type": "project" }
+    ]
+  },
+  {
+    "title": "Deployment of Deep Learning Models",
+    "lessons": [
+      { "name": "Saving and Loading Models", "type": "lecture" },
+      { "name": "Deploying Models with Flask", "type": "lecture" },
+      { "name": "Project: Deploy a Deep Learning Model", "type": "project" }
+    ]
+  },
+  {
+    "title": "Final Project",
+    "lessons": [
+      { "name": "Develop a Complete End-to-End Deep Learning Project", "type": "project" }
+    ]
+  }
+]

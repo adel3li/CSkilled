@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Introduction to Data Structures and Algorithms",
+    "lessons": [
+      { "name": "What are Data Structures and Algorithms?", "type": "lecture" },
+      { "name": "Importance of DSA in Programming", "type": "lecture" },
+      { "name": "Complexity Analysis - Big O Notation", "type": "lecture", "link": "https://www.youtube.com/watch?v=__vX2sjlpXU" },
+      { "name": "Basic Mathematical Concepts for DSA", "type": "lecture" }
+    ]
+  },
+  {
+    "title": "Arrays and Linked Lists",
+    "lessons": [
+      { "name": "Introduction to Arrays", "type": "lecture" },
+      { "name": "Operations on Arrays", "type": "lecture" },
+      { "name": "Introduction to Linked Lists", "type": "lecture" },
+      { "name": "Singly Linked Lists", "type": "lecture", "link": "https://drive.google.com/file/d/14mxJjsDndXwBcuN3Fg_pISeTnzB2Z97N" },
+      { "name": "Doubly Linked Lists", "type": "lecture" },
+      { "name": "Circular Linked Lists", "type": "lecture" },
+      { "name": "Project: Linked List Implementation", "type": "project" }
+    ]
+  },
+  {
+    "title": "Stacks and Queues",
+    "lessons": [
+      { "name": "Introduction to Stacks", "type": "lecture" },
+      { "name": "Stack Operations", "type": "lecture" },
+      { "name": "Introduction to Queues", "type": "lecture" },
+      { "name": "Queue Operations", "type": "lecture" },
+      { "name": "Applications of Stacks and Queues", "type": "lecture" },
+      { "name": "Homework: Stack and Queue Implementation", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Trees",
+    "lessons": [
+      { "name": "Introduction to Trees", "type": "lecture" },
+      { "name": "Binary Trees", "type": "lecture" },
+      { "name": "Binary Search Trees (BST)", "type": "lecture" },
+      { "name": "Tree Traversal Techniques", "type": "lecture" },
+      { "name": "Balanced Trees - AVL Trees", "type": "lecture" },
+      { "name": "Homework: Implementing a BST", "type": "homework" },
+      { "name": "Project: Tree Traversal Visualizer", "type": "project" }
+    ]
+  },
+  {
+    "title": "Hashing",
+    "lessons": [
+      { "name": "Introduction to Hashing", "type": "lecture" },
+      { "name": "Hash Functions", "type": "lecture" },
+      { "name": "Collision Handling Techniques", "type": "lecture" },
+      { "name": "Applications of Hashing", "type": "lecture" },
+      { "name": "Homework: Hash Map Implementation", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Graphs",
+    "lessons": [
+      { "name": "Introduction to Graphs", "type": "lecture" },
+      { "name": "Graph Representation - Adjacency Matrix & List", "type": "lecture" },
+      { "name": "Graph Traversal - BFS & DFS", "type": "lecture", "link": "https://www.youtube.com/watch?v=pkaAmBKh0ko" },
+      { "name": "Shortest Path Algorithms - Dijkstra's & Floyd-Warshall", "type": "lecture" },
+      { "name": "Minimum Spanning Tree - Kruskal & Prim", "type": "lecture" },
+      { "name": "Project: Graph Traversal Simulator", "type": "project" }
+    ]
+  },
+  {
+    "title": "Sorting Algorithms",
+    "lessons": [
+      { "name": "Introduction to Sorting", "type": "lecture" },
+      { "name": "Bubble Sort, Selection Sort, and Insertion Sort", "type": "lecture" },
+      { "name": "Merge Sort and Quick Sort", "type": "lecture" },
+      { "name": "Heap Sort", "type": "lecture" },
+      { "name": "Homework: Sorting Algorithm Comparison", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Advanced Data Structures",
+    "lessons": [
+      { "name": "Heaps and Priority Queues", "type": "lecture" },
+      { "name": "Trie Data Structure", "type": "lecture" },
+      { "name": "Disjoint Set Union (DSU)", "type": "lecture" },
+      { "name": "Segment Trees", "type": "lecture" },
+      { "name": "Fenwick Tree (Binary Indexed Tree)", "type": "lecture" },
+      { "name": "Project: Implementing a Priority Queue", "type": "project" }
+    ]
+  },
+  {
+    "title": "Algorithmic Techniques",
+    "lessons": [
+      { "name": "Divide and Conquer", "type": "lecture" },
+      { "name": "Dynamic Programming", "type": "lecture" },
+      { "name": "Greedy Algorithms", "type": "lecture" },
+      { "name": "Backtracking", "type": "lecture" },
+      { "name": "Homework: Dynamic Programming Challenges", "type": "homework" }
+    ]
+  },
+  {
+    "title": "Final Project",
+    "lessons": [
+      { "name": "Build a Resume-Level Data Structure and Algorithm Project", "type": "project" }
+    ]
+  }
+]
