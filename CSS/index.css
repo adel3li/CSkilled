@@ -219,6 +219,7 @@ body {
   padding: 0px 170px 50px 50px;
   position: relative;
   overflow: hidden; /* Ensure background elements don't overflow */
+  max-width: 1200px;
 }
 
 /* Background decorative shapes using pseudo-elements */
@@ -259,7 +260,7 @@ body {
 
 /* Feature text styling */
 .feature-text {
-  max-width: 50%; /* Ensure the text takes up half the space */
+  max-width: 65%; /* Ensure the text takes up half the space */
 }
 
 .feature-text h2 {
@@ -1351,7 +1352,7 @@ body {
 }
 
 .newsletter-section input {
-  padding: 10px;
+  padding: 20px;
   width: 300px;
   border-radius: 20px;
   border: none;
@@ -1359,8 +1360,8 @@ body {
 }
 
 .newsletter-section button {
-  margin-left: 10px;
-  padding: 10px 20px;
+  margin-top: 0px;
+  padding: 15px 20px;
   border-radius: 20px;
   border: none;
   background-color: white;
