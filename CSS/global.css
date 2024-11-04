@@ -122,26 +122,9 @@ button:focus {
   font-size: 2rem;
 }
 
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-    flex-direction: column;
-    background-color: #fbfbfe;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 10px;
-    z-index: 999;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
+.hamburger:hover {
+  color: blue; /* Change to blue on hover */
+  cursor: pointer;
 }
 
 /* Footer */

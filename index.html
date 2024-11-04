@@ -77,107 +77,103 @@
         </div>
     </section>
 
-    <!-- Testimonials Section with Square Design -->
-    <section id="testimonials" class="testimonials-section">
-        <h2 class="section-title">اسمع من طلابنا</h2>
-    
-        <!-- Testimonials Container -->
-        <div class="testimonial-container">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-card active">
-            <p>اللي عجبني في المسار أنه فعلا متطور على لغة العصر وبيفهمك كتير حاجات في البرمجة مش موجودة في كورسات تانية. استفدت جدا من المسار، وأقدر أقول أني في طريقي للاحتراف.</p>
-            <strong>ندى عبد الفتاح</strong>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-    
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card">
-            <p>كانت مدرسة فريدة المحتوى وفعلا استفدت أروع استفادة. الدروس التفاعلية بتخليك تتعلم بشكل وعي وتقدر تطبق اللي بتتعلمه. بجد شكراً لكل المدرسين والمحتوى المتميز.</p>
-            <strong>عمر عبد الظاهر</strong>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-    
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card">
-            <p>منصة ممتازة لتعلم البرمجة. التجربة كانت رائعة، والتطبيق العملي ساعدني كثيرًا في الفهم.</p>
-            <strong>محمد علي</strong>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-    
-        <!-- Testimonial 4 -->
-        <div class="testimonial-card">
-            <p>أحببت الدروس التفاعلية جدًا. لقد ساعدتني على تطبيق ما تعلمته بشكل فعلي.</p>
-            <strong>سارة أحمد</strong>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-    
-        <!-- Testimonial 5 -->
-        <div class="testimonial-card">
-            <p>المسار كان مفيداً جداً، وأنا الآن أعمل كمطور ويب بفضل هذه الدروس.</p>
-            <strong>خالد عبد الرحمن</strong>
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-        </div>
-    
-        <!-- Slider Navigation Dots -->
-        <div class="slider-dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
-        <span class="dot" data-index="3"></span>
-        <span class="dot" data-index="4"></span>
-        </div>
 
-        <script>
-            // Select all testimonial cards and dots
-            const testimonialCards = document.querySelectorAll('.testimonial-card');
-            const dots = document.querySelectorAll('.dot');
-        
-            // Function to show the testimonial based on the clicked dot
-            function showTestimonial(index) {
-            // Remove the active class from all testimonials and dots
-            testimonialCards.forEach(card => card.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-        
-            // Add the active class to the selected testimonial and dot
-            testimonialCards[index].classList.add('active');
-            dots[index].classList.add('active');
-            }
-        
-            // Add click event listeners to each dot
-            dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const index = dot.getAttribute('data-index');
-                showTestimonial(index);
-            });
-            });
-        
-            // Initially show the first testimonial
-            showTestimonial(0);
-        </script>
-
-    </section>
-
-        <!-- Reviews Section -->
-        <section id="reviews" class="reviews-section">
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="reviews-wrapper">
+            <!-- Reviews Content on the Left -->
             <div class="reviews-content">
                 <div class="review-text">
                     <h2>تقييمات الطلاب</h2>
                     <p>ما يقوله الطلاب عن تجربتهم.</p>
                     <a href="#" class="cta-button">اقرأ المزيد من التقييمات</a>
                 </div>
-                <div class="review-image">
-                    <img src="https://cdn-jjfhf.nitrocdn.com/hwGdHsKTGpIHJSBirKPhKvQbhZYuIuNn/assets/images/optimized/rev-448abd0/i0.wp.com/almdrasa.com/wp-content/uploads/2023/08/5138581d6a253be237819505244f1909.Group-607.png" alt="Student running with diploma" alt="Reviews">
+            </div>
+    
+            <!-- Testimonials on the Right -->
+            <div class="testimonial-container">
+                <h2 class="section-title">اسمع من طلابنا</h2>
+                
+                <!-- Testimonial Cards -->
+                <div class="testimonial-card active">
+                    <p>اللي عجبني في المسار أنه فعلا متطور على لغة العصر وبيفهمك كتير حاجات في البرمجة مش موجودة في كورسات تانية. استفدت جدا من المسار، وأقدر أقول أني في طريقي للاحتراف.</p>
+                    <strong>ندى عبد الفتاح</strong>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <p>كانت مدرسة فريدة المحتوى وفعلا استفدت أروع استفادة. الدروس التفاعلية بتخليك تتعلم بشكل وعي وتقدر تطبق اللي بتتعلمه. بجد شكراً لكل المدرسين والمحتوى المتميز.</p>
+                    <strong>عمر عبد الظاهر</strong>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <p>منصة ممتازة لتعلم البرمجة. التجربة كانت رائعة، والتطبيق العملي ساعدني كثيرًا في الفهم.</p>
+                    <strong>محمد علي</strong>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <p>أحببت الدروس التفاعلية جدًا. لقد ساعدتني على تطبيق ما تعلمته بشكل فعلي.</p>
+                    <strong>سارة أحمد</strong>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <p>المسار كان مفيداً جداً، وأنا الآن أعمل كمطور ويب بفضل هذه الدروس.</p>
+                    <strong>خالد عبد الرحمن</strong>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+    
+                <!-- Slider Navigation Dots -->
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0" aria-label="Show Testimonial 1"></span>
+                    <span class="dot" data-index="1" aria-label="Show Testimonial 2"></span>
+                    <span class="dot" data-index="2" aria-label="Show Testimonial 3"></span>
+                    <span class="dot" data-index="3" aria-label="Show Testimonial 4"></span>
+                    <span class="dot" data-index="4" aria-label="Show Testimonial 5"></span>
                 </div>
             </div>
-        </section>
+        </div>
+    
+        <script>
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+    
+            function showTestimonial(index) {
+                testimonialCards.forEach(card => card.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+    
+                testimonialCards[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+    
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const index = dot.getAttribute('data-index');
+                    currentIndex = parseInt(index);
+                    showTestimonial(currentIndex);
+                });
+            });
+    
+            function autoSlide() {
+                currentIndex = (currentIndex + 1) % testimonialCards.length;
+                showTestimonial(currentIndex);
+            }
+    
+            setInterval(autoSlide, 5000);
+            showTestimonial(0);
+        </script>
+    </section>
+
 
     <!-- Instructor Section -->
     <section id="instructor" class="instructor-section">
         <div class="instructor-content">
         <!-- Left Side: Text -->
         <div class="instructor-text">
-            <h2>ما الذي تجده في المدرسة و لن تجده عليه في مكان آخر؟</h2>
+            <h2>ما الذي تجده هنا و لن تجده عليه في مكان آخر؟</h2>
             <p>
             إضافة على استكمال شخصي مع كل مادة وخطة سيرورة أخذ كاملة، تتميز عن غيرها من 
             منصات التعليم بتقديم دروس تفاعلية. مع كل درس، ستتمكن من تطبيق ما تعلمته 
@@ -188,7 +184,7 @@
             خطوة. هذه التجربة الفريدة تعزز من فهمك وتطبيقك العملي، مما يتيح لك فرصة 
             الوصول إلى الاحتراف.
             </p>
-            <a href="#" class="cta-button">انضم إلى المدرسة الآن!</a>
+            <a href="#" class="cta-button">انضم الآن!</a>
         </div>
     
         <!-- Right Side: Instructor Card -->
@@ -299,7 +295,7 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section id="newsletter" class="newsletter-section">
+    <section id="newsletter" class="newsletter-section" style="display: none;">
         <h2>اشترك في النشرة الإخبارية</h2>
         <form action="">
             <input type="email" placeholder="أدخل بريدك الإلكتروني">
