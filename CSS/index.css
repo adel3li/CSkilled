@@ -12,11 +12,13 @@ body {
 .hero-section {
   background-color: #000;
   display: flex;
-  justify-content: space-between;
+  justify-content: center ;
   padding: 50px 250px 100px 50px;
   color: white;
   position: relative;
   overflow: hidden;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Decorative shapes */
@@ -42,8 +44,9 @@ body {
   height: 200px;
   bottom: -80px;
   right: -80px;
-  background-color: #b18aff;
+  background-color: #00d1b2;
   transform: rotate(-30deg);
+  opacity: 1;
 }
 
 /* Flex container for hero content */
@@ -72,14 +75,14 @@ body {
 }
 
 .text-content p {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #aaa;
 }
 
 /* Call-to-action button */
 .cta-button {
-  background-color: #6f42ff;
+  background-color: cyan;
   padding: 10px 30px;
   color: white;
   border-radius: 20px;
@@ -115,7 +118,7 @@ body {
   }
 
   .text-content p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .hero-image {
@@ -127,7 +130,7 @@ body {
   }
 
   .cta-button {
-    padding: 0px;
+    /* padding: 0px; */
     font-size: 0.95rem;
   }
 }
@@ -139,7 +142,7 @@ body {
   }
 
   .hero-content {
-    display: block;
+    display: flex;
     text-align: center;
   }
 
@@ -153,7 +156,7 @@ body {
   }
 
   .text-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .hero-image {
@@ -262,7 +265,7 @@ body {
 
 /* Call-to-action button styling */
 .cta-button {
-  background-color: #6f42ff; /* Purple background */
+  background-color: #00d1b2; /* Purple background */
   padding: 12px 30px;
   color: white;
   border-radius: 20px;
@@ -381,6 +384,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   text-align: right;
+  margin-right: 0px;
+  /* margin-top: 20%; */
 }
 
 .review-text h2 {
@@ -391,10 +396,11 @@ body {
 .review-text p {
   font-size: 1.2em;
   color: #555;
+  text-align: right;
 }
 
 .cta-button {
-  display: inline-block;
+  display: flex;
   padding: 0.8em 1.5em;
   color: #fff;
   background-color: #0073e6;
@@ -539,7 +545,7 @@ body {
 
 /* Instructor Section */
 .instructor-section {
-  background-color: #6f42ff; /* Purple background */
+  background-color: #220484; /* Purple background */
   padding: 60px 100px;
   position: relative;
   color: white;
@@ -608,12 +614,12 @@ body {
 
 .instructor-card p {
   font-size: 1.2rem;
-  color: #555;
+  color: #000;
 }
 
 /* Call-to-Action Button */
 .cta-button {
-  background-color: #00d1b2; /* Cyan button */
+  background-color: #00ffd9; 
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -639,10 +645,12 @@ body {
 .instructor-section::before {
   width: 150px;
   height: 150px;
-  top: 0;
-  left: 0;
-  background-color: #00d1b2; /* Cyan shape */
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  top: -10px;
+  left: -20px;
+  background-color: cyan; /* Cyan shape */
+  /* clip-path: polygon(0% 0%, 100% 0%, 0% 100%); */
+  border-radius: 10%;
+  opacity: 1;
 }
 
 .instructor-section::after {
@@ -650,8 +658,9 @@ body {
   height: 200px;
   bottom: -50px;
   right: -30px;
-  background-color: #ffffff; /* White circle */
+  background-color: #6f42ff; /* White circle */
   border-radius: 50%;
+  opacity: 1;
 }
 
 /* ====== Responsive Design ====== */
@@ -947,21 +956,22 @@ body {
 
 /* Service Details Section */
 .service-details-section {
-  background-color: #fff; /* White background */
+  background-color: #220484; /* White background */
   padding: 50px 100px;
   display: flex;
   justify-content: center;
   position: relative;
+  color: white;
 }
 
 /* Service Details Content Layout */
 .service-details-content {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  gap: 30px; /* Add gap between image and text */
+  gap: 50px; /* Add gap between image and text */
 }
 
 /* Left Side: Image of Person Working */
@@ -981,11 +991,11 @@ body {
 .service-details-image .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .cta-button {
-  background-color: #6f42ff; /* Purple background */
+  background-color: #443dff; /* Purple background */
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -995,11 +1005,11 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #5a35cc; /* Darker purple for hover */
+  background-color: gray; /* Darker purple for hover */
 }
 
 .cta-button.purple {
-  background-color: #6f42ff; /* Purple button */
+  background-color: #443dff; /* Purple button */
 }
 
 .cta-button.white {
@@ -1024,28 +1034,31 @@ body {
 }
 
 .service-details-text li {
-  display: flex;
+  /* display: flex; */
   align-items: flex-start;
   margin-bottom: 20px;
 }
 
 .service-details-text li img {
-  width: 30px;
+  width: 20px;
   margin-left: 15px; /* Space between icon and text */
+  margin-top: 10px;
 }
 
 .service-details-text li span {
-  color: #6f42ff; /* Purple for the title */
-  font-size: 1.2rem;
+  color: #00d1b2; /* Purple for the title */
+  font-size: 1.5rem;
   margin-bottom: 5px;
+  margin-top: 0px;
 }
 
 .service-details-text li p {
-  color: #333;
+  color: white;
   font-size: 1rem;
   margin: 0;
   line-height: 1.5;
-  margin-right: 20px;
+  margin-right: 0px;
+  margin-top: 0px;
 }
 
 /* Background Decorative Elements */
@@ -1054,25 +1067,42 @@ body {
   content: '';
   position: absolute;
   z-index: 1;
-  opacity: 0.2;
+  opacity: 1;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  z-index: 1; /* Ensure it's behind the content */
+  opacity: 0.2; /* Make the shapes subtle */
+  background-color: #6f42ff; /* Purple color */
+  border-radius: 50%;
 }
 
 .service-details-section::before {
   width: 150px;
   height: 150px;
-  top: 0;
-  left: 0;
-  background-color: #00d1b2; /* Cyan shape */
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  top: -10px;
+  left: 15px;
+  background-color: #01ffd9; /* Cyan shape */
+  /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+  /* border-radius: 10%; */
+  opacity: 1;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  top: -0px;
+  left: -100px;
+  background-color: #6f42ff; /* Purple */
 }
 
 .service-details-section::after {
   width: 200px;
   height: 200px;
-  bottom: -50px;
-  right: -30px;
-  background-color: #ffffff; /* White circle */
-  border-radius: 50%;
+  bottom: 0px;
+  right: -100px;
+  background-color: cyan; /* White circle */
+  /* border-radius: 10%; */
+  overflow: hidden;
+  opacity: 1;
 }
 
 /* ====== Responsive Design ====== */
@@ -1130,8 +1160,8 @@ body {
     margin-bottom: 10px; /* Add margin below the icon */
   }
 
-  .cta-button {
-    width: 100%; /* Full width for buttons */
+  .service-details-content .cta-button {
+    width: 20%; /* Full width for buttons */
     text-align: center;
   }
 }
