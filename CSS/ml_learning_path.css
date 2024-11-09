@@ -633,13 +633,15 @@ body {
   flex-wrap: wrap;
 }
 
+/* General Testimonial Styling */
 .testimonial {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 300px; /* Fixed width for each testimonial card */
+  width: 300px; /* Default width for each testimonial */
+  min-height: 350px; /* Default height */
 }
 
 .testimonial img.profile-pic {
@@ -656,6 +658,33 @@ body {
   text-align: right;
 }
 
+/* Individual Styling */
+#testimonial1 {
+  width: 350px;
+  min-height: 400px;
+}
+#testimonial1 p {
+  font-size: 1.01rem;
+}
+
+#testimonial2 {
+  width: 300px;
+  min-height: 420px;
+}
+#testimonial2 p {
+  font-size: 1.1rem;
+}
+
+#testimonial3 {
+  width: 320px;
+  min-height: 380px;
+}
+#testimonial3 p {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+/* Star Ratings and Names */
 .testimonial .stars {
   color: #ffcc00;
   font-size: 1.2rem;
@@ -715,6 +744,7 @@ body {
     margin-bottom: 30px;
   }
 }
+
 
 /* FAQ Section */
 .faq {
