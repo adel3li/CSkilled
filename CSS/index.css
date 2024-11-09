@@ -10,7 +10,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background-color: #000;
+  background-color: #0d0039;
   display: flex;
   justify-content: center ;
   padding: 0px 0px 50px 100px;
@@ -549,7 +549,7 @@ body {
 
 /* Instructor Section */
 .instructor-section {
-  background-color: #220484; /* Purple background */
+  background-color: #0d0039; /* Purple background */
   padding: 60px 100px;
   position: relative;
   color: white;
@@ -624,7 +624,7 @@ body {
 
 /* Call-to-Action Button */
 .cta-button {
-  background-color: #00ffd9; 
+  background-color: cyan; 
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -655,7 +655,7 @@ body {
   background-color: cyan; /* Cyan shape */
   /* clip-path: polygon(0% 0%, 100% 0%, 0% 100%); */
   border-radius: 10%;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .instructor-section::after {
@@ -665,7 +665,7 @@ body {
   right: -30px;
   background-color: #6f42ff; /* White circle */
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 /* ====== Responsive Design ====== */
@@ -768,7 +768,7 @@ body {
 
 /* Service Details Section */
 .service-details-section {
-  background-color: #220484; /* White background */
+  background-color: #0d0039; /* White background */
   padding: 50px 100px;
   display: flex;
   justify-content: center;
@@ -1122,4 +1122,3 @@ details:hover {
     padding-right: 5px;
   }
 }
-

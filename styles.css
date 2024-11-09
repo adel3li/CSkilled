@@ -670,36 +670,135 @@ details[open] .toggle-icon {
   position: relative;
 } */
 
-/* FAQ Section Styling */
-.faq-content summary {
+/* FAQ Section */
+.faq-section {
+  background-color: #f5f5f5;
+  padding: 50px 100px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* FAQ Container */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+/* Details and Question Styling */
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.question {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #443dff;
-  display: flex;
-  line-height: 50px;
-  cursor: pointer; /* Add pointer cursor for summary */
+  color: #6f42ff;
+  outline: none;
+  cursor: pointer;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0.5rem;
 }
 
-.faq-content details[open] summary {
-  color: #000; /* Change color when opened */
+/* Change color when the FAQ is open */
+details[open] .question {
+  color: #563d7c;
 }
 
-.faq-content summary::before {
-  content: "+"; /* Default plus icon */
-  font-size: 24px;
-  margin-right: 10px;
-  color: #a339ff; /* Icon color */
-  order: -1; /* Make the icon appear before text */
-  margin-left: .5rem;
+/* Custom symbols for expand/collapse */
+.question::before {
+  content: "+";
+  font-size: 1.5rem;
+  color: #6f42ff;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
 }
 
-.faq-content details[open] summary::before {
-  content: "-"; /* Change to minus icon when opened */
+details[open] .question::before {
+  content: "-";
+  color: #563d7c;
 }
 
-.faq-content p {
-  font-size: 1.2rem;
-  margin: 2rem;
+/* FAQ Answer Content */
+.answer {
+  margin-top: 10px;
+  padding-right: 20px;
+  color: #333;
+  text-align: right;
+}
+
+details:hover {
+  background-color: #f0f0f0;
+}
+
+/* ====== Responsive Design ====== */
+
+/* Medium Screens (1200px - 768px) */
+@media (max-width: 1200px) {
+  .faq-section {
+    padding: 40px 50px;
+  }
+
+  .faq-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 30px 20px;
+  }
+
+  .faq-container {
+    max-width: 100%;
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .answer {
+    padding-right: 10px;
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 20px 10px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .answer {
+    font-size: 0.9rem;
+    padding-right: 5px;
+  }
 }
 
 /* Style for the "التسجيل والدفع" content section */
@@ -893,6 +992,10 @@ details[open] .toggle-icon {
 
   .content, .sidebar {
     width: 100%;
+  }
+
+  .footer a {
+    font-size: 1.1rem;
   }
 }
 

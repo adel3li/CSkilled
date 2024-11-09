@@ -30,6 +30,7 @@ body {
   padding: 60px 20px;
   position: relative; /* Position for absolute elements (shapes) */
   overflow: hidden; /* Hide overflow for the shapes */
+  background-color: #0d0039;
 }
 
 .hero-container {
@@ -78,7 +79,7 @@ body {
 .hero-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional: Add rounded corners to the image */
+  border-radius: 0%;
 }
 
 /* Decorative shape on the top left */
@@ -745,60 +746,6 @@ body {
   }
 }
 
-
-/* FAQ Section */
-.faq {
-  padding: 50px;
-  background-color: var(--background-color);
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the overall FAQ section */
-}
-
-.faq h2 {
-  font-size: 2.5rem;
-  color: #020029;
-  margin-bottom: 30px;
-}
-
-.faq-item {
-  margin-bottom: 10px;
-}
-
-.faq-question {
-  background-color: #ffffff; /* Set background to white */
-  color: #000000; /* Set text color to black */
-  border: none;
-  padding: 15px;
-  width: 100%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  text-align: right;
-  border-radius: 5px;
-  background-color: var(--faq-answer-bg);
-  transition: background-color var(--transition-time), color var(--transition-time);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for each question */
-  font-family: var(--text-color);
-}
-
-.faq-question:hover {
-  background-color: #2f27ce;
-  color: #ffffff; /* Change text color to white on hover */
-}
-
-.faq-answer {
-  display: none;
-  padding: 15px;
-  background-color: var(--faq-answer-bg);
-  border-left: 3px solid var(--faq-border-color);
-  margin-top: 10px;
-  color: var(--faq-answer-color);
-  font-size: 1.2rem;
-  line-height: 1.6;
-  border-radius: 5px;
-  text-align: right;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for each answer */
-}
-
 /* FAQ Section */
 .faq-section {
   background-color: #f5f5f5;
@@ -819,6 +766,7 @@ body {
   text-align: right;
 }
 
+/* Details and Question Styling */
 details {
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -829,7 +777,7 @@ details {
   transition: background-color 0.3s ease;
 }
 
-summary {
+.question {
   font-size: 1.2rem;
   font-weight: bold;
   color: #6f42ff;
@@ -838,36 +786,31 @@ summary {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
+  list-style: none;
   padding: 0.5rem;
-  list-style: none; /* Removes the marker in Firefox */
 }
 
 /* Change color when the FAQ is open */
-details[open] summary {
+details[open] .question {
   color: #563d7c;
 }
 
-/* Remove the default arrow in WebKit browsers */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Add the custom + and - symbols */
-summary::before {
+/* Custom symbols for expand/collapse */
+.question::before {
   content: "+";
   font-size: 1.5rem;
   color: #6f42ff;
   transition: transform 0.3s ease;
-  margin-left: 10px; /* Add space between the symbol and the text */
+  margin-left: 10px;
 }
 
-/* Change the + to - when details is open */
-details[open] summary::before {
+details[open] .question::before {
   content: "-";
   color: #563d7c;
 }
 
-details p {
+/* FAQ Answer Content */
+.answer {
   margin-top: 10px;
   padding-right: 20px;
   color: #333;
@@ -882,107 +825,54 @@ details:hover {
 
 /* Medium Screens (1200px - 768px) */
 @media (max-width: 1200px) {
-  .newsletter-section {
-    padding: 40px 50px; /* Reduce padding for medium screens */
-  }
-
-  .newsletter-section input {
-    width: 250px; /* Slightly reduce input width */
-  }
-
   .faq-section {
-    padding: 40px 50px; /* Reduce padding for medium screens */
+    padding: 40px 50px;
   }
 
   .faq-section h2 {
-    font-size: 2rem; /* Reduce heading size */
+    font-size: 2rem;
   }
 }
 
 /* Small Screens (768px and below) */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 30px 20px; /* Reduce padding for small screens */
+    padding: 30px 20px;
   }
 
   .faq-container {
-    max-width: 100%; /* Full width for FAQ container */
+    max-width: 100%;
   }
 
   .faq-section h2 {
-    font-size: 1.8rem; /* Reduce heading size */
+    font-size: 1.8rem;
   }
 
-  details summary {
-    font-size: 1.1rem; /* Slightly reduce summary text size */
+  .question {
+    font-size: 1rem;
   }
 
-  details p {
-    padding-right: 10px; /* Reduce padding for text */
+  .answer {
+    padding-right: 10px;
   }
 }
 
 /* Extra Small Screens (480px and below) */
 @media (max-width: 480px) {
   .faq-section {
-    padding: 20px 10px; /* Further reduce padding */
+    padding: 20px 10px;
   }
 
   .faq-section h2 {
-    font-size: 1.5rem; /* Further reduce heading size */
+    font-size: 1.5rem;
   }
 
-  details summary {
-    font-size: 1rem; /* Reduce summary text size */
+  .question {
+    font-size: 1rem;
   }
 
-  details p {
+  .answer {
     font-size: 0.9rem;
-    padding-right: 5px; /* Reduce padding for text */
+    padding-right: 5px;
   }
-}
-
-/* Footer Section */
-.footer {
-  background-color: #000000;
-  color: var(--text-color);
-  padding: 30px 0;
-  text-align: center;
-}
-
-.footer-logo-text {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.social-icons {
-  margin-bottom: 20px;
-}
-
-.social-icon {
-  color: #ffffff;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  transition: color var(--transition-time);
-}
-
-.social-icon:hover {
-  color: #3d20cc;
-}
-
-.footer-links a {
-  color: var(--text-color);
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.footer-links span {
-  color: var(--text-color);
-  margin: 0 5px;
-}
-
-.footer p {
-  font-size: 0.9rem;
-  margin-top: 15px;
 }

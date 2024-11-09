@@ -10,7 +10,7 @@ body {
 /* Hero Section */
 .hero-section {
   position: relative;
-  background-color: #000; /* Black background */
+  background-color: #0d0039; /* Black background */
   color: #fff;
   padding: 60px 20px;
   display: flex;
@@ -130,7 +130,7 @@ body {
   align-items: center; /* Vertically center the content */
   z-index: 2; /* Ensure the content is above the shapes */
   max-width: 1400px; /* Optional: constrain the width of the content */
-  width: 70%; /* Ensure it takes the full width of the container */
+  width: 60%; /* Ensure it takes the full width of the container */
   margin-right: 20%;
 }
 
@@ -143,7 +143,7 @@ body {
 }
 
 .hero-image img {
-  max-width: 60%; /* Ensure image is responsive */
+  max-width: 40%; /* Ensure image is responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Optional: Add rounded corners to the image */
 }
@@ -152,7 +152,7 @@ body {
 .hero-text {
   flex: 1 1 50%; /* The text container takes 50% of the width */
   text-align: right; /* Right-align text for Arabic */
-  padding-left: 20px; /* Add space between text and image */
+  padding-left: 0px; /* Add space between text and image */
 }
 
 .hero-text h1 {
@@ -196,7 +196,7 @@ body {
     align-items: center; /* Vertically center the content */
     z-index: 2; /* Ensure the content is above the shapes */
     max-width: 1400px; /* Optional: constrain the width of the content */
-    width: 70%; /* Ensure it takes the full width of the container */
+    width: 80%; /* Ensure it takes the full width of the container */
     margin-right: 0%;
     flex-direction: column;
   }
@@ -207,7 +207,7 @@ body {
   }
 
   .hero-image img {
-    max-width: 60%; /* Slightly smaller image on mid-sized screens */
+    max-width: 40%; /* Slightly smaller image on mid-sized screens */
     margin-right: 0;
   }
 
@@ -269,7 +269,7 @@ body {
   /* .hero-section::before,
   .hero-section::after {
     display: none;
-  }*/
+  } */
 } 
 
 @media (max-width: 480px) {
@@ -278,7 +278,7 @@ body {
   }
 
   .hero-image img {
-    max-width: 60%; /* Further reduce image size for mobile */
+    max-width: 40%; /* Further reduce image size for mobile */
   }
 
   .hero-text h1 {
@@ -449,13 +449,15 @@ body {
   flex-wrap: wrap;
 }
 
+/* General Testimonial Styling */
 .testimonial {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 300px; /* Fixed width for each testimonial card */
+  width: 300px; /* Default width for each testimonial */
+  min-height: 350px; /* Default height */
 }
 
 .testimonial img.profile-pic {
@@ -472,6 +474,33 @@ body {
   text-align: right;
 }
 
+/* Individual Styling */
+#testimonial1 {
+  width: 350px;
+  min-height: 400px;
+}
+#testimonial1 p {
+  font-size: 1.75rem;
+}
+
+#testimonial2 {
+  width: 300px;
+  min-height: 420px;
+}
+#testimonial2 p {
+  font-size: 1.2rem;
+}
+
+#testimonial3 {
+  width: 320px;
+  min-height: 380px;
+}
+#testimonial3 p {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+/* Star Ratings and Names */
 .testimonial .stars {
   color: #ffcc00;
   font-size: 1.2rem;
@@ -532,7 +561,6 @@ body {
   }
 }
 
-
 /* FAQ Section */
 .faq-section {
   background-color: #f5f5f5;
@@ -553,6 +581,7 @@ body {
   text-align: right;
 }
 
+/* Details and Question Styling */
 details {
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -563,7 +592,7 @@ details {
   transition: background-color 0.3s ease;
 }
 
-summary {
+.question {
   font-size: 1.2rem;
   font-weight: bold;
   color: #6f42ff;
@@ -572,36 +601,31 @@ summary {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
+  list-style: none;
   padding: 0.5rem;
-  list-style: none; /* Removes the marker in Firefox */
 }
 
 /* Change color when the FAQ is open */
-details[open] summary {
+details[open] .question {
   color: #563d7c;
 }
 
-/* Remove the default arrow in WebKit browsers */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Add the custom + and - symbols */
-summary::before {
+/* Custom symbols for expand/collapse */
+.question::before {
   content: "+";
   font-size: 1.5rem;
   color: #6f42ff;
   transition: transform 0.3s ease;
-  margin-left: 10px; /* Add space between the symbol and the text */
+  margin-left: 10px;
 }
 
-/* Change the + to - when details is open */
-details[open] summary::before {
+details[open] .question::before {
   content: "-";
   color: #563d7c;
 }
 
-details p {
+/* FAQ Answer Content */
+.answer {
   margin-top: 10px;
   padding-right: 20px;
   color: #333;
@@ -616,62 +640,54 @@ details:hover {
 
 /* Medium Screens (1200px - 768px) */
 @media (max-width: 1200px) {
-  .newsletter-section {
-    padding: 40px 50px; /* Reduce padding for medium screens */
-  }
-
-  .newsletter-section input {
-    width: 250px; /* Slightly reduce input width */
-  }
-
   .faq-section {
-    padding: 40px 50px; /* Reduce padding for medium screens */
+    padding: 40px 50px;
   }
 
   .faq-section h2 {
-    font-size: 2rem; /* Reduce heading size */
+    font-size: 2rem;
   }
 }
 
 /* Small Screens (768px and below) */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 30px 20px; /* Reduce padding for small screens */
+    padding: 30px 20px;
   }
 
   .faq-container {
-    max-width: 100%; /* Full width for FAQ container */
+    max-width: 100%;
   }
 
   .faq-section h2 {
-    font-size: 1.8rem; /* Reduce heading size */
+    font-size: 1.8rem;
   }
 
-  details summary {
-    font-size: 1.1rem; /* Slightly reduce summary text size */
+  .question {
+    font-size: 1rem;
   }
 
-  details p {
-    padding-right: 10px; /* Reduce padding for text */
+  .answer {
+    padding-right: 10px;
   }
 }
 
 /* Extra Small Screens (480px and below) */
 @media (max-width: 480px) {
   .faq-section {
-    padding: 20px 10px; /* Further reduce padding */
+    padding: 20px 10px;
   }
 
   .faq-section h2 {
-    font-size: 1.5rem; /* Further reduce heading size */
+    font-size: 1.5rem;
   }
 
-  details summary {
-    font-size: 1rem; /* Reduce summary text size */
+  .question {
+    font-size: 1rem;
   }
 
-  details p {
+  .answer {
     font-size: 0.9rem;
-    padding-right: 5px; /* Reduce padding for text */
+    padding-right: 5px;
   }
 }
