@@ -13,12 +13,13 @@ body {
   background-color: #000;
   display: flex;
   justify-content: center ;
-  padding: 50px 250px 100px 50px;
+  padding: 0px 0px 50px 100px;
   color: white;
   position: relative;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
+  z-index: 0;
 }
 
 /* Decorative shapes */
@@ -27,7 +28,7 @@ body {
   content: '';
   position: absolute;
   background-color: #6f42ff;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.8;
 }
 
@@ -44,7 +45,7 @@ body {
   height: 200px;
   bottom: -80px;
   right: -80px;
-  background-color: #00d1b2;
+  background-color: cyan;
   transform: rotate(-30deg);
   opacity: 1;
 }
@@ -55,12 +56,12 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  padding-right: 20%;
+  /* padding-right: 20%; */
 }
 
 /* Text content styling */
 .text-content {
-  max-width: 50%;
+  max-width: 100%;
   color: white;
 }
 
@@ -71,7 +72,7 @@ body {
 }
 
 .text-content h1 span {
-  color: #00d1b2;
+  color: cyan;
 }
 
 .text-content p {
@@ -107,7 +108,7 @@ body {
   z-index: 2;
 }
 
-/* ===== Responsive Design for Hero Section ===== */
+/* Responsive Design for Hero Section */
 @media (max-width: 1200px) {
   .hero-section {
     padding: 50px 100px 100px 50px;
@@ -122,15 +123,14 @@ body {
   }
 
   .hero-image {
-    max-width: 40%;
+    max-width: 45%; /* Increase image width similar to feature section */
   }
 
   .hero-content {
-    padding-right: 15%;
+    padding-right: 0%;
   }
 
   .cta-button {
-    /* padding: 0px; */
     font-size: 0.95rem;
   }
 }
@@ -143,7 +143,9 @@ body {
 
   .hero-content {
     display: flex;
-    text-align: center;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content */
+    text-align: center; /* Center-align text */
   }
 
   .text-content {
@@ -160,8 +162,8 @@ body {
   }
 
   .hero-image {
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 70%; /* Similar to feature image styling */
+    margin: 0 auto; /* Center the image */
   }
 
   .cta-button {
@@ -186,7 +188,8 @@ body {
   }
 
   .hero-image {
-    max-width: 80%;
+    max-width: 80%; /* Reduce size for very small screens */
+    margin: 0 auto; /* Center the image */
   }
 
   .cta-button {
@@ -194,6 +197,7 @@ body {
     font-size: 0.85rem;
   }
 }
+
 
 
 /* Feature Section */
@@ -551,6 +555,7 @@ body {
   color: white;
   text-align: center;
   overflow: hidden;
+  z-index: 0;
 }
 
 /* Instructor Content - Text and Instructor Card */
@@ -650,7 +655,7 @@ body {
   background-color: cyan; /* Cyan shape */
   /* clip-path: polygon(0% 0%, 100% 0%, 0% 100%); */
   border-radius: 10%;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .instructor-section::after {
@@ -660,7 +665,7 @@ body {
   right: -30px;
   background-color: #6f42ff; /* White circle */
   border-radius: 50%;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 /* ====== Responsive Design ====== */
@@ -761,199 +766,6 @@ body {
   }
 }
 
-/* Why Choose Us Section */
-.why-choose-us-section {
-  background-color: #000; /* Black background */
-  color: white;
-  padding: 40px 0px; /* Increased padding for better spacing */
-  text-align: center;
-  position: relative;
-}
-
-/* Section Heading */
-.why-choose-us-section h2 {
-  font-size: 2.5rem;
-  color: #6f42ff; /* Purple accent for the heading */
-  margin-bottom: 40px;
-}
-
-/* Flexbox layout for content */
-.why-choose-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  gap: 30px; /* Add gap between content blocks */
-}
-
-/* Left and Right Text Sections */
-.why-choose-text {
-  width: 40%; /* Shrink width to allow space for the image */
-  text-align: right; /* Align text for Arabic */
-  padding: 0px 50px; /* Reduced padding for better fit on smaller screens */
-}
-
-.why-choose-text ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0;
-}
-
-.why-choose-text li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px; /* Reduced margin for better spacing */
-}
-
-.why-choose-text li img {
-  width: 30px;
-  height: 30px;
-  margin-left: 15px; /* Space between icon and text */
-}
-
-.why-choose-text li span {
-  color: #00d1b2; /* Cyan for the bullet point title */
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-}
-
-.why-choose-text li p {
-  color: white;
-  font-size: 1rem;
-  margin: 0;
-  line-height: 1.5;
-  margin-right: 20px;
-}
-
-/* Illustration in the Middle */
-.why-choose-image {
-  width: 30%; /* Reduced width for better layout */
-  text-align: center;
-}
-
-.why-choose-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Background Decorative Elements */
-.why-choose-us-section::before, 
-.why-choose-us-section::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  opacity: 0.2;
-}
-
-.why-choose-us-section::before {
-  width: 100px;
-  height: 100px;
-  top: 10px;
-  left: 10px;
-  background-color: #00d1b2; /* Cyan shape */
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-}
-
-.why-choose-us-section::after {
-  width: 150px;
-  height: 150px;
-  bottom: -50px;
-  right: -30px;
-  background-color: #ffffff; /* White circle */
-  border-radius: 50%;
-}
-
-/* ====== Responsive Design ====== */
-
-/* Medium Screens (1200px - 768px) */
-@media (max-width: 1200px) {
-  .why-choose-text {
-    padding: 0px 20px; /* Reduce padding for medium screens */
-    width: 45%; /* Adjust width for better balance */
-  }
-
-  .why-choose-image {
-    width: 40%; /* Increase image width on medium screens */
-  }
-
-  .why-choose-text li {
-    margin-bottom: 30px;
-  }
-
-  .why-choose-text li span {
-    font-size: 1.2rem; /* Adjust font size */
-  }
-
-  .why-choose-text li p {
-    font-size: 0.95rem; /* Adjust text size */
-  }
-}
-
-/* Small Screens (768px and below) */
-@media (max-width: 768px) {
-  .why-choose-content {
-    flex-direction: column; /* Stack content vertically */
-    gap: 20px;
-  }
-
-  .why-choose-text {
-    width: 100%; /* Full width for text section */
-    padding: 0px 20px; /* Reduce padding for small screens */
-    margin-bottom: 20px;
-    text-align: center; /* Center-align text */
-  }
-
-  .why-choose-image {
-    width: 80%; /* Increase image width */
-    margin: 0 auto 20px; /* Center image */
-  }
-
-  .why-choose-text ul {
-    margin-top: 20px;
-  }
-
-  .why-choose-text li {
-    justify-content: center;
-    flex-direction: column; /* Stack icon and text vertically */
-    align-items: center;
-    margin-bottom: 20px; /* Reduced margin for smaller screens */
-  }
-
-  .why-choose-text li img {
-    margin-left: 0; /* Remove left margin */
-    margin-bottom: 10px; /* Add margin below the icon */
-  }
-
-  .why-choose-text li p {
-    margin-right: 0;
-    text-align: center; /* Center-align text */
-  }
-}
-
-/* Extra Small Screens (480px and below) */
-@media (max-width: 480px) {
-  .why-choose-us-section h2 {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-    margin-bottom: 30px;
-  }
-
-  .why-choose-text li span {
-    font-size: 1.1rem; /* Adjust text size */
-  }
-
-  .why-choose-text li p {
-    font-size: 0.9rem; /* Adjust text size */
-  }
-
-  .why-choose-image {
-    width: 100%; /* Full width for image */
-  }
-
-  .why-choose-text li {
-    margin-bottom: 15px;
-  }
-}
-
 /* Service Details Section */
 .service-details-section {
   background-color: #220484; /* White background */
@@ -962,6 +774,7 @@ body {
   justify-content: center;
   position: relative;
   color: white;
+  z-index: 0;
 }
 
 /* Service Details Content Layout */
@@ -998,6 +811,7 @@ body {
   background-color: #443dff; /* Purple background */
   color: white;
   padding: 10px 20px;
+  margin: 0px;
   border-radius: 25px;
   text-decoration: none;
   font-size: 1rem;
@@ -1065,33 +879,26 @@ body {
 .service-details-section::before, 
 .service-details-section::after {
   content: '';
-  position: absolute;
-  z-index: 1;
   opacity: 1;
   overflow: hidden;
-  content: '';
   position: absolute;
-  z-index: 1; /* Ensure it's behind the content */
-  opacity: 0.2; /* Make the shapes subtle */
+  z-index: -1; /* Ensure it's behind the content */
   background-color: #6f42ff; /* Purple color */
   border-radius: 50%;
 }
 
 .service-details-section::before {
-  width: 150px;
-  height: 150px;
-  top: -10px;
-  left: 15px;
-  background-color: #01ffd9; /* Cyan shape */
-  /* clip-path: polygon(0% 0%, 100% 0%, 50% 100%); */
+  top: -100px;
+  left: 45px;
+  background-color: cyan; /* Cyan shape */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
   /* border-radius: 10%; */
   opacity: 1;
   overflow: hidden;
   width: 200px;
   height: 200px;
-  top: -0px;
-  left: -100px;
   background-color: #6f42ff; /* Purple */
+  transform: rotate(135deg);
 }
 
 .service-details-section::after {
@@ -1185,46 +992,6 @@ body {
   }
 }
 
-/* Newsletter Section */
-.newsletter-section {
-  background-color: #6f42ff;
-  color: white;
-  padding: 50px 100px;
-  text-align: center;
-}
-
-.newsletter-section form {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
-}
-
-.newsletter-section input {
-  padding: 20px;
-  width: 300px;
-  border-radius: 20px;
-  border: none;
-  margin-bottom: 10px; /* Add margin below input for small screens */
-}
-
-.newsletter-section button {
-  margin-top: 0px;
-  padding: 15px 20px;
-  border-radius: 20px;
-  border: none;
-  background-color: white;
-  color: #6f42ff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.newsletter-section button:hover {
-  background-color: #f5f5f5;
-}
-
 /* FAQ Section */
 .faq-section {
   background-color: #f5f5f5;
@@ -1245,6 +1012,7 @@ body {
   text-align: right;
 }
 
+/* Details and Question Styling */
 details {
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -1255,7 +1023,7 @@ details {
   transition: background-color 0.3s ease;
 }
 
-summary {
+.question {
   font-size: 1.2rem;
   font-weight: bold;
   color: #6f42ff;
@@ -1264,36 +1032,31 @@ summary {
   /* display: flex; */
   justify-content: space-between;
   align-items: center;
+  list-style: none;
   padding: 0.5rem;
-  list-style: none; /* Removes the marker in Firefox */
 }
 
 /* Change color when the FAQ is open */
-details[open] summary {
+details[open] .question {
   color: #563d7c;
 }
 
-/* Remove the default arrow in WebKit browsers */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Add the custom + and - symbols */
-summary::before {
+/* Custom symbols for expand/collapse */
+.question::before {
   content: "+";
   font-size: 1.5rem;
   color: #6f42ff;
   transition: transform 0.3s ease;
-  margin-left: 10px; /* Add space between the symbol and the text */
+  margin-left: 10px;
 }
 
-/* Change the + to - when details is open */
-details[open] summary::before {
+details[open] .question::before {
   content: "-";
   color: #563d7c;
 }
 
-details p {
+/* FAQ Answer Content */
+.answer {
   margin-top: 10px;
   padding-right: 20px;
   color: #333;
@@ -1308,136 +1071,55 @@ details:hover {
 
 /* Medium Screens (1200px - 768px) */
 @media (max-width: 1200px) {
-  .newsletter-section {
-    padding: 40px 50px; /* Reduce padding for medium screens */
-  }
-
-  .newsletter-section input {
-    width: 250px; /* Slightly reduce input width */
-  }
-
   .faq-section {
-    padding: 40px 50px; /* Reduce padding for medium screens */
+    padding: 40px 50px;
   }
 
   .faq-section h2 {
-    font-size: 2rem; /* Reduce heading size */
+    font-size: 2rem;
   }
 }
 
 /* Small Screens (768px and below) */
 @media (max-width: 768px) {
-  .newsletter-section {
-    padding: 30px 20px; /* Reduce padding for small screens */
-  }
-
-  .newsletter-section form {
-    flex-direction: column; /* Stack input and button vertically */
-  }
-
-  .newsletter-section input {
-    width: 100%; /* Full width input */
-    margin-bottom: 10px; /* Add space below input */
-  }
-
-  .newsletter-section button {
-    width: 100%; /* Full width button */
-    margin-left: 0; /* Remove left margin */
-  }
-
   .faq-section {
-    padding: 30px 20px; /* Reduce padding for small screens */
+    padding: 30px 20px;
   }
 
   .faq-container {
-    max-width: 100%; /* Full width for FAQ container */
+    max-width: 100%;
   }
 
   .faq-section h2 {
-    font-size: 1.8rem; /* Reduce heading size */
+    font-size: 1.8rem;
   }
 
-  details summary {
-    font-size: 1.1rem; /* Slightly reduce summary text size */
+  .question {
+    font-size: 1rem;
   }
 
-  details p {
-    padding-right: 10px; /* Reduce padding for text */
+  .answer {
+    padding-right: 10px;
   }
 }
 
 /* Extra Small Screens (480px and below) */
 @media (max-width: 480px) {
-  .newsletter-section {
-    padding: 20px 10px; /* Further reduce padding */
-  }
-
-  .newsletter-section input {
-    width: 100%; /* Full width input */
-    padding: 8px; /* Slightly reduce padding */
-  }
-
-  .newsletter-section button {
-    width: 100%; /* Full width button */
-    padding: 8px 15px; /* Adjust button padding */
-  }
-
   .faq-section {
-    padding: 20px 10px; /* Further reduce padding */
+    padding: 20px 10px;
   }
 
   .faq-section h2 {
-    font-size: 1.5rem; /* Further reduce heading size */
+    font-size: 1.5rem;
   }
 
-  details summary {
-    font-size: 1rem; /* Reduce summary text size */
+  .question {
+    font-size: 1rem;
   }
 
-  details p {
+  .answer {
     font-size: 0.9rem;
-    padding-right: 5px; /* Reduce padding for text */
+    padding-right: 5px;
   }
 }
 
-/* Footer */
-/* .footer {
-  background-color: #f5f5f5;
-  padding: 30px 100px;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-logo h2 {
-  font-size: 2rem;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #333;
-  margin: 0 10px;
-}
-
-.footer-links span {
-  margin: 0 5px;
-  color: #666;
-}
-
-.social-icons a {
-  margin-left: 10px;
-  color: #333;
-}
-
-.social-icons a:hover {
-  color: #6f42ff;
-}
-
-.footer-copyright {
-  margin-top: 10px;
-  text-align: center;
-  color: #666;
-} */
