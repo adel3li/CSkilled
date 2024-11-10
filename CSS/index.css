@@ -1078,6 +1078,9 @@ details:hover {
   .faq-section h2 {
     font-size: 2rem;
   }
+  .question {
+    list-style: none;
+  }
 }
 
 /* Small Screens (768px and below) */
@@ -1096,6 +1099,7 @@ details:hover {
 
   .question {
     font-size: 1rem;
+    list-style: none;
   }
 
   .answer {
@@ -1115,6 +1119,7 @@ details:hover {
 
   .question {
     font-size: 1rem;
+    list-style: none;
   }
 
   .answer {

@@ -19,6 +19,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden; /* Hide overflow for shapes */
+  padding: 35px;
 }
 
 /* Purple Decorative Shape in the Top-Left Corner */
