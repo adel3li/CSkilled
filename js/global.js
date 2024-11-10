@@ -25,15 +25,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Lazy loading images
-  // lazyLoadImages();
+  lazyLoadImages();
 
   // Add event listener to toggle "+" and "-" in details elements
-  // document.querySelectorAll('details').forEach(detail => {
-  //   detail.addEventListener('toggle', function () {
-  //     const icon = this.querySelector('summary::before');
-  //     if (icon) icon.textContent = this.open ? '-' : '+';
-  //   });
-  // });
+  document.querySelectorAll('details').forEach(detail => {
+    detail.addEventListener('toggle', function () {
+      const icon = this.querySelector('summary::before');
+      if (icon) icon.textContent = this.open ? '-' : '+';
+    });
+  });
 });
 
 
