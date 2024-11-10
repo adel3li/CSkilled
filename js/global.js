@@ -28,33 +28,33 @@ document.addEventListener('DOMContentLoaded', function () {
   // lazyLoadImages();
 
   // Add event listener to toggle "+" and "-" in details elements
-  document.querySelectorAll('details').forEach(detail => {
-    detail.addEventListener('toggle', function () {
-      const icon = this.querySelector('summary::before');
-      if (icon) icon.textContent = this.open ? '-' : '+';
-    });
-  });
+  // document.querySelectorAll('details').forEach(detail => {
+  //   detail.addEventListener('toggle', function () {
+  //     const icon = this.querySelector('summary::before');
+  //     if (icon) icon.textContent = this.open ? '-' : '+';
+  //   });
+  // });
 });
 
 
 // Call lazyLoadImages when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  lazyLoadImages();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   lazyLoadImages();
+// });
 
 // Load external CSS (for lazy loading of styalesheets)
-function loadCSS(href, media = 'all') {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = href;
-  link.media = media;
-  document.getElementsByTagName("head")[0].appendChild(link);
-}
+// function loadCSS(href, media = 'all') {
+//   const link = document.createElement("link");
+//   link.rel = "stylesheet";
+//   link.href = href;
+//   link.media = media;
+//   document.getElementsByTagName("head")[0].appendChild(link);
+// }
 
 // Load CSS on window load
-window.onload = function() {
-  loadCSS("styles.css");
-};
+// window.onload = function() {
+//   loadCSS("styles.css");
+// };
 
 // Add event listener to toggle "+" and "-" in details elements
 // document.querySelectorAll('details').forEach(detail => {
