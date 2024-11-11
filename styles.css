@@ -43,6 +43,16 @@ body {
   color: blue; /* Adjust the color if needed */
 }
 
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:hover,
+.logo a:focus {
+  color: #443dff; /* Accent color on hover or focus */
+  /* background-color: rgba(68, 61, 255, 0.1); Optional: accent background tint on hover */
+}
+
 .nav {
   display: flex;
   gap: 15px;
