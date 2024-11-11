@@ -1,9 +1,5 @@
 {
   "sidebar": {
-    "image": {
-      "image": "Asset/Photos/background.jpg",
-      "alt": "Course Image"
-    },
     "course_info": [
       {
         "icon": "fas fa-clock",

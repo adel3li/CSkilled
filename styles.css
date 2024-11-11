@@ -858,14 +858,14 @@ details:hover {
 }
 
 /* Lazy Image Placeholder */
-.lazy-image {
-  opacity: 0;            /* Initially hide the lazy-loaded image */
-  transition: opacity 0.5s ease-in-out; /* Fade in the image as it loads */
-}
+/* .lazy-image {
+  opacity: 0;        
+  transition: opacity 0.5s ease-in-out; 
+} */
 
-.lazy-image.lazyloaded {
-  opacity: 1;            /* Show the image once it has been loaded */
-}
+/* .lazy-image.lazyloaded {
+  opacity: 1;   
+} */
 
 /* Optional: Hover Effect for the Image */
 .resized-image:hover {

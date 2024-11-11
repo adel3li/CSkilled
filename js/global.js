@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Lazy loading images
-  lazyLoadImages();
+  // lazyLoadImages();
 
   // Add event listener to toggle "+" and "-" in details elements
   document.querySelectorAll('details').forEach(detail => {
@@ -55,6 +55,8 @@ function loadCSS(href, media = 'all') {
 window.onload = function() {
   loadCSS("styles.css");
 };
+
+
 
 // Add event listener to toggle "+" and "-" in details elements
 // document.querySelectorAll('details').forEach(detail => {

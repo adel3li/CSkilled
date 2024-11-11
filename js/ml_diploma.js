@@ -200,53 +200,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Load sidebar content from `sidebar.json`
+// Load sidebar content from `sidebar.json`
 document.addEventListener('DOMContentLoaded', function() {
   fetch('json/sidebar.json')
     .then(response => response.json())
     .then(data => {
       const sidebarData = data.sidebar;
-      
-      const imageElement = document.getElementById('sidebar-image');
-      imageElement.src = sidebarData.image.src;
-      imageElement.alt = sidebarData.image.alt;
-      
+
+      // Populate course information list
       const courseInfoList = document.getElementById('course-info');
       sidebarData.course_info.forEach(info => {
         const listItem = document.createElement('li');
         listItem.innerHTML = `<i class="${info.icon}"></i> ${info.label}`;
         courseInfoList.appendChild(listItem);
       });
-      
+
+      // Set price and subscription information
       document.getElementById('old-price').innerHTML = `<del>${sidebarData.price.old_price}</del>`;
       document.getElementById('new-price').textContent = sidebarData.price.new_price;
       document.getElementById('subscription-time').textContent = sidebarData.subscription_time;
       document.getElementById('subscribe-button').textContent = sidebarData.subscribe_button.text;
     })
     .catch(error => console.error('Error fetching sidebar data:', error));
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const lazyImages = [].slice.call(document.querySelectorAll('img.lazy-image'));
-
-  if ('IntersectionObserver' in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove('lazy-image');
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  } else {
-    // Fallback for browsers that don't support IntersectionObserver
-    lazyImages.forEach(function(lazyImage) {
-      lazyImage.src = lazyImage.dataset.src;
-    });
-  }
 });
