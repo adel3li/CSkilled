@@ -20,6 +20,16 @@ h1, h2, h3, p {
   padding: 0;
 }
 
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:hover,
+.logo a:focus {
+  color: #443dff; /* Accent color on hover or focus */
+  /* background-color: rgba(68, 61, 255, 0.1); Optional: accent background tint on hover */
+}
+
 /* Links */
 a {
   text-decoration: none;
