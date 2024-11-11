@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Call lazyLoadImages when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  lazyLoadImages();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   lazyLoadImages();
+// });
 
 // Load external CSS (for lazy loading of styalesheets)
 function loadCSS(href, media = 'all') {
