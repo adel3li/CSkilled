@@ -499,7 +499,7 @@ body {
 }
 #testimonial3 p {
   font-size: 1.3rem;
-  text-align: left;
+  /* text-align: left; */
 }
 
 /* Star Ratings and Names */
