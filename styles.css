@@ -711,25 +711,28 @@ details {
   transition: background-color 0.3s ease;
 }
 
+details:hover {
+  background-color: #f0f0f0;
+}
+
+details[open] .question {
+  color: #563d7c;
+}
+
+/* Question Styling */
 .question {
   font-size: 1.2rem;
   font-weight: bold;
   color: #6f42ff;
   outline: none;
   cursor: pointer;
-  /* display: flex; */
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
   padding: 0.5rem;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 
-/* Change color when the FAQ is open */
-details[open] .question {
-  color: #563d7c;
-}
-
-/* Custom symbols for expand/collapse */
 .question::before {
   content: "+";
   font-size: 1.5rem;
@@ -743,16 +746,12 @@ details[open] .question::before {
   color: #563d7c;
 }
 
-/* FAQ Answer Content */
+/* Answer Content Styling */
 .answer {
   margin-top: 10px;
   padding-right: 20px;
   color: #333;
   text-align: right;
-}
-
-details:hover {
-  background-color: #f0f0f0;
 }
 
 /* ====== Responsive Design ====== */
@@ -765,6 +764,10 @@ details:hover {
 
   .faq-section h2 {
     font-size: 2rem;
+  }
+
+  .question {
+    list-style: none;
   }
 }
 
@@ -784,6 +787,7 @@ details:hover {
 
   .question {
     font-size: 1rem;
+    list-style: none;
   }
 
   .answer {
@@ -803,6 +807,7 @@ details:hover {
 
   .question {
     font-size: 1rem;
+    list-style: none;
   }
 
   .answer {
