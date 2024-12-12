@@ -784,7 +784,7 @@ details {
   outline: none;
   cursor: pointer;
   /* display: flex; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   list-style: none;
   padding: 0.5rem;

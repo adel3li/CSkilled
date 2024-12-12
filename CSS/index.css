@@ -861,14 +861,14 @@ body {
 
 .service-details-text li span {
   color: #00d1b2; /* Purple for the title */
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 5px;
   margin-top: 0px;
 }
 
 .service-details-text li p {
   color: white;
-  font-size: 1rem;
+  font-size: 1.45rem;
   margin: 0;
   line-height: 1.5;
   margin-right: 0px;
@@ -1030,7 +1030,7 @@ details {
   outline: none;
   cursor: pointer;
   /* display: flex; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   list-style: none;
   padding: 0.5rem;
